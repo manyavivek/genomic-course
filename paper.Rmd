@@ -1,12 +1,12 @@
 ---
-title: "paper"
-author: "Manya Vivek" 
-output: html_document
-biblography: reference.bib
+title:"paper"
+author:"Manya Vivek" 
+output:html_document
+biblography:reference.bib
 ---
 
- Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
-# REFERENCES
+## R Markdown
 
 
