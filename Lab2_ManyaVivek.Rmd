@@ -1,13 +1,8 @@
 ---
-title: "lab2"
+title: "Lab2"
 author: "Manya Vivek" 
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 
 [Lab1](Lab1_ManyaVivek.html)
 
