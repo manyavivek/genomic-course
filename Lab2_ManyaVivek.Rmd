@@ -1,5 +1,5 @@
 ---
-title: "Lab2"
+title: "lab2"
 author: "Manya Vivek" 
 output: html_document
 ---
