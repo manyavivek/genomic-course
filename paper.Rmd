@@ -1,7 +1,7 @@
 ---
-title: 'My Title'
-author: "Me me me me!"
-date: Aug 31, 2020
+title: 'paper'
+author: "Manya Vivek"
+date: Sep 3, 2020
 output: html_document
 bibliography: data/references.bib
 ---
@@ -9,5 +9,5 @@ bibliography: data/references.bib
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
 # REFERENCES
-```
+
 
