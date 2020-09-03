@@ -1,6 +1,7 @@
 ---
-title: "Lab2_ManyaVivek"
+title: "Lab2"
 output: html_document
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -38,3 +39,6 @@ n <- "A,T,C,G"
 sort(n)
 ```
 
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
+
+# REFERENCES
