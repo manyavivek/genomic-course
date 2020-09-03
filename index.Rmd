@@ -6,7 +6,7 @@ output: html_document
 
 [Lab1](Lab1_ManyaVivek.html)
 
-[references](paper.html)
+
 
 
 
