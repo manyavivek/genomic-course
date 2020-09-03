@@ -1,12 +1,13 @@
 ---
-title:"paper"
-author:"Manya Vivek" 
-output:html_document
-biblography:reference.bib
+title: 'My Title'
+author: "Me me me me!"
+date: Aug 31, 2020
+output: html_document
+bibliography: data/references.bib
 ---
-
+  
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
-## R Markdown
-
+# REFERENCES
+```
 
