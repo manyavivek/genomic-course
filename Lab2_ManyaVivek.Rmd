@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Lab2_ManyaVivek"
 output: html_document
 ---
 
@@ -7,19 +7,4 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-[Lab2](Lab2_ManyaVivek.html)
-
-[references](paper.html)
-
-
-
-
-
-
-
-
-
-
-
-
+[Lab1](Lab1_ManyaVivek.html)
