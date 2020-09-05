@@ -13,7 +13,9 @@ Here is video of seals swimming close to the shore in Cape cod (08/08/2020). I f
 Click link:
 [Video](Seals.mp4)
 
-LAB SUBMISSION: 
+![ ](IMG_1577.JPG) 
+
+## LAB SUBMISSION: 
 
 1.
 [Lab1](Lab1_ManyaVivek.html)
