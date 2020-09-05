@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amherst. This page is for my Evolutionary Genomics and Bininformatics lab. 
 
-Here is video of seals swimming close to the shore in Cape cod (08/08/2020). 
+Here is video of seals swimming close to the shore in Cape cod (08/08/2020). I feel fortunate to have seen them swim and I'm glad I recorded it. 
 Click link:
 [Video](Seals.mp4)
 
