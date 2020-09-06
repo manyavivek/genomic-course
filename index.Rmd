@@ -12,14 +12,14 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 ![ ](IMG_1577.JPG) 
 
 
+## VIDEO
 
-
+![ ](Seals.mp4)
 
 Here is video of seals swimming close to the shore in Cape cod (08/08/2020). I feel fortunate to have seen them swim and I'm glad I recorded it. 
-Click link:
-[Video](Seals.mp4)
 
-## LAB SUBMISSIONS: 
+
+### LAB SUBMISSIONS: 
 
 1.
 [Lab1](Lab1_ManyaVivek.html)
