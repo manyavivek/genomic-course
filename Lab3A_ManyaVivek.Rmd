@@ -25,6 +25,7 @@ surveys <- read.csv("data_raw/portal_data_joined.csv")
 head(surveys)
 ```
 
+# Challenge
 ```{r}
 str(surveys)
 ```
@@ -120,16 +121,37 @@ surveys[n_row/2, ]
 surveys[-(7:n_row), ]
 ```
 
+
 ## FACTORS
 
 ```{r}
-sex <- factor(c("male", "female", "female", "male"))
+plot(as.factor(surveys$sex))
+```
+
+```{r}
+sex <- factor(surveys$sex)
+head(sex)
 ```
 
 ```{r}
 levels(sex)
 ```
+
 ```{r}
-nlevels(sex)
+levels(sex)[1] <- "undetermined"
+levels(sex) 
 ```
+
+```{r}
+head(sex)
+```
+
+# Challange 
+```{r}
+levels(sex)[2:3] <- c("female", "male")
+sex <- factor(sex, levels = c("female", "male", "undetermined"))
+plot(sex)
+```
+
+# Challange 
 
