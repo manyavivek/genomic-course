@@ -1,0 +1,34 @@
+---
+title: "Lab 3B"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+download.file(url = "https://ndownloader.figshare.com/files/2292169",
+              destfile = "data_raw/portal_data_joined.csv")
+```
+
+```{r}
+surveys <- read_csv("data_raw/portal_data_joined.csv")
+```
+
+# Inspect the data
+```{r}
+str(surveys)
+```
+
+```{r}
+select(surveys, plot_id, species_id)
+```
+
+
+
+
