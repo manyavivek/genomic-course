@@ -25,10 +25,10 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 2.
 [Lab2 - git, GitHub and R studio projects](Lab2_ManyaVivek.html)
 
-3. 
-[Lab3A - Starting with data](Lab3A_ManyaVivek.html)
+3. Lab3
+- [Lab3A - Starting with data](Lab3A_ManyaVivek.html)
 
-
+- [Lab3B - Manipulating data](Lab3B_ManyaVivek.html)
 
 
 
