@@ -35,16 +35,6 @@ str(surveys)
 dim(surveys)
 ```
 
-# Number of rows 
-```{r}
-nrow(surveys)
-```
-
-# Number of columns 
-```{r}
-ncol(surveys)
-```
-
 # First 6 rows
 ```{r}
 head(surveys)
@@ -73,26 +63,6 @@ surveys[1,1]
 # first element in the sixth column (as a vector)
 ```{r}
 surveys[1,6]
-```
-
-# first column of the data frame (as a vector)
-```{r}
-surveys[ ,1]
-```
-
-# first column of the data frame (as a data frame)
-```{r}
-surveys[1]
-```
-
-# first three elements in the 7th column
-```{r}
-surveys[1:3,7]
-```
-
-# the third row of the data frame 
-```{r}
-surveys[3, ]
 ```
 
 # equivalent to head surveys 
@@ -154,4 +124,23 @@ plot(sex)
 ```
 
 # Challange 
+1. 
+```{r}
+animal_data <- data.frame(
+          animal = c( "dog", "cat", "sea cucumber", "sea urchin"),
+          feel = c( "furry", "squishy","leathery", "spiny"),
+          weight = c(45, 8, 1.1, 0.8)
+          )
+```
+
+2. 
+```{r}
+country_climate <- data.frame(
+       country = c("Canada", "Panama", "South Africa", "Australia"),
+       climate = c("cold", "hot", "temperate", "hot/temperate"),
+       temperature = c(10, 30, 18, 15),
+       northern_hemisphere = c("TRUE", "TRUE", "FALSE", "FALSE"),
+       has_kangaroo = c(5, 10, 15, 1)
+       )
+```
 
