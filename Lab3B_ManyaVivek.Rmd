@@ -56,6 +56,12 @@ surveys %>%
   head()
 ```
 
+```{r}
+surveys %>%
+  mutate(weight_kg = weight / 1000,
+         weight_lb = weight_kg * 2.2)
+```
+
 # Challenge
 ```{r}
 surveys_hindfoot_cm <- surveys %>%
@@ -64,6 +70,7 @@ surveys_hindfoot_cm <- surveys %>%
     filter(hindfoot_cm < 3) %>%
     select(species_id, hindfoot_cm)
 ```
+
 
 # ------------------------------------------------------------------------------
 
@@ -78,5 +85,54 @@ surveys %>%
 ```{r}
 surveys %>%
     count(plot_type) 
+```
+
+```{r}
+surveys %>%
+    filter(!is.na(hindfoot_length)) %>%
+    group_by(species_id) %>%
+    summarize(
+        mean_hindfoot_length = mean(hindfoot_length),
+        min_hindfoot_length = min(hindfoot_length),
+        max_hindfoot_length = max(hindfoot_length),
+        n = n()
+    )
+```
+
+```{r}
+surveys %>%
+    filter(!is.na(weight)) %>%
+    group_by(year) %>%
+    filter(weight == max(weight)) %>%
+    select(year, genus, species, weight) %>%
+    arrange(year)
+```
+
+# ------------------------------------------------------------------------------
+
+# Challange 
+1. 
+```{r}
+surveys_spread_genera <- surveys %>%
+  group_by(plot_id, year) %>%
+  summarize(n_genera = n_distinct(genus)) %>%
+  spread(year, n_genera)
+```
+2. 
+```{r}
+surveys_spread_genera %>%
+  gather("year", "n_genera", -plot_id)
+```
+3. 
+```{r}
+surveys_long <- surveys %>%
+  gather("measurement", "value", hindfoot_length, weight)
+```
+4. 
+```{r}
+surveys_long %>%
+  group_by(year, measurement, plot_type) %>%
+  summarize(mean_value = mean(value, na.rm=TRUE)) %>%
+  spread(measurement, mean_value)
 ```
 
