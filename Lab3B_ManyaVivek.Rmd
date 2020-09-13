@@ -30,5 +30,53 @@ select(surveys, plot_id, species_id)
 ```
 
 
+# Challange 
+```{r}
+surveys %>% 
+filter(year < 1995) %>% 
+select(year, sex, weight)
+```
 
+# ----------------------------------------------------------------------
+```{r}
+surveys %>%
+  mutate(weight_kg = weight / 1000)
+```
+
+```{r}
+surveys %>%
+  filter(!is.na(weight)) %>%
+  mutate(weight_kg = weight / 1000) %>%
+  head()
+```
+
+```{r}
+surveys %>%
+  mutate(weight_kg = weight / 1000) %>%
+  head()
+```
+
+# Challenge
+```{r}
+surveys_hindfoot_cm <- surveys %>%
+    filter(!is.na(hindfoot_length)) %>%
+    mutate(hindfoot_cm = hindfoot_length / 10) %>%
+    filter(hindfoot_cm < 3) %>%
+    select(species_id, hindfoot_cm)
+```
+
+# ------------------------------------------------------------------------------
+
+```{r}
+surveys %>%
+  group_by(sex, species_id) %>%
+  summarize(mean_weight = mean(weight, na.rm = TRUE)) %>% 
+  tail()
+```
+
+# Challenge
+```{r}
+surveys %>%
+    count(plot_type) 
+```
 
