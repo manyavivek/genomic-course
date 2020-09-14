@@ -30,7 +30,8 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 
 - [Lab3B - Manipulating data](Lab3B_ManyaVivek.html)
 
-
+4. 
+[Lab4 - Data wrangling and graphing COVID-19 reporting data (Part 1)](Lab4_ManyaVivek.html)
 
 
 
