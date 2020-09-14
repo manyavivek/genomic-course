@@ -1,0 +1,53 @@
+---
+title: "Lab4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+report_03_11_2020 <- 
+read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv")) %>% 
+  rename(Country_Region = "Country/Region", Province_State = "Province/State")
+```
+
+```{r}
+str(report_03_11_2020)
+```
+
+```{r}
+head(report_03_11_2020)
+```
+
+```{r}
+library(DT)
+datatable(report_03_11_2020)
+```
+
+# Exercises (Part 1)
+
+1. 
+```{r}
+download.file(url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-13-2020.csv",
+              destfile = "data_raw/portal_data_joined.csv")
+```
+
+```{r}
+report_03_13_2020 <-read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-13-2020.csv")) %>% 
+   rename(Country_Region = "Country/Region", Province_State = "Province/State")
+```
+
+```{r}
+str(report_03_13_2020)
+View(report_03_11_2020)
+```
+
+
+
+
