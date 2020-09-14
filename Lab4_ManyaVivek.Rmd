@@ -33,20 +33,28 @@ datatable(report_03_11_2020)
 # Exercises (Part 1)
 
 1. 
-```{r}
-download.file(url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-13-2020.csv",
-              destfile = "data_raw/portal_data_joined.csv")
-```
 
 ```{r}
-report_03_13_2020 <-read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-13-2020.csv")) %>% 
-   rename(Country_Region = "Country/Region", Province_State = "Province/State")
+report_03_13_2020 <-
+read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-13-2020.csv")) %>% 
+  rename(Country_Region = "Country/Region", Province_State = "Province/State")
 ```
 
 ```{r}
 str(report_03_13_2020)
-View(report_03_11_2020)
 ```
+
+
+```{r}
+report_09_13_2020 <-
+read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-13-2020.csv"))  
+```
+
+```{r}
+str(report_09_13_2020)
+```
+
+2. 
 
 
 
