@@ -57,57 +57,48 @@ str(report_09_13_2020)
 # 2. 
 ```{r}
 report_03_13_2020 %>% 
-  group_by(Country_Region)
-```
-
-```{r}
-report_03_13_2020 %>% 
-    summarize(mean_deaths = mean(Deaths))
+  group_by(Country_Region) %>% 
+  summarise(totaldeaths = sum(Deaths))
 ```
 
 ```{r}
 report_09_13_2020 %>% 
   group_by(Country_Region) %>% 
-summarise(totaldeaths = sum(Deaths))
-```
-
-```{r}
-report_09_13_2020 %>% 
-  group_by(Country_Region) %>% 
-  summarize(totaldeaths = sum(Deaths))
+  summarise(totaldeaths = sum(Deaths))
 ```
 
 # 3. 
 ```{r}
-filter(report_03_13_2020, Country_Region == "US")
-filter(report_09_13_2020, Country_Region == "US")
+filter(report_09_13_2020, Country_Region == "US") %>% 
+group_by(Province_State) %>% 
+summarise(totalconfirmed = sum(Confirmed))
 ```
+
+```{r}
+filter(report_03_13_2020, Country_Region == "US") %>% 
+  group_by(Province_State) %>% 
+  summarise(totalconfirmed = sum(Confirmed))
+```
+
 
 # 4. 
 ```{r}
-report_09_13_2020 %>% 
-  group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths)) %>% 
-  slice(1:10)
-```
-
-```{r}
-report_09_13_2020 %>% 
-  group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths)) %>% 
-  slice(1:10)
-```
-
-
-
-```{r}
 report_03_13_2020 %>% 
-count(Deaths)
+  group_by(Country_Region) %>% 
+  summarise(totaldeaths = sum(Deaths)) %>% 
+  arrange(desc(totaldeaths)) %>% 
+  slice(1:10)
 ```
 
 ```{r}
-arrange(report_03_13_2020, Country_Region, Deaths = FALSE)
+report_09_13_2020 %>% 
+  group_by(Country_Region) %>% 
+  summarise(totaldeaths = sum(Deaths)) %>% 
+  arrange(desc(totaldeaths)) %>% 
+  slice(1:10)
 ```
+
+
 # ----------------------------------------------------------------------------
 
 ```{r}
