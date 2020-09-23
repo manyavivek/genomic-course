@@ -27,42 +27,56 @@ str(Confirmed_State_06_13)
 ```
 
 ```{r}
-Confirmed_State_09_13 <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-13-2020.csv"))
-```
-
-
-```{r}
-Confirmed_State_09_13 %>% 
- filter (Country_Region == "US") %>% 
+Confirmed_State_09_13 <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-13-2020.csv")) %>% 
+  filter(Country_Region == "US") %>% 
   group_by(Province_State, Country_Region) %>% 
   summarise(Confirmed = sum(Confirmed))
 str(Confirmed_State_09_13)
 ```
+
 
 ```{r}
 setdiff(Confirmed_State_09_13$Province_State, Confirmed_State_06_13$Province_State)
 ```
 
 ```{r}
-Confirmed_State_06_13_09_13_joined <- full_join(Confirmed_State_06_13, Confirmed_State_06_13, by = "Province_State")
-head(Confirmed_State_06_13_09_13_joined) 
-  tail(Confirmed_State_06_13_09_13_joined, 5)
+Confirmed_State_09_13 <- Confirmed_State_09_13 %>% 
+  filter(Province_State != "Recovered") 
 ```
 
 ```{r}
-which(is.na(Confirmed_State_06_13_09_13_joined))
+Confirmed_State_6_13_9_13_joined <- full_join(Confirmed_State_06_13,
+      Confirmed_State_09_13, by = c("Province_State"))
+head(Confirmed_State_6_13_9_13_joined)
 ```
 
 ```{r}
-Confirmed_State_06_13_09_13_joined <- full_join(Confirmed_State_06_13,
+tail(Confirmed_State_6_13_9_13_joined, 5)
+```
+
+```{r}
+which(is.na(Confirmed_State_6_13_9_13_joined))
+```
+
+```{r}
+Confirmed_State_6_13_9_13_joined <- full_join(Confirmed_State_06_13,
       Confirmed_State_09_13, by = c("Province_State")) %>% 
-      rename(Confirmed_06_13 = "Confirmed.x", Confirmed_09_13 = "Confirmed.y") %>% 
+       rename(Confirmed_6_13_2020 = "Confirmed.x", Confirmed_9_13_2020 = "Confirmed.y") %>%  
       select(-Country_Region.x, -Country_Region.y) %>% 
-      replace_na(list(Confirmed_06_13_2020 = 0))
-head(Confirmed_State_06_13_09_13_joined)
+      replace_na(list(Confirmed_6_13_2020 = 0))
+head(Confirmed_State_6_13_9_13_joined)
 ```
 
-## Switching between wide and long table formats 
+
+
+```{r}
+Confirmed_State_6_13_9_13_joined_long <- Confirmed_State_6_13_9_13_joined %>% 
+              pivot_longer(!Province_State,
+                            names_to = "Date", 
+                           values_to = "Confirmed") 
+
+ggplot(Confirmed_State_6_13_9_13_joined_long, aes(x = Confirmed,  y = Province_State))  + geom_point(aes(color = Date)) 
+```
 
 
 
