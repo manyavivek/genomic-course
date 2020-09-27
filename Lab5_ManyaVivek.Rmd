@@ -226,7 +226,7 @@ time_series_joined_US_top10 <- time_series_joined_US %>%
 
 
 
-```{r}
+```{r, fig.height = 10, fig.width = 10}
 time_series_joined_US %>% 
   group_by(Province_State,Date) %>% 
   summarise_at(c("Confirmed", "Deaths"), sum) %>% 
