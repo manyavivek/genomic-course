@@ -20,23 +20,26 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 ### LAB SUBMISSIONS: 
 
 1.
-[Lab1 - Introduction to R and Reproducible Research](Lab1_ManyaVivek.html)
+* [Lab1 - Introduction to R and Reproducible Research](Lab1_ManyaVivek.html)
 
 2.
-[Lab2 - git, GitHub and R studio projects](Lab2_ManyaVivek.html)
+* [Lab2 - git, GitHub and R studio projects](Lab2_ManyaVivek.html)
 
-3. Lab3
-- [Lab3A - Starting with data](Lab3A_ManyaVivek.html)
+3. 
+* [Lab3A - Starting with data](Lab3A_ManyaVivek.html)
 
-- [Lab3B - Manipulating data](Lab3B_ManyaVivek.html)
+* [Lab3B - Manipulating data](Lab3B_ManyaVivek.html)
 
 4. 
-[Lab4 - Data wrangling and graphing COVID-19 reporting data (Part 1)](Lab4_ManyaVivek.html)
+* [Lab4 - Data wrangling and graphing COVID-19 reporting data (Part 1)](Lab4_ManyaVivek.html)
 
 5. 
 * [Lab5 - Data wrangling and graphing COVID-19 reporting data (Part 2)](Lab5_ManyaVivek.html)
 
-* [Lab5 Extra - Interactive Graphs and Animations from the COVID-19 reporting data](Lab5Extra.html)
+* [Lab5 Extra - Interactive Graphs and Animations from the COVID-19 reporting data](Lab5Extra_ManyaVivek.html)
+
+6. 
+* [Lab6 - Data Maps and Interactive Graphs from the COVID-19 reporting data](Lab6_ManyaVivek.html)
 
 
 
