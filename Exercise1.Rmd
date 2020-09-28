@@ -1,0 +1,87 @@
+---
+title: "Exercise1"
+author: "Manya Vivek"
+date: "9/28/2020"
+output: html_document
+---
+
+---
+title: "Exercise 1"
+author: "Manya Vivek"
+date: "9/27/2020"
+output: html_document
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+download.file(url = "https://ndownloader.figshare.com/files/2292169",
+              destfile = "data_raw/portal_data_joined.csv")
+```
+
+
+```{r}
+surveys_complete <- read.csv("data_raw/portal_data_joined.csv")
+```
+
+
+
+```{r}
+yearly_counts <- surveys_complete %>%
+  count(year, genus)
+```
+
+
+```{r}
+ggplot(data = yearly_counts, aes(x = year, y = n)) +
+     geom_line()
+```
+
+```{r}
+ggplot(data = yearly_counts, aes(x = year, y = n, color = genus)) + 
+  geom_line()
+```
+
+```{r}
+yearly_counts %>% 
+  ggplot(mapping = aes(x = year, y = n, color = genus)) + 
+  geom_line()
+```
+
+```{r, fig.height = 10, fig.width = 20}
+ggplot(data = yearly_counts, mapping = aes(x = year, y = n, color = genus)) + 
+  geom_line()+
+  facet_wrap(facet = vars(genus))
+```
+
+# Challange 
+
+```{r}
+yearly_weight <- surveys_complete %>%
+                group_by(year, species_id) %>%
+  summarise(avg_weight = mean(weight))
+```
+
+```{r, fig.height= 20, fig.width = 20}
+ggplot(data = yearly_weight, mapping = aes(x=year, y=avg_weight)) +
+   geom_line() +
+   facet_wrap(vars(species_id)) +
+   theme_bw()
+```
+
+```{r}
+ yearly_sex_counts <- surveys_complete %>%
+                      count(year, genus, sex)
+```
+
+```{r, fig.height = 10, fig.width= 15}
+ggplot(data = yearly_sex_counts, mapping = aes(x = year, y = n, color = sex)) +
+    geom_line() +
+    facet_wrap(vars(genus)) +
+    labs(title = "Observed genera through time",
+        x = "Year of observation",
+        y = "Number of individuals") +
+    theme_bw() +
+        theme(text=element_text(size = 16))
+```

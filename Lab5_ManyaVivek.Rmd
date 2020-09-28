@@ -11,11 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-# Exercise 1 
+# Exercise 1: Data Visualization tutorial 
 
-
-
-
+[Exercise 1](Exercise1.html)
 
 ## 06/13/2020
 ```{r}
