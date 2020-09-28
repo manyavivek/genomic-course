@@ -58,13 +58,13 @@ str(report_09_13_2020)
 ```{r}
 report_03_13_2020 %>% 
   group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths))
+  summarise(Deaths = sum(Deaths))
 ```
 
 ```{r}
 report_09_13_2020 %>% 
   group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths))
+  summarise(Deaths = sum(Deaths))
 ```
 
 ## Question 3: .CONFIRMED CASES PER U.S STATE USE
@@ -73,14 +73,14 @@ report_09_13_2020 %>%
 ```{r}
 filter(report_03_13_2020, Country_Region == "US") %>% 
   group_by(Province_State) %>% 
-  summarise(totalconfirmed = sum(Confirmed))
+  summarise(Confirmed = sum(Confirmed))
 ```
 
 ### 09/13/2020
 ```{r}
 filter(report_09_13_2020, Country_Region == "US") %>% 
 group_by(Province_State) %>% 
-summarise(totalconfirmed = sum(Confirmed))
+summarise(Confirmed = sum(Confirmed))
 ```
 
 
@@ -91,8 +91,8 @@ summarise(totalconfirmed = sum(Confirmed))
 ```{r}
 report_03_13_2020 %>% 
   group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths)) %>% 
-  arrange(desc(totaldeaths)) %>% 
+  summarise(Deaths = sum(Deaths)) %>% 
+  arrange(desc(Deaths)) %>% 
   slice(1:10)
 ```
 
@@ -100,17 +100,15 @@ report_03_13_2020 %>%
 ```{r}
 report_09_13_2020 %>% 
   group_by(Country_Region) %>% 
-  summarise(totaldeaths = sum(Deaths)) %>% 
-  arrange(desc(totaldeaths)) %>% 
+  summarise(Deaths = sum(Deaths)) %>% 
+  arrange(desc(Deaths)) %>% 
   slice(1:10)
 ```
 
 
 # ----------------------------------------------------------------------------
 
-```{r}
-install.packages("tidyverse")
-```
+
 
 ```{r}
 library(tidyverse)
@@ -130,9 +128,9 @@ arrange(desc(min_deaths)) %>%
 slice(1:10)
 
 ggplot(data = report_03_13_2020, mapping = aes(x = Country_Region, y = Deaths)) +
-    geom_boxplot()
-ggplot(data = report_09_13_2020, mapping = aes(x = Country_Region, y = Confirmed)) +
-    geom_boxplot()
+  geom_point() 
+  ggplot(data = report_09_13_2020, mapping = aes(x = Country_Region, y = Confirmed)) +
+   geom_point()
 ```
 
 
@@ -145,9 +143,9 @@ arrange(desc(min_deaths)) %>%
 slice(1:10)
 
 ggplot(data = report_09_13_2020, mapping = aes(x = Country_Region, y = Deaths)) +
-    geom_boxplot()
+    geom_point()
 ggplot(data = report_09_13_2020, mapping = aes(x = Country_Region, y = Confirmed)) +
-    geom_boxplot()
+    geom_point()
 ```
 
 ## Question 6
@@ -168,9 +166,8 @@ ggplot(aes(x = Confirmed,  y = Province_State)) +
 ```
 
 #### graph 2: 10 states with the most deaths on 03/13/2020
-```{r}
+```{r, fig.height= 20, fig.width= 10}
 report_03_13_2020 %>%
-  filter(Country_Region == "US") %>% 
   group_by(Province_State) %>% 
   summarise(Deaths) %>% 
   arrange(desc(Deaths)) %>% 
@@ -184,7 +181,7 @@ ggplot(aes(x = Deaths,  y = Province_State)) +
 ### 10 states with the most confirmed cases and deaths on 9/13/2020 
 
 #### graph 1: 10 states with the most confirmed cases on 09/13/2020
-```{r}
+```{r, fig.height= 20, fig.width= 10}
 report_09_13_2020 %>%
   filter(Country_Region =="US") %>% 
   group_by(Province_State) %>% 
@@ -197,7 +194,7 @@ ggplot(aes(x = Confirmed,  y = Province_State)) +
 ```
 
 #### graph 2: 10 states with the most deaths on 09/13/2020
-```{r}
+```{r, fig.height= 20, fig.heigh = 10}
 report_09_13_2020 %>%
   filter(Country_Region =="US") %>% 
   group_by(Province_State) %>% 
