@@ -34,8 +34,9 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 [Lab4 - Data wrangling and graphing COVID-19 reporting data (Part 1)](Lab4_ManyaVivek.html)
 
 5. 
-[lab5 - Data wrangling and graphing COVID-19 reporting data (Part 2)](Lab5_ManyaVivek.html)
+* [Lab5 - Data wrangling and graphing COVID-19 reporting data (Part 2)](Lab5_ManyaVivek.html)
 
+* [Lab5 Extra - Interactive Graphs and Animations from the COVID-19 reporting data](Lab5Extra.html)
 
 
 
