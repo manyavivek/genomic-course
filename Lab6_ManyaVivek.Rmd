@@ -73,3 +73,29 @@ ggplot(daily_report, aes(x = Long, y = Lat, size = Confirmed)) +
     coord_fixed(ratio=1.5)
 ```
 
+```{r}
+library(RColorBrewer)
+```
+
+```{r, fig.height= 10, fig.width = 10}
+report_9_26_2020 <-   read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>%
+  rename(Long = "Long_") %>% 
+  unite(Key, Admin2, Province_State, sep = ".") %>% 
+  group_by(Key) %>% 
+  summarize(Confirmed = sum(Confirmed)) %>% 
+  mutate(Key = tolower(Key))
+us <- map_data("state")
+counties <- map_data("county") %>% 
+  unite(Key, subregion, region, sep = ".", remove = FALSE)
+state_join <- left_join(counties, report_9_26_2020, by = c("Key"))
+ggplot(data = us, mapping = aes(x = long, y = lat, group = group)) + 
+  borders("state", colour = "black") +
+  geom_polygon(data = state_join, aes(fill = Confirmed)) +
+  scale_fill_gradientn(colors = brewer.pal(n = 7, name = "OrRd"),
+                       breaks = c(1, 10, 100, 1000, 10000, 100000, 1000000),
+                       trans = "log10", na.value = "White") +
+  ggtitle("Number of Confirmed Cases by US County") +
+  theme_bw() 
+```
+
+
