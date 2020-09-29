@@ -122,6 +122,25 @@ ggplot(data = tx_county, mapping = aes(x = long, y = lat, group = group)) +
                          trans = "log10") +
     labs(title = "COVID-19 Confirmed Cases in Texas'")
 ```
- 
 
+
+
+```{r}
+library(plotly)
+ggplotly(
+  ggplot(data = tx_county, mapping = aes(x = long, y = lat, group = group)) + 
+  coord_fixed(1.3) + 
+# Add data layer
+  geom_polygon(data = state_join, aes(fill = Confirmed), color = "black") +
+    scale_fill_gradientn(colours = 
+                         wes_palette("Zissou1", 100, type = "continuous")) +
+  ggtitle("COVID-19 Cases in Texas") +
+# Cleaning up the graph
+  labs(x=NULL, y=NULL) +
+  theme(panel.border = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  theme(axis.text = element_blank())
+)
+```
 
