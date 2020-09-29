@@ -50,6 +50,27 @@ ts_long_joined_counts <- ts_long_joined %>%
 
 # Plot graph to a pdf outputfile
 
+```{r}
+pdf("ts_long_joined_image.pdf", width = 6, height = 3)
+ts_long_joined %>% 
+  group_by(Country_Region,Date) %>% 
+  summarise_at(c("Confirmed", "Deaths"), sum) %>% 
+  filter (Country_Region == "US") %>% 
+    ggplot(aes(x = Date,  y = Deaths)) + 
+    geom_point() +
+    geom_line() +
+    ggtitle("US COVID-19 Deaths")
+dev.off()
+```
+
+
+
+# Inserting Images
+
+
+![US COVID-19 Deaths](ts_long_joined_image.png) 
+
+
 
 
 
