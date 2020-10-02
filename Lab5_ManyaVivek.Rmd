@@ -244,7 +244,7 @@ time_series_long_confirmed_US <- time_series_long_confirmed_US %>%
   filter(!is.na(Province_State))
 ```
 
-```{r, fig.height= 25, fig.width = 10}
+```{r, fig.height= 40, fig.width = 10}
     ggplot(data = time_series_long_confirmed_US, mapping = aes(x = Date, y = Confirmed)) +
     geom_point() +
     geom_line() +
