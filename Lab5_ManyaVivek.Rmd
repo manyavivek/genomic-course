@@ -238,22 +238,16 @@ ggtitle("The Top 10 Countries by Total Deaths") +
 ```
 
 ## Exercise 9 
-```{r}
-time_series_long_confirmed_US <- time_series_long_confirmed_US %>% 
-  count(Province_State, Date, Confirmed) %>% 
-  filter(!is.na(Province_State))
-```
+
 
 ```{r, fig.height= 40, fig.width = 10}
-    ggplot(data = time_series_long_confirmed_US, mapping = aes(x = Date, y = Confirmed)) +
+time_series_joined_US %>% 
+    ggplot(aes(x = Date, y = Confirmed), size = 0.5) +
     geom_point() +
-    geom_line() +
     facet_wrap(~Province_State, ncol= 4) +
       labs(title = "Confirmed Cases for all US states and territories",
         x = "Date",
-        y = "Confirmed Cases") +
-    theme_bw() +
-    theme(text=element_text(size = 16))
+        y = "Confirmed Cases") 
 ``` 
 
 # Exercise 10: 
