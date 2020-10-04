@@ -58,7 +58,7 @@ ggplot(daily_report, aes(x = Long, y = Lat, size = Confirmed)) +
                         breaks=mybreaks, labels = c("1-99",
                         "100-999", "1,000-9,999", "10,000-99,999", "100,000-999,999", "1,000,000-9,999,999")) +
     scale_color_viridis_c(option="viridis",name="Cases",
-                        trans="log", breaks=mybreaks, labels = c("1-99",
+                        breaks=mybreaks, labels = c("1-99",
                         "100-999", "1,000-9,999", "10,000-99,999", "100,000-999,999","1,000,000-9,999,999"))  +
 # Cleaning up the graph
   
@@ -141,5 +141,5 @@ ggplotly(
 )
 ```
 
-
+# Exercise 5 
 
