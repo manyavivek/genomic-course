@@ -15,19 +15,21 @@ library(wesanderson)
 ```
 
 ```{r}
-daily_report <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
-  rename(Long = "Long_") 
-    
-ggplot(daily_report, aes(x = Long, y = Lat, size = Confirmed/1000)) +
-    borders("world", colour = NA, fill = "grey90") +
-    theme_bw() +
-    geom_point(shape = 21, color='purple', fill='purple', alpha = 0.5) +
-    labs(title = 'World COVID-19 Confirmed cases',x = '', y = '',
-        size="Cases (x1000000))") +
-    theme(legend.position = "right") +
-    coord_fixed(ratio=1.5)
-
+daily_report_global <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
+  rename(Long = "Long_") %>% 
+  filter(Lat != "NA") %>% 
+  filter(Long != "NA")
 ```
+```{r, fig.height = 20, fig.width= 20}
+ggplot(data = daily_report_global, mapping = aes(x = Long, y = Lat, size = Confirmed)) +
+  borders("world", color = NA, fill = "grey90") +
+  theme_bw() +
+  geom_point(shape = 21, color='purple', fill='purple', alpha = 0.5) +
+  labs(title = 'World COVID-19 Confirmed cases',x = '', y = '', size="Cases (x1000))") +
+  theme(legend.position = "right") +
+  coord_fixed(ratio=1.5)
+```
+
 ```{r}
 daily_report <-   read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
   rename(Long = "Long_") %>% 
@@ -52,7 +54,7 @@ mybreaks <- c(1, 100, 1000, 10000, 100000, 1000000)
 ggplot(daily_report, aes(x = Long, y = Lat, size = Confirmed)) +
     borders("state", colour = "white", fill = "grey90") +
     geom_point(aes(x=Long, y=Lat, size=Confirmed, color=Confirmed),stroke=F, alpha=0.7) +
-    scale_size_continuous(name="Cases", trans="log", range=c(16), 
+    scale_size_continuous(name="Cases", range=c(1,9), 
                         breaks=mybreaks, labels = c("1-99",
                         "100-999", "1,000-9,999", "10,000-99,999", "100,000-999,999", "1,000,000-9,999,999")) +
     scale_color_viridis_c(option="viridis",name="Cases",
@@ -77,7 +79,7 @@ ggplot(daily_report, aes(x = Long, y = Lat, size = Confirmed)) +
 library(RColorBrewer)
 ```
 
-```{r, fig.height= 10, fig.width = 10}
+```{r}
 report_9_26_2020 <-   read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>%
   rename(Long = "Long_") %>% 
   unite(Key, Admin2, Province_State, sep = ".") %>% 
@@ -93,15 +95,12 @@ ggplot(data = us, mapping = aes(x = long, y = lat, group = group)) +
   geom_polygon(data = state_join, aes(fill = Confirmed)) +
   scale_fill_gradientn(colors = brewer.pal(n = 7, name = "OrRd"),
                        breaks = c(1, 10, 100, 1000, 10000, 100000, 1000000),
-                       trans = "log10", na.value = "White") +
+                       na.value = "White") +
   ggtitle("Number of Confirmed Cases by US County") +
   theme_bw() 
 ```
 
-
-
-
-```{r}
+```{r echo=FALSE}
 daily_report <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
   rename(Long = "Long_") %>% 
   filter(Province_State == "Texas") %>% 
@@ -123,8 +122,6 @@ ggplot(data = tx_county, mapping = aes(x = long, y = lat, group = group)) +
     labs(title = "COVID-19 Confirmed Cases in Texas'")
 ```
 
-
-
 ```{r}
 library(plotly)
 ggplotly(
@@ -133,7 +130,7 @@ ggplotly(
 # Add data layer
   geom_polygon(data = state_join, aes(fill = Confirmed), color = "black") +
     scale_fill_gradientn(colours = 
-                         wes_palette("Zissou1", 100, type = "continuous")) +
+                         wes_palette("Rushmore1", 100, type = "continuous")) +
   ggtitle("COVID-19 Cases in Texas") +
 # Cleaning up the graph
   labs(x=NULL, y=NULL) +
@@ -143,4 +140,6 @@ ggplotly(
   theme(axis.text = element_blank())
 )
 ```
+
+
 
