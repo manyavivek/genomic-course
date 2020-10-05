@@ -143,3 +143,4 @@ ggplotly(
 
 # Exercise 5 
 
+* [EXERCISE 5](Exercise5.html)

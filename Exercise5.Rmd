@@ -1,0 +1,83 @@
+---
+title: "Exercise5"
+author: "Manya Vivek"
+date: "10/3/2020"
+output: html_document
+---
+```{r echo= FALSE, results= FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(maps)
+library(mapdata)
+library(lubridate)
+library(viridis)
+library(wesanderson)
+library(plotly)
+library(ggplot2)
+```
+
+```{r echo=FALSE, results= FALSE, warning=FALSE, message=FALSE}
+daily_report <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
+  rename(Long = "Long_") %>% 
+  group_by(Country_Region) %>% 
+  summarize(Confirmed = sum(Confirmed), Deaths = sum(Deaths))
+```
+
+```{r echo=FALSE, results= FALSE, warning=FALSE, message=FALSE}
+world <- as_tibble(map_data("world")) %>% 
+ mutate(region = str_replace_all(region, c("USA" = "US", "Czech Republic" = "Czechia",  
+        "Ivory Coast" = "Cote d'Ivoire", "Democratic Republic of the Congo" = "Congo (Kinshasa)", 
+        "Republic of Congo" = "Congo (Brazzaville)")))
+```
+
+```{r echo=FALSE, results= FALSE, warning=FALSE, message=FALSE}
+setdiff(world$region, daily_report$Country_Region) 
+```
+
+```{r echo=FALSE, results= FALSE, warning=FALSE, message=FALSE}
+country_join <- left_join(world, daily_report, by = c("region" = "Country_Region"))
+```
+
+# Covid-19 confirmed cases and deaths
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height = 8, fig.width = 10}
+ggplotly(
+ggplot(data = world, mapping = aes(x = long, y = lat, text = region, group = group)) + 
+  coord_fixed(1.3) + 
+  geom_polygon(data = country_join, aes(fill = Deaths), color = "black") +
+  scale_fill_gradientn(colours = 
+                         wes_palette("Zissou1", 100, type = "continuous")) +
+  labs(title = "COVID-19 Deaths")
+)
+```
+
+```{r echo= FALSE, warning= FALSE, message=FALSE, fig.height = 8, fig.width = 10}
+ggplotly(
+ggplot(data = world, mapping = aes(x = long, y = lat, text = region, group = group)) + 
+  coord_fixed(1.3) + 
+  geom_polygon(data = country_join, aes(fill = Confirmed), color = "black") +
+  scale_fill_gradientn(colours = 
+                         wes_palette("Zissou1", 100, type = "continuous")) +
+  labs(title = "COVID-19 Confirmed Cases")
+)
+```
+
+# Covid 19 - Affected Areas 
+
+```{r echo=FALSE, results= FALSE, warning=FALSE, message=FALSE}
+daily_report_global <- read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv")) %>% 
+  rename(Long = "Long_") %>% 
+  filter(Lat != "NA") %>% 
+  filter(Long != "NA")
+```
+
+```{r echo=FALSE, results= FALSE,warning=FALSE, message=FALSE, fig.height = 8, fig.width = 10}
+ggplot(data = daily_report_global, mapping = aes(x = Long, y = Lat, size = Confirmed)) +
+  borders("world", color = NA, fill = "black") +
+  theme_bw() +
+  geom_point(shape = 21, color='red', fill='red', alpha = 0.5) +
+  labs(title = 'World COVID-19 Confirmed cases',x = '', y = '', size="Cases (x1000))") +
+  theme(legend.position = "right") +
+  coord_fixed(ratio=1.5)
+```
+
+
+
