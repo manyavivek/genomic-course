@@ -1,0 +1,11 @@
+---
+title: "reference"
+author: "Manya Vivek"
+date: "10/10/2020"
+output: html_document
+bibliography: reference.bib
+---
+
+Application written in R [@RCoreTeam] using the data from JHU [@GitHub].
+
+# REFERENCES

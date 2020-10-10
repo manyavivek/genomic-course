@@ -3,6 +3,7 @@ title: "Exercise5"
 author: "Manya Vivek"
 date: "10/3/2020"
 output: html_document
+bibliography: reference.bib
 ---
 ```{r echo= FALSE, results= FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -117,3 +118,7 @@ ggplot(data = us, mapping = aes(x = long, y = lat, text = region, group = group)
 ```
 
 
+
+Created using the data from JHU [@GitHub].
+
+# REFERENCES
