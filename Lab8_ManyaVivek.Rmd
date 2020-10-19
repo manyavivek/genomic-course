@@ -78,8 +78,54 @@ p + geom_tippoint(shape = "diamond", color = "purple") + geom_tiplab(color = "pu
 
 # Tree annotation
 
+```{r}
+ggtree(tree) + geom_text(aes(label=node), hjust=-.1)
+```
+```{r}
+ggtree(tree) + geom_tiplab()
+```
+
+# Labelling Clades
 
 
+```{r}
+ggtree(tree) + 
+  geom_cladelabel(node=17, label="Random", color="red", offset =.8, align = TRUE)+
+  geom_cladelabel(node=21, label="Different", 
+                  color="blue", offset=.8, align = TRUE) +
+ theme_tree2() + 
+  xlim(0, 70) 
+```
+
+### removing x-axis scale 
+```{r}
+ggtree(tree) + 
+  geom_cladelabel(node=17, label="Random", color="red", offset =.8, align = TRUE)+
+  geom_cladelabel(node=21, label="Different", 
+                  color="blue", offset=.8, align = TRUE) +
+ theme_tree2() + 
+  xlim(0, 70) + 
+  theme_tree()
+```
+
+###  highlight the entire clade 
+```{r}
+ggtree(tree) + 
+  geom_tiplab() + 
+  geom_hilight(node=17, fill="gold") + 
+  geom_hilight(node=21, fill="purple")
+```
+
+# Connecting Taxa 
+#### (use geom_taxalink())
+```{r}
+ggtree(tree) + 
+  geom_tiplab() + 
+  geom_taxalink("E", "H", color="blue3") +
+  geom_taxalink("C", "G", color="orange2", curvature=-.9)
+```
+
+## Exercise 3
 
 
 
