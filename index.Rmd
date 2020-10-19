@@ -41,6 +41,8 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 6. 
 * [Lab6 - Data Maps and Interactive Graphs from the COVID-19 reporting data](Lab6_ManyaVivek.html)
 
+7. 
+* [Lab 7 - RNA-Seq workflow: gene-level exploratory analysis and differential expression](Lab7_ManyaVivek.html)
 
 
 
