@@ -3,9 +3,6 @@ title: "Index"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amherst. This page is for my Evolutionary Genomics and Bininformatics lab. 
 
@@ -44,7 +41,8 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 7. 
 * [Lab 7 - RNA-Seq workflow: gene-level exploratory analysis and differential expression](Lab7_ManyaVivek.html)
 
-
+8. 
+* [Lab 8 - Sequence Alignment, Phylogenetic Analysis and Tree Visualization](Lab8_ManyaVivek.html)
 
 
 

@@ -1,0 +1,85 @@
+---
+title: "Lab8"
+author: "Manya Vivek"
+date: "10/19/2020"
+output: html_document
+---
+# Basic trees
+
+```{r}
+library(tidyverse)
+library(ggtree)
+```
+
+```{r}
+tree <- read.tree(url("https://raw.githubusercontent.com/GuangchuangYu/treedata-workshop/master/_data/tree_newick.nwk"))
+tree
+```
+
+```{r}
+ggplot(tree) + geom_tree() + theme_tree()
+```
+
+```{r}
+ggtree(tree)
+```
+
+```{r}
+# adding a scale
+```
+
+
+```{r}
+ggtree(tree) + geom_treescale()
+```
+```{r}
+ggtree(tree) + theme_tree2()
+```
+```{r}
+ggtree(tree, branch.length="none")
+```
+```{r}
+ggtree(tree, branch.length="none", color="blue", size=2, linetype=3)
+```
+
+
+## Exercise 1 
+```{r}
+ggtree(tree, layout = "slanted")
+```
+
+```{r}
+ggtree(tree, layout = "circular")
+```
+
+```{r}
+ggtree(tree, branch.length="none", color="red", size=2, linetype=1)
+```
+
+#-----------------------------------------------------------------------------------------------
+
+### Other tree genomes 
+
+```{r}
+# create the basic plot
+p <- ggtree(tree)
+```
+
+##### Node points, tip points and tiplab 
+```{r}
+p + geom_nodepoint() + geom_tippoint() + geom_tiplab()
+```
+
+## Exercise 2 
+
+```{r}
+p + geom_tippoint(shape = "diamond", color = "purple") + geom_tiplab(color = "purple") + geom_nodepoint(color = "yellow", alpha = 0.5, size = 3)
+```
+
+# Tree annotation
+
+
+
+
+
+
