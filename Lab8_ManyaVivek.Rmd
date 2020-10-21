@@ -116,6 +116,12 @@ ggtree(tree) +
   geom_hilight(node=21, fill="purple")
 ```
 
+```{r}
+ggtree(tree) + geom_tiplab()
+MRCA(tree, c("C", "E"))
+MRCA(tree, c("G", "H"))
+```
+
 # Connecting Taxa 
 #### (use geom_taxalink())
 ```{r}
@@ -126,6 +132,38 @@ ggtree(tree) +
 ```
 
 ## Exercise 3
+
+```{r}
+ggtree(tree) + geom_text(aes(label=node), hjust=-.3)
+```
+
+
+
+```{r}
+ggtree(tree) 
+MRCA(tree, c("B", "C"))
+MRCA(tree, c("L", "J"))
+```
+
+```{r}
+ggtree(tree) + 
+  geom_tiplab() +
+  geom_hilight(node=19, fill="sky blue") + 
+  geom_hilight(node=23, fill="lavender") + 
+  geom_taxalink("C", "E", linetype = 2) +
+  geom_taxalink("G", "J", linetype = 2) + 
+  theme_tree2() + 
+  ggtitle("Practice Phylogenetic tree")
+```
+
+```{r}
+  ggtree(tree, layout = "circular") +
+  geom_tiplab() +
+  geom_hilight(node=19, fill="sky blue") + 
+  geom_hilight(node=23, fill="lavender") + 
+  theme_tree2() + 
+  ggtitle("Practice Phylogenetic circular tree") 
+```
 
 
 
