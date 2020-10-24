@@ -376,63 +376,86 @@ sum(!is.na(res$pvalue))
 ```
 
 ## -----------------------------------------------------------------------------
-sum(res$padj < 0.1, na.rm=TRUE)
 
-## -----------------------------------------------------------------------------
+```{r}
+sum(res$padj < 0.1, na.rm=TRUE)
+```
+
+
+```{r}
 resSig <- subset(res, padj < 0.1)
 head(resSig[ order(resSig$log2FoldChange), ])
+```
 
-## -----------------------------------------------------------------------------
+```{r}
 head(resSig[ order(resSig$log2FoldChange, decreasing = TRUE), ])
+```
 
-## ----plotcounts---------------------------------------------------------------
+
+## plotcounts
+```{r}
 topGene <- rownames(res)[which.min(res$padj)]
 plotCounts(dds, gene = topGene, intgroup=c("dex"))
+```
 
-## ----ggplotcountsjitter, fig.width = 4, fig.height = 3------------------------
+## ggplotcountsjitter
+```{r, fig.width = 4, fig.height = 3}
 library("ggbeeswarm")
 geneCounts <- plotCounts(dds, gene = topGene, intgroup = c("dex","cell"),
                          returnData = TRUE)
 ggplot(geneCounts, aes(x = dex, y = count, color = cell)) +
   scale_y_log10() +  geom_beeswarm(cex = 3)
+```
 
-## ----ggplotcountsgroup, fig.width = 4, fig.height = 3-------------------------
+## ggplotcountsgroup
+```{r, fig.width = 4, fig.height = 3}
 ggplot(geneCounts, aes(x = dex, y = count, color = cell, group = cell)) +
   scale_y_log10() + geom_point(size = 3) + geom_line()
+```
 
 ## ----plotma-------------------------------------------------------------------
+```{r}
 library("apeglm")
 resultsNames(dds)
 res <- lfcShrink(dds, coef="dex_trt_vs_untrt", type="apeglm")
 plotMA(res, ylim = c(-5, 5))
+```
 
 ## ----plotmaNoShr--------------------------------------------------------------
+```{r}
 res.noshr <- results(dds, name="dex_trt_vs_untrt")
 plotMA(res.noshr, ylim = c(-5, 5))
-
+```
 ## ----plotmalabel--------------------------------------------------------------
+```{r}
 plotMA(res, ylim = c(-5,5))
 topGene <- rownames(res)[which.min(res$padj)]
 with(res[topGene, ], {
   points(baseMean, log2FoldChange, col="dodgerblue", cex=2, lwd=2)
   text(baseMean, log2FoldChange, topGene, pos=2, col="dodgerblue")
 })
+```
 
 ## ----histpvalue2--------------------------------------------------------------
+```{r}
 hist(res$pvalue[res$baseMean > 1], breaks = 0:20/20,
      col = "grey50", border = "white")
-
+```
 ## -----------------------------------------------------------------------------
+```{r}
 library("genefilter")
 topVarGenes <- head(order(rowVars(assay(vsd)), decreasing = TRUE), 20)
+```
 
 ## ----genescluster-------------------------------------------------------------
+```{r}
 mat  <- assay(vsd)[ topVarGenes, ]
 mat  <- mat - rowMeans(mat)
 anno <- as.data.frame(colData(vsd)[, c("cell","dex")])
 pheatmap(mat, annotation_col = anno)
+```
 
-## ----sensitivityovermean, fig.width=6-----------------------------------------
+```{r, sensitivityovermean, fig.width=6} 
 qs <- c(0, quantile(resLFC1$baseMean[resLFC1$baseMean > 0], 0:6/6))
 bins <- cut(resLFC1$baseMean, qs)
 levels(bins) <- paste0("~", round(signif((qs[-1] + qs[-length(qs)])/2, 2)))
@@ -440,19 +463,22 @@ fractionSig <- tapply(resLFC1$pvalue, bins, function(p)
                           mean(p < .05, na.rm = TRUE))
 barplot(fractionSig, xlab = "mean normalized count",
                      ylab = "fraction of small p values")
+```
 
 ## ---- eval=FALSE--------------------------------------------------------------
-#  library("IHW")
-#  res.ihw <- results(dds, filterFun=ihw)
 
 ## -----------------------------------------------------------------------------
+```{r}
 library("AnnotationDbi")
 library("org.Hs.eg.db")
-
+```
 ## -----------------------------------------------------------------------------
+```{r}
 columns(org.Hs.eg.db)
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 ens.str <- substr(rownames(res), 1, 15)
 res$symbol <- mapIds(org.Hs.eg.db,
                      keys=ens.str,
@@ -464,46 +490,59 @@ res$entrez <- mapIds(org.Hs.eg.db,
                      column="ENTREZID",
                      keytype="ENSEMBL",
                      multiVals="first")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 resOrdered <- res[order(res$pvalue),]
 head(resOrdered)
+```
 
-## ----eval=FALSE---------------------------------------------------------------
-#  resOrderedDF <- as.data.frame(resOrdered)[1:100, ]
-#  write.csv(resOrderedDF, file = "results.csv")
-
-## ----eval=FALSE---------------------------------------------------------------
-#  library("ReportingTools")
-#  htmlRep <- HTMLReport(shortName="report", title="My report",
-#                        reportDirectory="./report")
-#  publish(resOrderedDF, htmlRep)
-#  url <- finish(htmlRep)
-#  browseURL(url)
+```{r, eval=FALSE}
+resOrderedDF <- as.data.frame(resOrdered)[1:100, ]
+write.csv(resOrderedDF, file = "results.csv")
+```
+## -------------------------------------------------------------------
+```{r eval=FALSE}
+library("ReportingTools")
+htmlRep <- HTMLReport(shortName="report", title="My report",                      reportDirectory="./report")
+publish(resOrderedDF, htmlRep)
+url <- finish(htmlRep)
+browseURL(url)
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 resGR <- lfcShrink(dds, coef="dex_trt_vs_untrt", type="apeglm", format="GRanges")
 resGR
-
+```
 ## -----------------------------------------------------------------------------
+```{r}
 ens.str <- substr(names(resGR), 1, 15)
 resGR$symbol <- mapIds(org.Hs.eg.db, ens.str, "SYMBOL", "ENSEMBL")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 library("Gviz")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 window <- resGR[topGene] + 1e6
 strand(window) <- "*"
 resGRsub <- resGR[resGR %over% window]
 naOrDup <- is.na(resGRsub$symbol) | duplicated(resGRsub$symbol)
 resGRsub$group <- ifelse(naOrDup, names(resGRsub), resGRsub$symbol)
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 status <- factor(ifelse(resGRsub$padj < 0.05 & !is.na(resGRsub$padj),
                         "sig", "notsig"))
-
+```
 ## ----gvizplot-----------------------------------------------------------------
+```{r}
 options(ucscChromosomeNames = FALSE)
 g <- GenomeAxisTrack()
 a <- AnnotationTrack(resGRsub, name = "gene ranges", feature = status)
@@ -511,11 +550,15 @@ d <- DataTrack(resGRsub, data = "log2FoldChange", baseline = 0,
                type = "h", name = "log2 fold change", strand = "+")
 plotTracks(list(g, d, a), groupAnnotation = "group",
            notsig = "grey", sig = "hotpink")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 library("sva")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 dat  <- counts(dds, normalized = TRUE)
 idx  <- rowMeans(dat) > 1
 dat  <- dat[idx, ]
@@ -523,24 +566,30 @@ mod  <- model.matrix(~ dex, colData(dds))
 mod0 <- model.matrix(~   1, colData(dds))
 svseq <- svaseq(dat, mod, mod0, n.sv = 2)
 svseq$sv
+```
 
 ## ----svaplot------------------------------------------------------------------
+```{r}
 par(mfrow = c(2, 1), mar = c(3,5,3,1))
 for (i in 1:2) {
   stripchart(svseq$sv[, i] ~ dds$cell, vertical = TRUE, main = paste0("SV", i))
   abline(h = 0)
  }
-
+```
 ## -----------------------------------------------------------------------------
+```{r}
 ddssva <- dds
 ddssva$SV1 <- svseq$sv[,1]
 ddssva$SV2 <- svseq$sv[,2]
 design(ddssva) <- ~ SV1 + SV2 + dex
-
+```
 ## -----------------------------------------------------------------------------
+```{r}
 library("RUVSeq")
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 set <- newSeqExpressionSet(counts(dds))
 idx  <- rowSums(counts(set) > 5) >= 2
 set  <- set[idx, ]
@@ -549,32 +598,42 @@ not.sig <- rownames(res)[which(res$pvalue > .1)]
 empirical <- rownames(set)[ rownames(set) %in% not.sig ]
 set <- RUVg(set, empirical, k=2)
 pData(set)
+```
 
 ## ----ruvplot------------------------------------------------------------------
+```{r}
 par(mfrow = c(2, 1), mar = c(3,5,3,1))
 for (i in 1:2) {
   stripchart(pData(set)[, i] ~ dds$cell, vertical = TRUE, main = paste0("W", i))
   abline(h = 0)
- }
+}
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 ddsruv <- dds
 ddsruv$W1 <- set$W_1
 ddsruv$W2 <- set$W_2
 design(ddsruv) <- ~ W1 + W2 + dex
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 library("fission")
 data("fission")
 ddsTC <- DESeqDataSet(fission, ~ strain + minute + strain:minute)
+```
 
 ## ----fissionDE----------------------------------------------------------------
+```{r}
 ddsTC <- DESeq(ddsTC, test="LRT", reduced = ~ strain + minute)
 resTC <- results(ddsTC)
 resTC$symbol <- mcols(ddsTC)$symbol
 head(resTC[order(resTC$padj),], 4)
+```
 
-## ----fissioncounts, fig.width=6, fig.height=4.5-------------------------------
+## ----fissioncounts, 
+```{r, fig.width=6, fig.height=4.5}
 fiss <- plotCounts(ddsTC, which.min(resTC$padj), 
                    intgroup = c("minute","strain"), returnData = TRUE)
 fiss$minute <- as.numeric(as.character(fiss$minute))
@@ -582,17 +641,22 @@ ggplot(fiss,
   aes(x = minute, y = count, color = strain, group = strain)) + 
   geom_point() + stat_summary(fun.y=mean, geom="line") +
   scale_y_log10()
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 resultsNames(ddsTC)
 res30 <- results(ddsTC, name="strainmut.minute30", test="Wald")
 res30[which.min(resTC$padj),]
-
+``` 
 ## -----------------------------------------------------------------------------
+```{r}
 betas <- coef(ddsTC)
 colnames(betas)
+```
 
 ## ----fissionheatmap-----------------------------------------------------------
+```{r}
 topGenes <- head(order(resTC$padj),20)
 mat <- betas[topGenes, -c(1,2)]
 thr <- 3 
@@ -600,6 +664,9 @@ mat[mat < -thr] <- -thr
 mat[mat > thr] <- thr
 pheatmap(mat, breaks=seq(from=-thr, to=thr, length=101),
          cluster_col=FALSE)
+```
 
 ## -----------------------------------------------------------------------------
+```{r}
 sessionInfo()
+```
