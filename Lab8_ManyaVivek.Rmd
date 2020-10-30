@@ -4,15 +4,18 @@ author: "Manya Vivek"
 date: "10/19/2020"
 output: html_document
 ---
-# Basic trees
 
+
+# Exercise 2
 ```{r}
 library(tidyverse)
 library(ggtree)
+library(treeio)
+library(ggimage)
 ```
 
 ```{r}
-tree <- read.tree(url("https://raw.githubusercontent.com/GuangchuangYu/treedata-workshop/master/_data/tree_newick.nwk"))
+tree <- read.tree("data/tree_newick.nwk")
 tree
 ```
 
@@ -24,11 +27,7 @@ ggplot(tree) + geom_tree() + theme_tree()
 ggtree(tree)
 ```
 
-```{r}
 # adding a scale
-```
-
-
 ```{r}
 ggtree(tree) + geom_treescale()
 ```
@@ -164,6 +163,66 @@ ggtree(tree) +
   theme_tree2() + 
   ggtitle("Practice Phylogenetic circular tree") 
 ```
+
+
+### Read the data
+```{r}
+tree <- read.beast("data/flu_tree_beast.tree")
+tree
+```
+### Scale Bar
+```{r}
+ggtree(tree, mrsd="2013-01-01") + 
+  theme_tree2() 
+```
+
+### Finally, add tip labels and adjust axis
+```{r, fig.height = 15, fig.width = 10}
+ggtree(tree, mrsd="2013-01-01") + 
+  theme_tree2() + 
+  geom_tiplab(align=TRUE, linesize=.5) + 
+  xlim(1990, 2020)
+```
+
+```{r, fig.height = 15, fig.width = 10}
+msaplot(p=ggtree(tree), fasta="data/flu_aasequence.fasta", window=c(150, 175))
+```
+```{r}
+set.seed(42)
+trees <- lapply(rep(c(10, 25, 50, 100), 3), rtree)
+class(trees) <- "multiPhylo"
+ggtree(trees) + facet_wrap(~.id, scale="free", ncol=4) + ggtitle("Phylogenetic trees")
+```
+```{r}
+tree <- rtree(30)
+p <- ggtree(tree)
+d1 <- data.frame(id=tree$tip.label, val=rnorm(30, sd=3))
+p2 <- facet_plot(p, panel="dot", data=d1, geom=geom_point, aes(x=val), color='red3')
+d2 <- data.frame(id=tree$tip.label, value = abs(rnorm(30, mean=100, sd=50)))
+p3 <- facet_plot(p2, panel='bar', data=d2, geom=geom_segment, 
+           aes(x=0, xend=value, y=y, yend=y), size=3, color='blue4') 
+p3 + theme_tree2()
+```
+
+```{r}
+
+newick <- "((Pongo_abelii,(Gorilla_gorilla_gorilla,(Pan_paniscus,Pan_troglodytes)Pan,Homo_sapiens)Homininae)Hominidae,Nomascus_leucogenys)Hominoidea;"
+
+tree <- read.tree(text=newick)
+
+d <- ggimage::phylopic_uid(tree$tip.label)
+d$body_mass = c(52, 114, 47, 45, 58, 6)
+
+p <- ggtree(tree) %<+% d + 
+  geom_tiplab(aes(image=uid, colour=body_mass), geom="phylopic", offset=2.5) +
+  geom_tiplab(aes(label=label), offset = .2) + xlim(NA, 7) +
+  scale_color_viridis_c()
+p  
+
+```
+
+
+
 
 
 
