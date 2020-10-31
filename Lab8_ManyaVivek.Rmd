@@ -12,6 +12,7 @@ library(ggimage)
 ```
 
 # Exercise 2 
+
 [TOL_output.mafft](data/TOL_output.mafft)
 
 ```{r}
@@ -21,9 +22,7 @@ tt
 ```{r, fig.height = 15, fig.width = 20}
 ggtree(tt) + geom_tiplab()
 ```
-```{r}
 
-```
 
 
 # Exercise 3
