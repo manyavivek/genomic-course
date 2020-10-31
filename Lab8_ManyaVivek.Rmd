@@ -4,9 +4,29 @@ author: "Manya Vivek"
 date: "10/19/2020"
 output: html_document
 ---
+```{r}
+library(tidyverse)
+library(ggtree)
+library(treeio)
+library(ggimage)
+```
+
+# Exercise 2 
+[TOL_output.mafft](data/TOL_output.mafft)
+
+```{r}
+tt <- read.tree("data/fastree_result.tre")
+tt
+```
+```{r, fig.height = 15, fig.width = 20}
+ggtree(tt) + geom_tiplab()
+```
+```{r}
+
+```
 
 
-# Exercise 2
+# Exercise 3
 ```{r}
 library(tidyverse)
 library(ggtree)
