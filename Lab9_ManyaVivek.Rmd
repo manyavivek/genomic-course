@@ -1,0 +1,173 @@
+---
+title: "Lab 9"
+author: "Manya Vivek"
+date: "10/26/2020"
+output: html_document
+---
+
+# 14.3.1 BASIC MATCHES
+```{r}
+library(stringr)
+library(tidyverse)
+```
+
+```{r}
+x <- c("apple", "banana", "pear")
+str_view(x, "an")
+```
+
+
+```{r}
+# the dot mataches any character
+str_view(x, ".a.")
+str_view(x, "..a")
+```
+
+
+```{r}
+# how do you match the character “.”? 
+# To create the regular expression, we need \\
+dot <- "\\."
+
+# But the expression itself only contains one:
+writeLines(dot)
+```
+
+```{r}
+# And this tells R to look for an explicit .
+x <- c("abc", "a.c", "bef")
+str_view(x, "a\\.c")
+
+```
+
+```{r}
+y <- c("ab.cd", "b.c", "c.def")
+str_view(y, "b\\.c")
+```
+
+```{r}
+# to create regular expression "\", we need the string "\\" 
+dot <- "\\"
+writeLines(dot)
+```
+
+```{r}
+# to create regular expression "\", we need the string "\\" 
+dot <- "\\."
+writeLines(dot)
+```
+```{r}
+x <- c("abc", "a.c", "bef")
+str_view(x, "a.c")
+```
+\\
+```{r}
+x <- c("abc", "a.c", "bef")
+str_view(x, "a\\.c")
+```
+
+```{r}
+# to create the regular expression "\" we need the string "\\".
+x <- "a\\b"
+writeLines(x)
+```
+
+```{r}
+str_view(x, "\\\\")
+```
+
+
+### 14.3.1 Exercises
+
+1. i. "\\" -> escape a character or symbol in strings. 
+  ii. "\\\\" -> Unrecognized backslash escape sequence in pattern
+  iii. "\\\\\\\" -> escape the next character. 
+
+2. 
+```{r}
+x <- "\"'\\"
+writeLines(x)
+```
+
+```{r}
+x <- ("\"'\\")
+str_view(x, "\"'\\\\")
+```
+
+
+3. 
+```{r}
+# "\." matches a dot and "." matches any character
+y <- (".l.o.l")
+str_view(y , "\\..\\..\\..")
+```
+
+# 14.3.2 ANCHORS
+
+```{r}
+# "^" to match the start of the string.
+# $ to match the end of the string.
+x <- c("apple", "mango", "banana", "avacado")
+str_view(x, "^a")
+str_view(x, "a$")
+```
+
+```{r}
+x <- c("apple", "banana", "pear")
+str_view(x, "^a")
+```
+
+```{r}
+x <- c("apple pie", "apple", "apple cake", "green apple")
+str_view(x, "apple")
+```
+```{r}
+# To force a regular expression to only match a complete string, anchor it with both "^" and "$"
+str_view(x, "^apple$")
+```
+
+### 14.3.2 Exercises
+
+1. 
+```{r}
+str_view(c("$^$", "abc$^$abc"), "^\\$\\^\\$$")
+```
+2. 
+(i)
+```{r}
+x <- c("yell","youth","fax","tax")
+str_view(x, "^y")
+```
+```{r}
+str_view(stringr::words, "^y", match = TRUE)
+```
+
+(ii)
+
+```{r}
+str_view(stringr::words, "x$", match = TRUE)
+```
+
+(iii)
+```{r}
+# "." represents characters
+# only three letters therefore, both "^" and "$" needs to be used 
+str_view(stringr::words, "^...$", match = TRUE)
+```
+(iv)
+```{r}
+# seven letter or more
+str_view(stringr::words, "^.......", match = TRUE)
+```
+
+# 14.3.3 Character classes and alternatives
+
+##### * "\\d" : matches any digit.
+##### * "\\s" : matches any whitespace (e.g. space, tab, newline).
+##### * [abc] : matches a, b, or c.
+##### * [^abc] : matches anything except a, b, or c.
+
+```{r}
+
+```
+
