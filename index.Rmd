@@ -44,7 +44,10 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 8. 
 * [Lab 8 - Sequence Alignment, Phylogenetic Analysis and Tree Visualization](Lab8_ManyaVivek.html)
 
+9. 
+* [Lab 9A : Programming in R - Regular Expressions](Lab9_ManyaVivek.html)
+* [Lab 9x: Programming in R - Control Structures and Functions](Lab9x_ManyaVivek.html)
 
-
+10. 
 
 
