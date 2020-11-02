@@ -4,6 +4,16 @@ author: "Manya Vivek"
 date: "10/19/2020"
 output: html_document
 ---
+# Exercise 1 
+* Open NGPhylogeny.fr. 
+* Click on "Let's go! with One Click Workflow" 
+* Choose FASTME/OneClick in Select your workflow 
+* Either input the "tree phylogenetic tree" or copy and paste the amino acid sequence from the file downloaded. 
+* Hit submit 
+* Download output tree file 
+
+[Output Tree](data/Output_Tree.nhx)
+
 ```{r}
 library(tidyverse)
 library(ggtree)
@@ -244,8 +254,25 @@ p
 
 [Tree File](data/fastree_result.tre)
 
+```{r}
+tree <- read.tree("data/fastree_result.tre")
+tree
+```
+```{r}
+ggtree(tree) + 
+  theme_tree2() +
+    geom_tiplab() + 
+  geom_nodelab() + 
+  xlim(0,2) 
+```
 
 
-
+```{r}
+ggtree(tree, layout = "circular") + 
+  theme_tree2() +
+    geom_tiplab() + 
+  geom_nodelab() + 
+  xlim(0,36)
+```
 
 
