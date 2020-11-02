@@ -1,0 +1,77 @@
+---
+title: "Lab10"
+author: "Manya Vivek"
+date: "11/2/2020"
+output: html_document
+---
+
+* vcf meta - describing the body of the file 
+
+```{r}
+library(vcfR)
+```
+
+```{r}
+# function data loads datasets in vcfR
+data(vcfR_example)
+vcf
+```
+## Meta Region 
+* meta region contains information about the file, its creation, as well as information to interpret abbreviations used elsewhere in the file. 
+
+```{r}
+strwrap(vcf@meta[1:7])
+```
+```{r}
+# help press the data making it convinient to view. 
+queryMETA(vcf)
+```
+*  When the function queryMETA() is called with only a vcfR object as a parameter, it attempts to summarize the meta information. Not all of the information is returned. For example, ‘contig’ elements are not returned
+
+```{r}
+queryMETA(vcf, element = 'DP')
+```
+
+```{r}
+queryMETA(vcf, element = 'FORMAT=<ID=DP')
+```
+
+## Fix Region 
+
+* The fix region contains information for each variant which is sometimes summarized over all samples. 
+* CHROM and POS - indicate the location of the variant. 
+* REF and ALT - reference and alternate allelic states for a diploid sample. 
+* QUAL - quality of each variant. 
+* FILTER - whether a variant has passed some form of quality assessment.
+
+```{r, <span> }
+# CHROM, POS, ID, RED, ALT, QUAL, FILTER are variants that are similar over all samples. 
+head(getFIX(vcf))
+```
+
+## The gt region 
+* The gt (genotype) region contains information about each variant for each sample.
+
+```{r}
+vcf@gt[1:6, 1:4]
+```
+
+# vcfR
+
+```{r}
+library('vcfR')
+vcf <- read.vcfR("data/pinf_sc50.vcf.gz")
+```
+
+```{r}
+vcf
+```
+```{r}
+library(adegenet)
+```
+
+
+```{r}
+vcfR2genlight(vcf)
+```
+

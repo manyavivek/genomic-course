@@ -11,9 +11,8 @@
 
 <meta name="author" content="Manya Vivek" />
 
-<meta name="date" content="2020-10-26" />
 
-<title>Lab 9</title>
+<title>Lab10</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -248,939 +247,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-<script>(function() {
-  // If window.HTMLWidgets is already defined, then use it; otherwise create a
-  // new object. This allows preceding code to set options that affect the
-  // initialization process (though none currently exist).
-  window.HTMLWidgets = window.HTMLWidgets || {};
-
-  // See if we're running in a viewer pane. If not, we're in a web browser.
-  var viewerMode = window.HTMLWidgets.viewerMode =
-      /\bviewer_pane=1\b/.test(window.location);
-
-  // See if we're running in Shiny mode. If not, it's a static document.
-  // Note that static widgets can appear in both Shiny and static modes, but
-  // obviously, Shiny widgets can only appear in Shiny apps/documents.
-  var shinyMode = window.HTMLWidgets.shinyMode =
-      typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings;
-
-  // We can't count on jQuery being available, so we implement our own
-  // version if necessary.
-  function querySelectorAll(scope, selector) {
-    if (typeof(jQuery) !== "undefined" && scope instanceof jQuery) {
-      return scope.find(selector);
-    }
-    if (scope.querySelectorAll) {
-      return scope.querySelectorAll(selector);
-    }
-  }
-
-  function asArray(value) {
-    if (value === null)
-      return [];
-    if ($.isArray(value))
-      return value;
-    return [value];
-  }
-
-  // Implement jQuery's extend
-  function extend(target /*, ... */) {
-    if (arguments.length == 1) {
-      return target;
-    }
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var prop in source) {
-        if (source.hasOwnProperty(prop)) {
-          target[prop] = source[prop];
-        }
-      }
-    }
-    return target;
-  }
-
-  // IE8 doesn't support Array.forEach.
-  function forEach(values, callback, thisArg) {
-    if (values.forEach) {
-      values.forEach(callback, thisArg);
-    } else {
-      for (var i = 0; i < values.length; i++) {
-        callback.call(thisArg, values[i], i, values);
-      }
-    }
-  }
-
-  // Replaces the specified method with the return value of funcSource.
-  //
-  // Note that funcSource should not BE the new method, it should be a function
-  // that RETURNS the new method. funcSource receives a single argument that is
-  // the overridden method, it can be called from the new method. The overridden
-  // method can be called like a regular function, it has the target permanently
-  // bound to it so "this" will work correctly.
-  function overrideMethod(target, methodName, funcSource) {
-    var superFunc = target[methodName] || function() {};
-    var superFuncBound = function() {
-      return superFunc.apply(target, arguments);
-    };
-    target[methodName] = funcSource(superFuncBound);
-  }
-
-  // Add a method to delegator that, when invoked, calls
-  // delegatee.methodName. If there is no such method on
-  // the delegatee, but there was one on delegator before
-  // delegateMethod was called, then the original version
-  // is invoked instead.
-  // For example:
-  //
-  // var a = {
-  //   method1: function() { console.log('a1'); }
-  //   method2: function() { console.log('a2'); }
-  // };
-  // var b = {
-  //   method1: function() { console.log('b1'); }
-  // };
-  // delegateMethod(a, b, "method1");
-  // delegateMethod(a, b, "method2");
-  // a.method1();
-  // a.method2();
-  //
-  // The output would be "b1", "a2".
-  function delegateMethod(delegator, delegatee, methodName) {
-    var inherited = delegator[methodName];
-    delegator[methodName] = function() {
-      var target = delegatee;
-      var method = delegatee[methodName];
-
-      // The method doesn't exist on the delegatee. Instead,
-      // call the method on the delegator, if it exists.
-      if (!method) {
-        target = delegator;
-        method = inherited;
-      }
-
-      if (method) {
-        return method.apply(target, arguments);
-      }
-    };
-  }
-
-  // Implement a vague facsimilie of jQuery's data method
-  function elementData(el, name, value) {
-    if (arguments.length == 2) {
-      return el["htmlwidget_data_" + name];
-    } else if (arguments.length == 3) {
-      el["htmlwidget_data_" + name] = value;
-      return el;
-    } else {
-      throw new Error("Wrong number of arguments for elementData: " +
-        arguments.length);
-    }
-  }
-
-  // http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
-  function escapeRegExp(str) {
-    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-  }
-
-  function hasClass(el, className) {
-    var re = new RegExp("\\b" + escapeRegExp(className) + "\\b");
-    return re.test(el.className);
-  }
-
-  // elements - array (or array-like object) of HTML elements
-  // className - class name to test for
-  // include - if true, only return elements with given className;
-  //   if false, only return elements *without* given className
-  function filterByClass(elements, className, include) {
-    var results = [];
-    for (var i = 0; i < elements.length; i++) {
-      if (hasClass(elements[i], className) == include)
-        results.push(elements[i]);
-    }
-    return results;
-  }
-
-  function on(obj, eventName, func) {
-    if (obj.addEventListener) {
-      obj.addEventListener(eventName, func, false);
-    } else if (obj.attachEvent) {
-      obj.attachEvent(eventName, func);
-    }
-  }
-
-  function off(obj, eventName, func) {
-    if (obj.removeEventListener)
-      obj.removeEventListener(eventName, func, false);
-    else if (obj.detachEvent) {
-      obj.detachEvent(eventName, func);
-    }
-  }
-
-  // Translate array of values to top/right/bottom/left, as usual with
-  // the "padding" CSS property
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/padding
-  function unpackPadding(value) {
-    if (typeof(value) === "number")
-      value = [value];
-    if (value.length === 1) {
-      return {top: value[0], right: value[0], bottom: value[0], left: value[0]};
-    }
-    if (value.length === 2) {
-      return {top: value[0], right: value[1], bottom: value[0], left: value[1]};
-    }
-    if (value.length === 3) {
-      return {top: value[0], right: value[1], bottom: value[2], left: value[1]};
-    }
-    if (value.length === 4) {
-      return {top: value[0], right: value[1], bottom: value[2], left: value[3]};
-    }
-  }
-
-  // Convert an unpacked padding object to a CSS value
-  function paddingToCss(paddingObj) {
-    return paddingObj.top + "px " + paddingObj.right + "px " + paddingObj.bottom + "px " + paddingObj.left + "px";
-  }
-
-  // Makes a number suitable for CSS
-  function px(x) {
-    if (typeof(x) === "number")
-      return x + "px";
-    else
-      return x;
-  }
-
-  // Retrieves runtime widget sizing information for an element.
-  // The return value is either null, or an object with fill, padding,
-  // defaultWidth, defaultHeight fields.
-  function sizingPolicy(el) {
-    var sizingEl = document.querySelector("script[data-for='" + el.id + "'][type='application/htmlwidget-sizing']");
-    if (!sizingEl)
-      return null;
-    var sp = JSON.parse(sizingEl.textContent || sizingEl.text || "{}");
-    if (viewerMode) {
-      return sp.viewer;
-    } else {
-      return sp.browser;
-    }
-  }
-
-  // @param tasks Array of strings (or falsy value, in which case no-op).
-  //   Each element must be a valid JavaScript expression that yields a
-  //   function. Or, can be an array of objects with "code" and "data"
-  //   properties; in this case, the "code" property should be a string
-  //   of JS that's an expr that yields a function, and "data" should be
-  //   an object that will be added as an additional argument when that
-  //   function is called.
-  // @param target The object that will be "this" for each function
-  //   execution.
-  // @param args Array of arguments to be passed to the functions. (The
-  //   same arguments will be passed to all functions.)
-  function evalAndRun(tasks, target, args) {
-    if (tasks) {
-      forEach(tasks, function(task) {
-        var theseArgs = args;
-        if (typeof(task) === "object") {
-          theseArgs = theseArgs.concat([task.data]);
-          task = task.code;
-        }
-        var taskFunc = tryEval(task);
-        if (typeof(taskFunc) !== "function") {
-          throw new Error("Task must be a function! Source:\n" + task);
-        }
-        taskFunc.apply(target, theseArgs);
-      });
-    }
-  }
-
-  // Attempt eval() both with and without enclosing in parentheses.
-  // Note that enclosing coerces a function declaration into
-  // an expression that eval() can parse
-  // (otherwise, a SyntaxError is thrown)
-  function tryEval(code) {
-    var result = null;
-    try {
-      result = eval(code);
-    } catch(error) {
-      if (!error instanceof SyntaxError) {
-        throw error;
-      }
-      try {
-        result = eval("(" + code + ")");
-      } catch(e) {
-        if (e instanceof SyntaxError) {
-          throw error;
-        } else {
-          throw e;
-        }
-      }
-    }
-    return result;
-  }
-
-  function initSizing(el) {
-    var sizing = sizingPolicy(el);
-    if (!sizing)
-      return;
-
-    var cel = document.getElementById("htmlwidget_container");
-    if (!cel)
-      return;
-
-    if (typeof(sizing.padding) !== "undefined") {
-      document.body.style.margin = "0";
-      document.body.style.padding = paddingToCss(unpackPadding(sizing.padding));
-    }
-
-    if (sizing.fill) {
-      document.body.style.overflow = "hidden";
-      document.body.style.width = "100%";
-      document.body.style.height = "100%";
-      document.documentElement.style.width = "100%";
-      document.documentElement.style.height = "100%";
-      if (cel) {
-        cel.style.position = "absolute";
-        var pad = unpackPadding(sizing.padding);
-        cel.style.top = pad.top + "px";
-        cel.style.right = pad.right + "px";
-        cel.style.bottom = pad.bottom + "px";
-        cel.style.left = pad.left + "px";
-        el.style.width = "100%";
-        el.style.height = "100%";
-      }
-
-      return {
-        getWidth: function() { return cel.offsetWidth; },
-        getHeight: function() { return cel.offsetHeight; }
-      };
-
-    } else {
-      el.style.width = px(sizing.width);
-      el.style.height = px(sizing.height);
-
-      return {
-        getWidth: function() { return el.offsetWidth; },
-        getHeight: function() { return el.offsetHeight; }
-      };
-    }
-  }
-
-  // Default implementations for methods
-  var defaults = {
-    find: function(scope) {
-      return querySelectorAll(scope, "." + this.name);
-    },
-    renderError: function(el, err) {
-      var $el = $(el);
-
-      this.clearError(el);
-
-      // Add all these error classes, as Shiny does
-      var errClass = "shiny-output-error";
-      if (err.type !== null) {
-        // use the classes of the error condition as CSS class names
-        errClass = errClass + " " + $.map(asArray(err.type), function(type) {
-          return errClass + "-" + type;
-        }).join(" ");
-      }
-      errClass = errClass + " htmlwidgets-error";
-
-      // Is el inline or block? If inline or inline-block, just display:none it
-      // and add an inline error.
-      var display = $el.css("display");
-      $el.data("restore-display-mode", display);
-
-      if (display === "inline" || display === "inline-block") {
-        $el.hide();
-        if (err.message !== "") {
-          var errorSpan = $("<span>").addClass(errClass);
-          errorSpan.text(err.message);
-          $el.after(errorSpan);
-        }
-      } else if (display === "block") {
-        // If block, add an error just after the el, set visibility:none on the
-        // el, and position the error to be on top of the el.
-        // Mark it with a unique ID and CSS class so we can remove it later.
-        $el.css("visibility", "hidden");
-        if (err.message !== "") {
-          var errorDiv = $("<div>").addClass(errClass).css("position", "absolute")
-            .css("top", el.offsetTop)
-            .css("left", el.offsetLeft)
-            // setting width can push out the page size, forcing otherwise
-            // unnecessary scrollbars to appear and making it impossible for
-            // the element to shrink; so use max-width instead
-            .css("maxWidth", el.offsetWidth)
-            .css("height", el.offsetHeight);
-          errorDiv.text(err.message);
-          $el.after(errorDiv);
-
-          // Really dumb way to keep the size/position of the error in sync with
-          // the parent element as the window is resized or whatever.
-          var intId = setInterval(function() {
-            if (!errorDiv[0].parentElement) {
-              clearInterval(intId);
-              return;
-            }
-            errorDiv
-              .css("top", el.offsetTop)
-              .css("left", el.offsetLeft)
-              .css("maxWidth", el.offsetWidth)
-              .css("height", el.offsetHeight);
-          }, 500);
-        }
-      }
-    },
-    clearError: function(el) {
-      var $el = $(el);
-      var display = $el.data("restore-display-mode");
-      $el.data("restore-display-mode", null);
-
-      if (display === "inline" || display === "inline-block") {
-        if (display)
-          $el.css("display", display);
-        $(el.nextSibling).filter(".htmlwidgets-error").remove();
-      } else if (display === "block"){
-        $el.css("visibility", "inherit");
-        $(el.nextSibling).filter(".htmlwidgets-error").remove();
-      }
-    },
-    sizing: {}
-  };
-
-  // Called by widget bindings to register a new type of widget. The definition
-  // object can contain the following properties:
-  // - name (required) - A string indicating the binding name, which will be
-  //   used by default as the CSS classname to look for.
-  // - initialize (optional) - A function(el) that will be called once per
-  //   widget element; if a value is returned, it will be passed as the third
-  //   value to renderValue.
-  // - renderValue (required) - A function(el, data, initValue) that will be
-  //   called with data. Static contexts will cause this to be called once per
-  //   element; Shiny apps will cause this to be called multiple times per
-  //   element, as the data changes.
-  window.HTMLWidgets.widget = function(definition) {
-    if (!definition.name) {
-      throw new Error("Widget must have a name");
-    }
-    if (!definition.type) {
-      throw new Error("Widget must have a type");
-    }
-    // Currently we only support output widgets
-    if (definition.type !== "output") {
-      throw new Error("Unrecognized widget type '" + definition.type + "'");
-    }
-    // TODO: Verify that .name is a valid CSS classname
-
-    // Support new-style instance-bound definitions. Old-style class-bound
-    // definitions have one widget "object" per widget per type/class of
-    // widget; the renderValue and resize methods on such widget objects
-    // take el and instance arguments, because the widget object can't
-    // store them. New-style instance-bound definitions have one widget
-    // object per widget instance; the definition that's passed in doesn't
-    // provide renderValue or resize methods at all, just the single method
-    //   factory(el, width, height)
-    // which returns an object that has renderValue(x) and resize(w, h).
-    // This enables a far more natural programming style for the widget
-    // author, who can store per-instance state using either OO-style
-    // instance fields or functional-style closure variables (I guess this
-    // is in contrast to what can only be called C-style pseudo-OO which is
-    // what we required before).
-    if (definition.factory) {
-      definition = createLegacyDefinitionAdapter(definition);
-    }
-
-    if (!definition.renderValue) {
-      throw new Error("Widget must have a renderValue function");
-    }
-
-    // For static rendering (non-Shiny), use a simple widget registration
-    // scheme. We also use this scheme for Shiny apps/documents that also
-    // contain static widgets.
-    window.HTMLWidgets.widgets = window.HTMLWidgets.widgets || [];
-    // Merge defaults into the definition; don't mutate the original definition.
-    var staticBinding = extend({}, defaults, definition);
-    overrideMethod(staticBinding, "find", function(superfunc) {
-      return function(scope) {
-        var results = superfunc(scope);
-        // Filter out Shiny outputs, we only want the static kind
-        return filterByClass(results, "html-widget-output", false);
-      };
-    });
-    window.HTMLWidgets.widgets.push(staticBinding);
-
-    if (shinyMode) {
-      // Shiny is running. Register the definition with an output binding.
-      // The definition itself will not be the output binding, instead
-      // we will make an output binding object that delegates to the
-      // definition. This is because we foolishly used the same method
-      // name (renderValue) for htmlwidgets definition and Shiny bindings
-      // but they actually have quite different semantics (the Shiny
-      // bindings receive data that includes lots of metadata that it
-      // strips off before calling htmlwidgets renderValue). We can't
-      // just ignore the difference because in some widgets it's helpful
-      // to call this.renderValue() from inside of resize(), and if
-      // we're not delegating, then that call will go to the Shiny
-      // version instead of the htmlwidgets version.
-
-      // Merge defaults with definition, without mutating either.
-      var bindingDef = extend({}, defaults, definition);
-
-      // This object will be our actual Shiny binding.
-      var shinyBinding = new Shiny.OutputBinding();
-
-      // With a few exceptions, we'll want to simply use the bindingDef's
-      // version of methods if they are available, otherwise fall back to
-      // Shiny's defaults. NOTE: If Shiny's output bindings gain additional
-      // methods in the future, and we want them to be overrideable by
-      // HTMLWidget binding definitions, then we'll need to add them to this
-      // list.
-      delegateMethod(shinyBinding, bindingDef, "getId");
-      delegateMethod(shinyBinding, bindingDef, "onValueChange");
-      delegateMethod(shinyBinding, bindingDef, "onValueError");
-      delegateMethod(shinyBinding, bindingDef, "renderError");
-      delegateMethod(shinyBinding, bindingDef, "clearError");
-      delegateMethod(shinyBinding, bindingDef, "showProgress");
-
-      // The find, renderValue, and resize are handled differently, because we
-      // want to actually decorate the behavior of the bindingDef methods.
-
-      shinyBinding.find = function(scope) {
-        var results = bindingDef.find(scope);
-
-        // Only return elements that are Shiny outputs, not static ones
-        var dynamicResults = results.filter(".html-widget-output");
-
-        // It's possible that whatever caused Shiny to think there might be
-        // new dynamic outputs, also caused there to be new static outputs.
-        // Since there might be lots of different htmlwidgets bindings, we
-        // schedule execution for later--no need to staticRender multiple
-        // times.
-        if (results.length !== dynamicResults.length)
-          scheduleStaticRender();
-
-        return dynamicResults;
-      };
-
-      // Wrap renderValue to handle initialization, which unfortunately isn't
-      // supported natively by Shiny at the time of this writing.
-
-      shinyBinding.renderValue = function(el, data) {
-        Shiny.renderDependencies(data.deps);
-        // Resolve strings marked as javascript literals to objects
-        if (!(data.evals instanceof Array)) data.evals = [data.evals];
-        for (var i = 0; data.evals && i < data.evals.length; i++) {
-          window.HTMLWidgets.evaluateStringMember(data.x, data.evals[i]);
-        }
-        if (!bindingDef.renderOnNullValue) {
-          if (data.x === null) {
-            el.style.visibility = "hidden";
-            return;
-          } else {
-            el.style.visibility = "inherit";
-          }
-        }
-        if (!elementData(el, "initialized")) {
-          initSizing(el);
-
-          elementData(el, "initialized", true);
-          if (bindingDef.initialize) {
-            var result = bindingDef.initialize(el, el.offsetWidth,
-              el.offsetHeight);
-            elementData(el, "init_result", result);
-          }
-        }
-        bindingDef.renderValue(el, data.x, elementData(el, "init_result"));
-        evalAndRun(data.jsHooks.render, elementData(el, "init_result"), [el, data.x]);
-      };
-
-      // Only override resize if bindingDef implements it
-      if (bindingDef.resize) {
-        shinyBinding.resize = function(el, width, height) {
-          // Shiny can call resize before initialize/renderValue have been
-          // called, which doesn't make sense for widgets.
-          if (elementData(el, "initialized")) {
-            bindingDef.resize(el, width, height, elementData(el, "init_result"));
-          }
-        };
-      }
-
-      Shiny.outputBindings.register(shinyBinding, bindingDef.name);
-    }
-  };
-
-  var scheduleStaticRenderTimerId = null;
-  function scheduleStaticRender() {
-    if (!scheduleStaticRenderTimerId) {
-      scheduleStaticRenderTimerId = setTimeout(function() {
-        scheduleStaticRenderTimerId = null;
-        window.HTMLWidgets.staticRender();
-      }, 1);
-    }
-  }
-
-  // Render static widgets after the document finishes loading
-  // Statically render all elements that are of this widget's class
-  window.HTMLWidgets.staticRender = function() {
-    var bindings = window.HTMLWidgets.widgets || [];
-    forEach(bindings, function(binding) {
-      var matches = binding.find(document.documentElement);
-      forEach(matches, function(el) {
-        var sizeObj = initSizing(el, binding);
-
-        if (hasClass(el, "html-widget-static-bound"))
-          return;
-        el.className = el.className + " html-widget-static-bound";
-
-        var initResult;
-        if (binding.initialize) {
-          initResult = binding.initialize(el,
-            sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-            sizeObj ? sizeObj.getHeight() : el.offsetHeight
-          );
-          elementData(el, "init_result", initResult);
-        }
-
-        if (binding.resize) {
-          var lastSize = {
-            w: sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-            h: sizeObj ? sizeObj.getHeight() : el.offsetHeight
-          };
-          var resizeHandler = function(e) {
-            var size = {
-              w: sizeObj ? sizeObj.getWidth() : el.offsetWidth,
-              h: sizeObj ? sizeObj.getHeight() : el.offsetHeight
-            };
-            if (size.w === 0 && size.h === 0)
-              return;
-            if (size.w === lastSize.w && size.h === lastSize.h)
-              return;
-            lastSize = size;
-            binding.resize(el, size.w, size.h, initResult);
-          };
-
-          on(window, "resize", resizeHandler);
-
-          // This is needed for cases where we're running in a Shiny
-          // app, but the widget itself is not a Shiny output, but
-          // rather a simple static widget. One example of this is
-          // an rmarkdown document that has runtime:shiny and widget
-          // that isn't in a render function. Shiny only knows to
-          // call resize handlers for Shiny outputs, not for static
-          // widgets, so we do it ourselves.
-          if (window.jQuery) {
-            window.jQuery(document).on(
-              "shown.htmlwidgets shown.bs.tab.htmlwidgets shown.bs.collapse.htmlwidgets",
-              resizeHandler
-            );
-            window.jQuery(document).on(
-              "hidden.htmlwidgets hidden.bs.tab.htmlwidgets hidden.bs.collapse.htmlwidgets",
-              resizeHandler
-            );
-          }
-
-          // This is needed for the specific case of ioslides, which
-          // flips slides between display:none and display:block.
-          // Ideally we would not have to have ioslide-specific code
-          // here, but rather have ioslides raise a generic event,
-          // but the rmarkdown package just went to CRAN so the
-          // window to getting that fixed may be long.
-          if (window.addEventListener) {
-            // It's OK to limit this to window.addEventListener
-            // browsers because ioslides itself only supports
-            // such browsers.
-            on(document, "slideenter", resizeHandler);
-            on(document, "slideleave", resizeHandler);
-          }
-        }
-
-        var scriptData = document.querySelector("script[data-for='" + el.id + "'][type='application/json']");
-        if (scriptData) {
-          var data = JSON.parse(scriptData.textContent || scriptData.text);
-          // Resolve strings marked as javascript literals to objects
-          if (!(data.evals instanceof Array)) data.evals = [data.evals];
-          for (var k = 0; data.evals && k < data.evals.length; k++) {
-            window.HTMLWidgets.evaluateStringMember(data.x, data.evals[k]);
-          }
-          binding.renderValue(el, data.x, initResult);
-          evalAndRun(data.jsHooks.render, initResult, [el, data.x]);
-        }
-      });
-    });
-
-    invokePostRenderHandlers();
-  }
-
-
-  function has_jQuery3() {
-    if (!window.jQuery) {
-      return false;
-    }
-    var $version = window.jQuery.fn.jquery;
-    var $major_version = parseInt($version.split(".")[0]);
-    return $major_version >= 3;
-  }
-
-  /*
-  / Shiny 1.4 bumped jQuery from 1.x to 3.x which means jQuery's
-  / on-ready handler (i.e., $(fn)) is now asyncronous (i.e., it now
-  / really means $(setTimeout(fn)).
-  / https://jquery.com/upgrade-guide/3.0/#breaking-change-document-ready-handlers-are-now-asynchronous
-  /
-  / Since Shiny uses $() to schedule initShiny, shiny>=1.4 calls initShiny
-  / one tick later than it did before, which means staticRender() is
-  / called renderValue() earlier than (advanced) widget authors might be expecting.
-  / https://github.com/rstudio/shiny/issues/2630
-  /
-  / For a concrete example, leaflet has some methods (e.g., updateBounds)
-  / which reference Shiny methods registered in initShiny (e.g., setInputValue).
-  / Since leaflet is privy to this life-cycle, it knows to use setTimeout() to
-  / delay execution of those methods (until Shiny methods are ready)
-  / https://github.com/rstudio/leaflet/blob/18ec981/javascript/src/index.js#L266-L268
-  /
-  / Ideally widget authors wouldn't need to use this setTimeout() hack that
-  / leaflet uses to call Shiny methods on a staticRender(). In the long run,
-  / the logic initShiny should be broken up so that method registration happens
-  / right away, but binding happens later.
-  */
-  function maybeStaticRenderLater() {
-    if (shinyMode && has_jQuery3()) {
-      window.jQuery(window.HTMLWidgets.staticRender);
-    } else {
-      window.HTMLWidgets.staticRender();
-    }
-  }
-
-  if (document.addEventListener) {
-    document.addEventListener("DOMContentLoaded", function() {
-      document.removeEventListener("DOMContentLoaded", arguments.callee, false);
-      maybeStaticRenderLater();
-    }, false);
-  } else if (document.attachEvent) {
-    document.attachEvent("onreadystatechange", function() {
-      if (document.readyState === "complete") {
-        document.detachEvent("onreadystatechange", arguments.callee);
-        maybeStaticRenderLater();
-      }
-    });
-  }
-
-
-  window.HTMLWidgets.getAttachmentUrl = function(depname, key) {
-    // If no key, default to the first item
-    if (typeof(key) === "undefined")
-      key = 1;
-
-    var link = document.getElementById(depname + "-" + key + "-attachment");
-    if (!link) {
-      throw new Error("Attachment " + depname + "/" + key + " not found in document");
-    }
-    return link.getAttribute("href");
-  };
-
-  window.HTMLWidgets.dataframeToD3 = function(df) {
-    var names = [];
-    var length;
-    for (var name in df) {
-        if (df.hasOwnProperty(name))
-            names.push(name);
-        if (typeof(df[name]) !== "object" || typeof(df[name].length) === "undefined") {
-            throw new Error("All fields must be arrays");
-        } else if (typeof(length) !== "undefined" && length !== df[name].length) {
-            throw new Error("All fields must be arrays of the same length");
-        }
-        length = df[name].length;
-    }
-    var results = [];
-    var item;
-    for (var row = 0; row < length; row++) {
-        item = {};
-        for (var col = 0; col < names.length; col++) {
-            item[names[col]] = df[names[col]][row];
-        }
-        results.push(item);
-    }
-    return results;
-  };
-
-  window.HTMLWidgets.transposeArray2D = function(array) {
-      if (array.length === 0) return array;
-      var newArray = array[0].map(function(col, i) {
-          return array.map(function(row) {
-              return row[i]
-          })
-      });
-      return newArray;
-  };
-  // Split value at splitChar, but allow splitChar to be escaped
-  // using escapeChar. Any other characters escaped by escapeChar
-  // will be included as usual (including escapeChar itself).
-  function splitWithEscape(value, splitChar, escapeChar) {
-    var results = [];
-    var escapeMode = false;
-    var currentResult = "";
-    for (var pos = 0; pos < value.length; pos++) {
-      if (!escapeMode) {
-        if (value[pos] === splitChar) {
-          results.push(currentResult);
-          currentResult = "";
-        } else if (value[pos] === escapeChar) {
-          escapeMode = true;
-        } else {
-          currentResult += value[pos];
-        }
-      } else {
-        currentResult += value[pos];
-        escapeMode = false;
-      }
-    }
-    if (currentResult !== "") {
-      results.push(currentResult);
-    }
-    return results;
-  }
-  // Function authored by Yihui/JJ Allaire
-  window.HTMLWidgets.evaluateStringMember = function(o, member) {
-    var parts = splitWithEscape(member, '.', '\\');
-    for (var i = 0, l = parts.length; i < l; i++) {
-      var part = parts[i];
-      // part may be a character or 'numeric' member name
-      if (o !== null && typeof o === "object" && part in o) {
-        if (i == (l - 1)) { // if we are at the end of the line then evalulate
-          if (typeof o[part] === "string")
-            o[part] = tryEval(o[part]);
-        } else { // otherwise continue to next embedded object
-          o = o[part];
-        }
-      }
-    }
-  };
-
-  // Retrieve the HTMLWidget instance (i.e. the return value of an
-  // HTMLWidget binding's initialize() or factory() function)
-  // associated with an element, or null if none.
-  window.HTMLWidgets.getInstance = function(el) {
-    return elementData(el, "init_result");
-  };
-
-  // Finds the first element in the scope that matches the selector,
-  // and returns the HTMLWidget instance (i.e. the return value of
-  // an HTMLWidget binding's initialize() or factory() function)
-  // associated with that element, if any. If no element matches the
-  // selector, or the first matching element has no HTMLWidget
-  // instance associated with it, then null is returned.
-  //
-  // The scope argument is optional, and defaults to window.document.
-  window.HTMLWidgets.find = function(scope, selector) {
-    if (arguments.length == 1) {
-      selector = scope;
-      scope = document;
-    }
-
-    var el = scope.querySelector(selector);
-    if (el === null) {
-      return null;
-    } else {
-      return window.HTMLWidgets.getInstance(el);
-    }
-  };
-
-  // Finds all elements in the scope that match the selector, and
-  // returns the HTMLWidget instances (i.e. the return values of
-  // an HTMLWidget binding's initialize() or factory() function)
-  // associated with the elements, in an array. If elements that
-  // match the selector don't have an associated HTMLWidget
-  // instance, the returned array will contain nulls.
-  //
-  // The scope argument is optional, and defaults to window.document.
-  window.HTMLWidgets.findAll = function(scope, selector) {
-    if (arguments.length == 1) {
-      selector = scope;
-      scope = document;
-    }
-
-    var nodes = scope.querySelectorAll(selector);
-    var results = [];
-    for (var i = 0; i < nodes.length; i++) {
-      results.push(window.HTMLWidgets.getInstance(nodes[i]));
-    }
-    return results;
-  };
-
-  var postRenderHandlers = [];
-  function invokePostRenderHandlers() {
-    while (postRenderHandlers.length) {
-      var handler = postRenderHandlers.shift();
-      if (handler) {
-        handler();
-      }
-    }
-  }
-
-  // Register the given callback function to be invoked after the
-  // next time static widgets are rendered.
-  window.HTMLWidgets.addPostRenderHandler = function(callback) {
-    postRenderHandlers.push(callback);
-  };
-
-  // Takes a new-style instance-bound definition, and returns an
-  // old-style class-bound definition. This saves us from having
-  // to rewrite all the logic in this file to accomodate both
-  // types of definitions.
-  function createLegacyDefinitionAdapter(defn) {
-    var result = {
-      name: defn.name,
-      type: defn.type,
-      initialize: function(el, width, height) {
-        return defn.factory(el, width, height);
-      },
-      renderValue: function(el, x, instance) {
-        return instance.renderValue(x);
-      },
-      resize: function(el, width, height, instance) {
-        return instance.resize(width, height);
-      }
-    };
-
-    if (defn.find)
-      result.find = defn.find;
-    if (defn.renderError)
-      result.renderError = defn.renderError;
-    if (defn.clearError)
-      result.clearError = defn.clearError;
-
-    return result;
-  }
-})();
-
-</script>
-<style type="text/css">.str_view ul, .str_view li {
-list-style: none;
-padding: 0;
-margin: 0.5em 0;
-font-family: monospace;
-}
-.str_view .match {
-border: 1px solid #ccc;
-background-color: #eee;
-}
-</style>
-<script>HTMLWidgets.widget({
-
-  name: 'str_view',
-
-  type: 'output',
-
-  initialize: function(el, width, height) {
-  },
-
-  renderValue: function(el, x, instance) {
-    el.innerHTML = x.html;
-  },
-
-  resize: function(el, width, height, instance) {
-  }
-
-});
-</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -1344,626 +410,220 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Lab 9</h1>
+<h1 class="title toc-ignore">Lab10</h1>
 <h4 class="author">Manya Vivek</h4>
-<h4 class="date">10/26/2020</h4>
+<h4 class="date">11/2/2020</h4>
 
 </div>
 
 
-<div id="basic-matches" class="section level1">
-<h1>14.3.1 BASIC MATCHES</h1>
-<pre class="r"><code>library(stringr)
-library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
-## ✓ tidyr   1.1.2     ✓ forcats 0.5.0
-## ✓ readr   1.4.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
-str_view(x, &quot;an&quot;)</code></pre>
-<div id="htmlwidget-3a1850cf71f8f463a87e" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3a1850cf71f8f463a87e">{"x":{"html":"<ul>\n  <li>apple<\/li>\n  <li>b<span class='match'>an<\/span>ana<\/li>\n  <li>pear<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># the dot mataches any character
-str_view(x, &quot;.a.&quot;)</code></pre>
-<div id="htmlwidget-8bbe0ac2bc09977b8deb" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8bbe0ac2bc09977b8deb">{"x":{"html":"<ul>\n  <li>apple<\/li>\n  <li><span class='match'>ban<\/span>ana<\/li>\n  <li>p<span class='match'>ear<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;..a&quot;)</code></pre>
-<div id="htmlwidget-192f8e742431cd404669" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-192f8e742431cd404669">{"x":{"html":"<ul>\n  <li>apple<\/li>\n  <li>b<span class='match'>ana<\/span>na<\/li>\n  <li><span class='match'>pea<\/span>r<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># how do you match the character “.”? 
-# To create the regular expression, we need \\
-dot &lt;- &quot;\\.&quot;
-
-# But the expression itself only contains one:
-writeLines(dot)</code></pre>
-<pre><code>## \.</code></pre>
-<pre class="r"><code># And this tells R to look for an explicit .
-x &lt;- c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;)
-str_view(x, &quot;a\\.c&quot;)</code></pre>
-<div id="htmlwidget-ff2d72f23bee23964c03" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ff2d72f23bee23964c03">{"x":{"html":"<ul>\n  <li>abc<\/li>\n  <li><span class='match'>a.c<\/span><\/li>\n  <li>bef<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>y &lt;- c(&quot;ab.cd&quot;, &quot;b.c&quot;, &quot;c.def&quot;)
-str_view(y, &quot;b\\.c&quot;)</code></pre>
-<div id="htmlwidget-48a189e623b60f3dd344" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-48a189e623b60f3dd344">{"x":{"html":"<ul>\n  <li>a<span class='match'>b.c<\/span>d<\/li>\n  <li><span class='match'>b.c<\/span><\/li>\n  <li>c.def<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># to create regular expression &quot;\&quot;, we need the string &quot;\\&quot; 
-dot &lt;- &quot;\\&quot;
-writeLines(dot)</code></pre>
-<pre><code>## \</code></pre>
-<pre class="r"><code># to create regular expression &quot;\&quot;, we need the string &quot;\\&quot; 
-dot &lt;- &quot;\\.&quot;
-writeLines(dot)</code></pre>
-<pre><code>## \.</code></pre>
-<pre class="r"><code>x &lt;- c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;)
-str_view(x, &quot;a.c&quot;)</code></pre>
-<p><div id="htmlwidget-5e8ed38e1ddfdb557f4c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5e8ed38e1ddfdb557f4c">{"x":{"html":"<ul>\n  <li><span class='match'>abc<\/span><\/li>\n  <li><span class='match'>a.c<\/span><\/li>\n  <li>bef<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script> \</p>
-<pre class="r"><code>x &lt;- c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;)
-str_view(x, &quot;a\\.c&quot;)</code></pre>
-<div id="htmlwidget-703c4d3e97539a613f25" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-703c4d3e97539a613f25">{"x":{"html":"<ul>\n  <li>abc<\/li>\n  <li><span class='match'>a.c<\/span><\/li>\n  <li>bef<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># to create the regular expression &quot;\&quot; we need the string &quot;\\&quot;.
-x &lt;- &quot;a\\b&quot;
-writeLines(x)</code></pre>
-<pre><code>## a\b</code></pre>
-<pre class="r"><code>str_view(x, &quot;\\\\&quot;)</code></pre>
-<div id="htmlwidget-65573b6e5481438b36cc" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-65573b6e5481438b36cc">{"x":{"html":"<ul>\n  <li>a<span class='match'>\\<\/span>b<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<div id="exercises" class="section level3">
-<h3>14.3.1 Exercises</h3>
-<ol style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-roman">
-<li>“\” -&gt; escape a character or symbol in strings.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-roman">
-<li>“\\” -&gt; Unrecognized backslash escape sequence in pattern</li>
-<li>&quot;\\\&quot; -&gt; escape the next character.</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li></li>
-</ol>
-<pre class="r"><code>x &lt;- &quot;\&quot;&#39;\\&quot;
-writeLines(x)</code></pre>
-<pre><code>## &quot;&#39;\</code></pre>
-<pre class="r"><code>x &lt;- (&quot;\&quot;&#39;\\&quot;)
-str_view(x, &quot;\&quot;&#39;\\\\&quot;)</code></pre>
-<div id="htmlwidget-f0fabde4b44f502e4208" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f0fabde4b44f502e4208">{"x":{"html":"<ul>\n  <li><span class='match'>\"'\\<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<ol start="3" style="list-style-type: decimal">
-<li></li>
-</ol>
-<pre class="r"><code># &quot;\.&quot; matches a dot and &quot;.&quot; matches any character
-y &lt;- (&quot;.l.o.l&quot;)
-str_view(y , &quot;\\..\\..\\..&quot;)</code></pre>
-<div id="htmlwidget-3dc63fd1d2daff613f4b" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3dc63fd1d2daff613f4b">{"x":{"html":"<ul>\n  <li><span class='match'>.l.o.l<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<div id="anchors" class="section level1">
-<h1>14.3.2 ANCHORS</h1>
-<pre class="r"><code># &quot;^&quot; to match the start of the string.
-# $ to match the end of the string.
-x &lt;- c(&quot;apple&quot;, &quot;mango&quot;, &quot;banana&quot;, &quot;avacado&quot;)
-str_view(x, &quot;^a&quot;)</code></pre>
-<div id="htmlwidget-4a09e1c4e65225121dd4" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4a09e1c4e65225121dd4">{"x":{"html":"<ul>\n  <li><span class='match'>a<\/span>pple<\/li>\n  <li>mango<\/li>\n  <li>banana<\/li>\n  <li><span class='match'>a<\/span>vacado<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;a$&quot;)</code></pre>
-<div id="htmlwidget-cd7643bfd22944bcad29" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd7643bfd22944bcad29">{"x":{"html":"<ul>\n  <li>apple<\/li>\n  <li>mango<\/li>\n  <li>banan<span class='match'>a<\/span><\/li>\n  <li>avacado<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
-str_view(x, &quot;^a&quot;)</code></pre>
-<div id="htmlwidget-cb634e2dddd8ff09a19c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cb634e2dddd8ff09a19c">{"x":{"html":"<ul>\n  <li><span class='match'>a<\/span>pple<\/li>\n  <li>banana<\/li>\n  <li>pear<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>x &lt;- c(&quot;apple pie&quot;, &quot;apple&quot;, &quot;apple cake&quot;, &quot;green apple&quot;)
-str_view(x, &quot;apple&quot;)</code></pre>
-<div id="htmlwidget-47aea0ae13d648474e9c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-47aea0ae13d648474e9c">{"x":{"html":"<ul>\n  <li><span class='match'>apple<\/span> pie<\/li>\n  <li><span class='match'>apple<\/span><\/li>\n  <li><span class='match'>apple<\/span> cake<\/li>\n  <li>green <span class='match'>apple<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># To force a regular expression to only match a complete string, anchor it with both &quot;^&quot; and &quot;$&quot;
-str_view(x, &quot;^apple$&quot;)</code></pre>
-<div id="htmlwidget-6c93ebaee616f4b055b0" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6c93ebaee616f4b055b0">{"x":{"html":"<ul>\n  <li>apple pie<\/li>\n  <li><span class='match'>apple<\/span><\/li>\n  <li>apple cake<\/li>\n  <li>green apple<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<div id="exercises-1" class="section level3">
-<h3>14.3.2 Exercises</h3>
-<ol style="list-style-type: decimal">
-<li></li>
-</ol>
-<pre class="r"><code>str_view(c(&quot;$^$&quot;, &quot;abc$^$abc&quot;), &quot;^\\$\\^\\$$&quot;)</code></pre>
-<p><div id="htmlwidget-af817d55082b84162161" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-af817d55082b84162161">{"x":{"html":"<ul>\n  <li><span class='match'>$^$<\/span><\/li>\n  <li>abc$^$abc<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script> 2. (i)</p>
-<pre class="r"><code>x &lt;- c(&quot;yell&quot;,&quot;youth&quot;,&quot;fax&quot;,&quot;tax&quot;)
-str_view(x, &quot;^y&quot;)</code></pre>
-<div id="htmlwidget-fa1dce387fc57b3cd136" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fa1dce387fc57b3cd136">{"x":{"html":"<ul>\n  <li><span class='match'>y<\/span>ell<\/li>\n  <li><span class='match'>y<\/span>outh<\/li>\n  <li>fax<\/li>\n  <li>tax<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(stringr::words, &quot;^y&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-51d7b8a13552b2ecd30c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-51d7b8a13552b2ecd30c">{"x":{"html":"<ul>\n  <li><span class='match'>y<\/span>ear<\/li>\n  <li><span class='match'>y<\/span>es<\/li>\n  <li><span class='match'>y<\/span>esterday<\/li>\n  <li><span class='match'>y<\/span>et<\/li>\n  <li><span class='match'>y<\/span>ou<\/li>\n  <li><span class='match'>y<\/span>oung<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<ol start="2" style="list-style-type: lower-roman">
-<li></li>
-</ol>
-<pre class="r"><code>str_view(stringr::words, &quot;x$&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-b5f0faa0730f4ebd2d36" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b5f0faa0730f4ebd2d36">{"x":{"html":"<ul>\n  <li>bo<span class='match'>x<\/span><\/li>\n  <li>se<span class='match'>x<\/span><\/li>\n  <li>si<span class='match'>x<\/span><\/li>\n  <li>ta<span class='match'>x<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<ol start="3" style="list-style-type: lower-roman">
-<li></li>
-</ol>
-<pre class="r"><code># &quot;.&quot; represents characters
-# only three letters therefore, both &quot;^&quot; and &quot;$&quot; needs to be used 
-str_view(stringr::words, &quot;^...$&quot;, match = TRUE)</code></pre>
-<p><div id="htmlwidget-5eccd99f72f196671352" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5eccd99f72f196671352">{"x":{"html":"<ul>\n  <li><span class='match'>act<\/span><\/li>\n  <li><span class='match'>add<\/span><\/li>\n  <li><span class='match'>age<\/span><\/li>\n  <li><span class='match'>ago<\/span><\/li>\n  <li><span class='match'>air<\/span><\/li>\n  <li><span class='match'>all<\/span><\/li>\n  <li><span class='match'>and<\/span><\/li>\n  <li><span class='match'>any<\/span><\/li>\n  <li><span class='match'>arm<\/span><\/li>\n  <li><span class='match'>art<\/span><\/li>\n  <li><span class='match'>ask<\/span><\/li>\n  <li><span class='match'>bad<\/span><\/li>\n  <li><span class='match'>bag<\/span><\/li>\n  <li><span class='match'>bar<\/span><\/li>\n  <li><span class='match'>bed<\/span><\/li>\n  <li><span class='match'>bet<\/span><\/li>\n  <li><span class='match'>big<\/span><\/li>\n  <li><span class='match'>bit<\/span><\/li>\n  <li><span class='match'>box<\/span><\/li>\n  <li><span class='match'>boy<\/span><\/li>\n  <li><span class='match'>bus<\/span><\/li>\n  <li><span class='match'>but<\/span><\/li>\n  <li><span class='match'>buy<\/span><\/li>\n  <li><span class='match'>can<\/span><\/li>\n  <li><span class='match'>car<\/span><\/li>\n  <li><span class='match'>cat<\/span><\/li>\n  <li><span class='match'>cup<\/span><\/li>\n  <li><span class='match'>cut<\/span><\/li>\n  <li><span class='match'>dad<\/span><\/li>\n  <li><span class='match'>day<\/span><\/li>\n  <li><span class='match'>die<\/span><\/li>\n  <li><span class='match'>dog<\/span><\/li>\n  <li><span class='match'>dry<\/span><\/li>\n  <li><span class='match'>due<\/span><\/li>\n  <li><span class='match'>eat<\/span><\/li>\n  <li><span class='match'>egg<\/span><\/li>\n  <li><span class='match'>end<\/span><\/li>\n  <li><span class='match'>eye<\/span><\/li>\n  <li><span class='match'>far<\/span><\/li>\n  <li><span class='match'>few<\/span><\/li>\n  <li><span class='match'>fit<\/span><\/li>\n  <li><span class='match'>fly<\/span><\/li>\n  <li><span class='match'>for<\/span><\/li>\n  <li><span class='match'>fun<\/span><\/li>\n  <li><span class='match'>gas<\/span><\/li>\n  <li><span class='match'>get<\/span><\/li>\n  <li><span class='match'>god<\/span><\/li>\n  <li><span class='match'>guy<\/span><\/li>\n  <li><span class='match'>hit<\/span><\/li>\n  <li><span class='match'>hot<\/span><\/li>\n  <li><span class='match'>how<\/span><\/li>\n  <li><span class='match'>job<\/span><\/li>\n  <li><span class='match'>key<\/span><\/li>\n  <li><span class='match'>kid<\/span><\/li>\n  <li><span class='match'>lad<\/span><\/li>\n  <li><span class='match'>law<\/span><\/li>\n  <li><span class='match'>lay<\/span><\/li>\n  <li><span class='match'>leg<\/span><\/li>\n  <li><span class='match'>let<\/span><\/li>\n  <li><span class='match'>lie<\/span><\/li>\n  <li><span class='match'>lot<\/span><\/li>\n  <li><span class='match'>low<\/span><\/li>\n  <li><span class='match'>man<\/span><\/li>\n  <li><span class='match'>may<\/span><\/li>\n  <li><span class='match'>mrs<\/span><\/li>\n  <li><span class='match'>new<\/span><\/li>\n  <li><span class='match'>non<\/span><\/li>\n  <li><span class='match'>not<\/span><\/li>\n  <li><span class='match'>now<\/span><\/li>\n  <li><span class='match'>odd<\/span><\/li>\n  <li><span class='match'>off<\/span><\/li>\n  <li><span class='match'>old<\/span><\/li>\n  <li><span class='match'>one<\/span><\/li>\n  <li><span class='match'>out<\/span><\/li>\n  <li><span class='match'>own<\/span><\/li>\n  <li><span class='match'>pay<\/span><\/li>\n  <li><span class='match'>per<\/span><\/li>\n  <li><span class='match'>put<\/span><\/li>\n  <li><span class='match'>red<\/span><\/li>\n  <li><span class='match'>rid<\/span><\/li>\n  <li><span class='match'>run<\/span><\/li>\n  <li><span class='match'>say<\/span><\/li>\n  <li><span class='match'>see<\/span><\/li>\n  <li><span class='match'>set<\/span><\/li>\n  <li><span class='match'>sex<\/span><\/li>\n  <li><span class='match'>she<\/span><\/li>\n  <li><span class='match'>sir<\/span><\/li>\n  <li><span class='match'>sit<\/span><\/li>\n  <li><span class='match'>six<\/span><\/li>\n  <li><span class='match'>son<\/span><\/li>\n  <li><span class='match'>sun<\/span><\/li>\n  <li><span class='match'>tax<\/span><\/li>\n  <li><span class='match'>tea<\/span><\/li>\n  <li><span class='match'>ten<\/span><\/li>\n  <li><span class='match'>the<\/span><\/li>\n  <li><span class='match'>tie<\/span><\/li>\n  <li><span class='match'>too<\/span><\/li>\n  <li><span class='match'>top<\/span><\/li>\n  <li><span class='match'>try<\/span><\/li>\n  <li><span class='match'>two<\/span><\/li>\n  <li><span class='match'>use<\/span><\/li>\n  <li><span class='match'>war<\/span><\/li>\n  <li><span class='match'>way<\/span><\/li>\n  <li><span class='match'>wee<\/span><\/li>\n  <li><span class='match'>who<\/span><\/li>\n  <li><span class='match'>why<\/span><\/li>\n  <li><span class='match'>win<\/span><\/li>\n  <li><span class='match'>yes<\/span><\/li>\n  <li><span class='match'>yet<\/span><\/li>\n  <li><span class='match'>you<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script> (iv)</p>
-<pre class="r"><code># seven letter or more
-str_view(stringr::words, &quot;^.......&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-2d5222b9c73967842838" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2d5222b9c73967842838">{"x":{"html":"<ul>\n  <li><span class='match'>absolut<\/span>e<\/li>\n  <li><span class='match'>account<\/span><\/li>\n  <li><span class='match'>achieve<\/span><\/li>\n  <li><span class='match'>address<\/span><\/li>\n  <li><span class='match'>adverti<\/span>se<\/li>\n  <li><span class='match'>afterno<\/span>on<\/li>\n  <li><span class='match'>against<\/span><\/li>\n  <li><span class='match'>already<\/span><\/li>\n  <li><span class='match'>alright<\/span><\/li>\n  <li><span class='match'>althoug<\/span>h<\/li>\n  <li><span class='match'>america<\/span><\/li>\n  <li><span class='match'>another<\/span><\/li>\n  <li><span class='match'>apparen<\/span>t<\/li>\n  <li><span class='match'>appoint<\/span><\/li>\n  <li><span class='match'>approac<\/span>h<\/li>\n  <li><span class='match'>appropr<\/span>iate<\/li>\n  <li><span class='match'>arrange<\/span><\/li>\n  <li><span class='match'>associa<\/span>te<\/li>\n  <li><span class='match'>authori<\/span>ty<\/li>\n  <li><span class='match'>availab<\/span>le<\/li>\n  <li><span class='match'>balance<\/span><\/li>\n  <li><span class='match'>because<\/span><\/li>\n  <li><span class='match'>believe<\/span><\/li>\n  <li><span class='match'>benefit<\/span><\/li>\n  <li><span class='match'>between<\/span><\/li>\n  <li><span class='match'>brillia<\/span>nt<\/li>\n  <li><span class='match'>britain<\/span><\/li>\n  <li><span class='match'>brother<\/span><\/li>\n  <li><span class='match'>busines<\/span>s<\/li>\n  <li><span class='match'>certain<\/span><\/li>\n  <li><span class='match'>chairma<\/span>n<\/li>\n  <li><span class='match'>charact<\/span>er<\/li>\n  <li><span class='match'>Christm<\/span>as<\/li>\n  <li><span class='match'>colleag<\/span>ue<\/li>\n  <li><span class='match'>collect<\/span><\/li>\n  <li><span class='match'>college<\/span><\/li>\n  <li><span class='match'>comment<\/span><\/li>\n  <li><span class='match'>committ<\/span>ee<\/li>\n  <li><span class='match'>communi<\/span>ty<\/li>\n  <li><span class='match'>company<\/span><\/li>\n  <li><span class='match'>compare<\/span><\/li>\n  <li><span class='match'>complet<\/span>e<\/li>\n  <li><span class='match'>compute<\/span><\/li>\n  <li><span class='match'>concern<\/span><\/li>\n  <li><span class='match'>conditi<\/span>on<\/li>\n  <li><span class='match'>conside<\/span>r<\/li>\n  <li><span class='match'>consult<\/span><\/li>\n  <li><span class='match'>contact<\/span><\/li>\n  <li><span class='match'>continu<\/span>e<\/li>\n  <li><span class='match'>contrac<\/span>t<\/li>\n  <li><span class='match'>control<\/span><\/li>\n  <li><span class='match'>convers<\/span>e<\/li>\n  <li><span class='match'>correct<\/span><\/li>\n  <li><span class='match'>council<\/span><\/li>\n  <li><span class='match'>country<\/span><\/li>\n  <li><span class='match'>current<\/span><\/li>\n  <li><span class='match'>decisio<\/span>n<\/li>\n  <li><span class='match'>definit<\/span>e<\/li>\n  <li><span class='match'>departm<\/span>ent<\/li>\n  <li><span class='match'>describ<\/span>e<\/li>\n  <li><span class='match'>develop<\/span><\/li>\n  <li><span class='match'>differe<\/span>nce<\/li>\n  <li><span class='match'>difficu<\/span>lt<\/li>\n  <li><span class='match'>discuss<\/span><\/li>\n  <li><span class='match'>distric<\/span>t<\/li>\n  <li><span class='match'>documen<\/span>t<\/li>\n  <li><span class='match'>economy<\/span><\/li>\n  <li><span class='match'>educate<\/span><\/li>\n  <li><span class='match'>electri<\/span>c<\/li>\n  <li><span class='match'>encoura<\/span>ge<\/li>\n  <li><span class='match'>english<\/span><\/li>\n  <li><span class='match'>environ<\/span>ment<\/li>\n  <li><span class='match'>especia<\/span>l<\/li>\n  <li><span class='match'>evening<\/span><\/li>\n  <li><span class='match'>evidenc<\/span>e<\/li>\n  <li><span class='match'>example<\/span><\/li>\n  <li><span class='match'>exercis<\/span>e<\/li>\n  <li><span class='match'>expense<\/span><\/li>\n  <li><span class='match'>experie<\/span>nce<\/li>\n  <li><span class='match'>explain<\/span><\/li>\n  <li><span class='match'>express<\/span><\/li>\n  <li><span class='match'>finance<\/span><\/li>\n  <li><span class='match'>fortune<\/span><\/li>\n  <li><span class='match'>forward<\/span><\/li>\n  <li><span class='match'>functio<\/span>n<\/li>\n  <li><span class='match'>further<\/span><\/li>\n  <li><span class='match'>general<\/span><\/li>\n  <li><span class='match'>germany<\/span><\/li>\n  <li><span class='match'>goodbye<\/span><\/li>\n  <li><span class='match'>history<\/span><\/li>\n  <li><span class='match'>holiday<\/span><\/li>\n  <li><span class='match'>hospita<\/span>l<\/li>\n  <li><span class='match'>however<\/span><\/li>\n  <li><span class='match'>hundred<\/span><\/li>\n  <li><span class='match'>husband<\/span><\/li>\n  <li><span class='match'>identif<\/span>y<\/li>\n  <li><span class='match'>imagine<\/span><\/li>\n  <li><span class='match'>importa<\/span>nt<\/li>\n  <li><span class='match'>improve<\/span><\/li>\n  <li><span class='match'>include<\/span><\/li>\n  <li><span class='match'>increas<\/span>e<\/li>\n  <li><span class='match'>individ<\/span>ual<\/li>\n  <li><span class='match'>industr<\/span>y<\/li>\n  <li><span class='match'>instead<\/span><\/li>\n  <li><span class='match'>interes<\/span>t<\/li>\n  <li><span class='match'>introdu<\/span>ce<\/li>\n  <li><span class='match'>involve<\/span><\/li>\n  <li><span class='match'>kitchen<\/span><\/li>\n  <li><span class='match'>languag<\/span>e<\/li>\n  <li><span class='match'>machine<\/span><\/li>\n  <li><span class='match'>meaning<\/span><\/li>\n  <li><span class='match'>measure<\/span><\/li>\n  <li><span class='match'>mention<\/span><\/li>\n  <li><span class='match'>million<\/span><\/li>\n  <li><span class='match'>ministe<\/span>r<\/li>\n  <li><span class='match'>morning<\/span><\/li>\n  <li><span class='match'>necessa<\/span>ry<\/li>\n  <li><span class='match'>obvious<\/span><\/li>\n  <li><span class='match'>occasio<\/span>n<\/li>\n  <li><span class='match'>operate<\/span><\/li>\n  <li><span class='match'>opportu<\/span>nity<\/li>\n  <li><span class='match'>organiz<\/span>e<\/li>\n  <li><span class='match'>origina<\/span>l<\/li>\n  <li><span class='match'>otherwi<\/span>se<\/li>\n  <li><span class='match'>paragra<\/span>ph<\/li>\n  <li><span class='match'>particu<\/span>lar<\/li>\n  <li><span class='match'>pension<\/span><\/li>\n  <li><span class='match'>percent<\/span><\/li>\n  <li><span class='match'>perfect<\/span><\/li>\n  <li><span class='match'>perhaps<\/span><\/li>\n  <li><span class='match'>photogr<\/span>aph<\/li>\n  <li><span class='match'>picture<\/span><\/li>\n  <li><span class='match'>politic<\/span><\/li>\n  <li><span class='match'>positio<\/span>n<\/li>\n  <li><span class='match'>positiv<\/span>e<\/li>\n  <li><span class='match'>possibl<\/span>e<\/li>\n  <li><span class='match'>practis<\/span>e<\/li>\n  <li><span class='match'>prepare<\/span><\/li>\n  <li><span class='match'>present<\/span><\/li>\n  <li><span class='match'>pressur<\/span>e<\/li>\n  <li><span class='match'>presume<\/span><\/li>\n  <li><span class='match'>previou<\/span>s<\/li>\n  <li><span class='match'>private<\/span><\/li>\n  <li><span class='match'>probabl<\/span>e<\/li>\n  <li><span class='match'>problem<\/span><\/li>\n  <li><span class='match'>proceed<\/span><\/li>\n  <li><span class='match'>process<\/span><\/li>\n  <li><span class='match'>produce<\/span><\/li>\n  <li><span class='match'>product<\/span><\/li>\n  <li><span class='match'>program<\/span>me<\/li>\n  <li><span class='match'>project<\/span><\/li>\n  <li><span class='match'>propose<\/span><\/li>\n  <li><span class='match'>protect<\/span><\/li>\n  <li><span class='match'>provide<\/span><\/li>\n  <li><span class='match'>purpose<\/span><\/li>\n  <li><span class='match'>quality<\/span><\/li>\n  <li><span class='match'>quarter<\/span><\/li>\n  <li><span class='match'>questio<\/span>n<\/li>\n  <li><span class='match'>realise<\/span><\/li>\n  <li><span class='match'>receive<\/span><\/li>\n  <li><span class='match'>recogni<\/span>ze<\/li>\n  <li><span class='match'>recomme<\/span>nd<\/li>\n  <li><span class='match'>relatio<\/span>n<\/li>\n  <li><span class='match'>remembe<\/span>r<\/li>\n  <li><span class='match'>represe<\/span>nt<\/li>\n  <li><span class='match'>require<\/span><\/li>\n  <li><span class='match'>researc<\/span>h<\/li>\n  <li><span class='match'>resourc<\/span>e<\/li>\n  <li><span class='match'>respect<\/span><\/li>\n  <li><span class='match'>respons<\/span>ible<\/li>\n  <li><span class='match'>saturda<\/span>y<\/li>\n  <li><span class='match'>science<\/span><\/li>\n  <li><span class='match'>scotlan<\/span>d<\/li>\n  <li><span class='match'>secreta<\/span>ry<\/li>\n  <li><span class='match'>section<\/span><\/li>\n  <li><span class='match'>separat<\/span>e<\/li>\n  <li><span class='match'>serious<\/span><\/li>\n  <li><span class='match'>service<\/span><\/li>\n  <li><span class='match'>similar<\/span><\/li>\n  <li><span class='match'>situate<\/span><\/li>\n  <li><span class='match'>society<\/span><\/li>\n  <li><span class='match'>special<\/span><\/li>\n  <li><span class='match'>specifi<\/span>c<\/li>\n  <li><span class='match'>standar<\/span>d<\/li>\n  <li><span class='match'>station<\/span><\/li>\n  <li><span class='match'>straigh<\/span>t<\/li>\n  <li><span class='match'>strateg<\/span>y<\/li>\n  <li><span class='match'>structu<\/span>re<\/li>\n  <li><span class='match'>student<\/span><\/li>\n  <li><span class='match'>subject<\/span><\/li>\n  <li><span class='match'>succeed<\/span><\/li>\n  <li><span class='match'>suggest<\/span><\/li>\n  <li><span class='match'>support<\/span><\/li>\n  <li><span class='match'>suppose<\/span><\/li>\n  <li><span class='match'>surpris<\/span>e<\/li>\n  <li><span class='match'>telepho<\/span>ne<\/li>\n  <li><span class='match'>televis<\/span>ion<\/li>\n  <li><span class='match'>terribl<\/span>e<\/li>\n  <li><span class='match'>therefo<\/span>re<\/li>\n  <li><span class='match'>thirtee<\/span>n<\/li>\n  <li><span class='match'>thousan<\/span>d<\/li>\n  <li><span class='match'>through<\/span><\/li>\n  <li><span class='match'>thursda<\/span>y<\/li>\n  <li><span class='match'>togethe<\/span>r<\/li>\n  <li><span class='match'>tomorro<\/span>w<\/li>\n  <li><span class='match'>tonight<\/span><\/li>\n  <li><span class='match'>traffic<\/span><\/li>\n  <li><span class='match'>transpo<\/span>rt<\/li>\n  <li><span class='match'>trouble<\/span><\/li>\n  <li><span class='match'>tuesday<\/span><\/li>\n  <li><span class='match'>underst<\/span>and<\/li>\n  <li><span class='match'>univers<\/span>ity<\/li>\n  <li><span class='match'>various<\/span><\/li>\n  <li><span class='match'>village<\/span><\/li>\n  <li><span class='match'>wednesd<\/span>ay<\/li>\n  <li><span class='match'>welcome<\/span><\/li>\n  <li><span class='match'>whether<\/span><\/li>\n  <li><span class='match'>without<\/span><\/li>\n  <li><span class='match'>yesterd<\/span>ay<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<div id="character-classes-and-alternatives" class="section level1">
-<h1>14.3.3 Character classes and alternatives</h1>
-<div id="d-matches-any-digit." class="section level5">
-<h5>* “\d” : matches any digit.</h5>
-</div>
-<div id="s-matches-any-whitespace-e.g.-space-tab-newline." class="section level5">
-<h5>* “\s” : matches any whitespace (e.g. space, tab, newline).</h5>
-</div>
-<div id="abc-matches-a-b-or-c." class="section level5">
-<h5>* [abc] : matches a, b, or c.</h5>
-</div>
-<div id="abc-matches-anything-except-a-b-or-c." class="section level5">
-<h5>* [^abc] : matches anything except a, b, or c.</h5>
-<pre class="r"><code>x &lt;- c(&quot;abc&quot;, &quot;a.c&quot;, &quot;a*c&quot;, &quot;a c&quot;)
-str_view(x, &quot;a[.]c&quot;)</code></pre>
-<div id="htmlwidget-7070c8aec7320125ef78" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7070c8aec7320125ef78">{"x":{"html":"<ul>\n  <li>abc<\/li>\n  <li><span class='match'>a.c<\/span><\/li>\n  <li>a*c<\/li>\n  <li>a c<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;.[*]c&quot;)</code></pre>
-<div id="htmlwidget-730cdd5ed72a7887b9d4" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-730cdd5ed72a7887b9d4">{"x":{"html":"<ul>\n  <li>abc<\/li>\n  <li>a.c<\/li>\n  <li><span class='match'>a*c<\/span><\/li>\n  <li>a c<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;a[ ].&quot;)</code></pre>
-<div id="htmlwidget-73a2aaed5a8b2f5cf93c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-73a2aaed5a8b2f5cf93c">{"x":{"html":"<ul>\n  <li>abc<\/li>\n  <li>a.c<\/li>\n  <li>a*c<\/li>\n  <li><span class='match'>a c<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>x &lt;- c(&quot;grey&quot;, &quot;gray&quot;)
-str_view(x, &quot;gr(e|a)y&quot;)</code></pre>
-<p><div id="htmlwidget-c9c5ec358f808373fec0" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c9c5ec358f808373fec0">{"x":{"html":"<ul>\n  <li><span class='match'>grey<\/span><\/li>\n  <li><span class='match'>gray<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script> ### 14.3.3 Exercises</p>
-<ol style="list-style-type: decimal">
-<li></li>
-</ol>
-<pre class="r"><code>str_view(stringr::words, &quot;^[aeiou]&quot;)</code></pre>
-<div id="htmlwidget-e01513423986c1b97f9d" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e01513423986c1b97f9d">{"x":{"html":"<ul>\n  <li><span class='match'>a<\/span><\/li>\n  <li><span class='match'>a<\/span>ble<\/li>\n  <li><span class='match'>a<\/span>bout<\/li>\n  <li><span class='match'>a<\/span>bsolute<\/li>\n  <li><span class='match'>a<\/span>ccept<\/li>\n  <li><span class='match'>a<\/span>ccount<\/li>\n  <li><span class='match'>a<\/span>chieve<\/li>\n  <li><span class='match'>a<\/span>cross<\/li>\n  <li><span class='match'>a<\/span>ct<\/li>\n  <li><span class='match'>a<\/span>ctive<\/li>\n  <li><span class='match'>a<\/span>ctual<\/li>\n  <li><span class='match'>a<\/span>dd<\/li>\n  <li><span class='match'>a<\/span>ddress<\/li>\n  <li><span class='match'>a<\/span>dmit<\/li>\n  <li><span class='match'>a<\/span>dvertise<\/li>\n  <li><span class='match'>a<\/span>ffect<\/li>\n  <li><span class='match'>a<\/span>fford<\/li>\n  <li><span class='match'>a<\/span>fter<\/li>\n  <li><span class='match'>a<\/span>fternoon<\/li>\n  <li><span class='match'>a<\/span>gain<\/li>\n  <li><span class='match'>a<\/span>gainst<\/li>\n  <li><span class='match'>a<\/span>ge<\/li>\n  <li><span class='match'>a<\/span>gent<\/li>\n  <li><span class='match'>a<\/span>go<\/li>\n  <li><span class='match'>a<\/span>gree<\/li>\n  <li><span class='match'>a<\/span>ir<\/li>\n  <li><span class='match'>a<\/span>ll<\/li>\n  <li><span class='match'>a<\/span>llow<\/li>\n  <li><span class='match'>a<\/span>lmost<\/li>\n  <li><span class='match'>a<\/span>long<\/li>\n  <li><span class='match'>a<\/span>lready<\/li>\n  <li><span class='match'>a<\/span>lright<\/li>\n  <li><span class='match'>a<\/span>lso<\/li>\n  <li><span class='match'>a<\/span>lthough<\/li>\n  <li><span class='match'>a<\/span>lways<\/li>\n  <li><span class='match'>a<\/span>merica<\/li>\n  <li><span class='match'>a<\/span>mount<\/li>\n  <li><span class='match'>a<\/span>nd<\/li>\n  <li><span class='match'>a<\/span>nother<\/li>\n  <li><span class='match'>a<\/span>nswer<\/li>\n  <li><span class='match'>a<\/span>ny<\/li>\n  <li><span class='match'>a<\/span>part<\/li>\n  <li><span class='match'>a<\/span>pparent<\/li>\n  <li><span class='match'>a<\/span>ppear<\/li>\n  <li><span class='match'>a<\/span>pply<\/li>\n  <li><span class='match'>a<\/span>ppoint<\/li>\n  <li><span class='match'>a<\/span>pproach<\/li>\n  <li><span class='match'>a<\/span>ppropriate<\/li>\n  <li><span class='match'>a<\/span>rea<\/li>\n  <li><span class='match'>a<\/span>rgue<\/li>\n  <li><span class='match'>a<\/span>rm<\/li>\n  <li><span class='match'>a<\/span>round<\/li>\n  <li><span class='match'>a<\/span>rrange<\/li>\n  <li><span class='match'>a<\/span>rt<\/li>\n  <li><span class='match'>a<\/span>s<\/li>\n  <li><span class='match'>a<\/span>sk<\/li>\n  <li><span class='match'>a<\/span>ssociate<\/li>\n  <li><span class='match'>a<\/span>ssume<\/li>\n  <li><span class='match'>a<\/span>t<\/li>\n  <li><span class='match'>a<\/span>ttend<\/li>\n  <li><span class='match'>a<\/span>uthority<\/li>\n  <li><span class='match'>a<\/span>vailable<\/li>\n  <li><span class='match'>a<\/span>ware<\/li>\n  <li><span class='match'>a<\/span>way<\/li>\n  <li><span class='match'>a<\/span>wful<\/li>\n  <li>baby<\/li>\n  <li>back<\/li>\n  <li>bad<\/li>\n  <li>bag<\/li>\n  <li>balance<\/li>\n  <li>ball<\/li>\n  <li>bank<\/li>\n  <li>bar<\/li>\n  <li>base<\/li>\n  <li>basis<\/li>\n  <li>be<\/li>\n  <li>bear<\/li>\n  <li>beat<\/li>\n  <li>beauty<\/li>\n  <li>because<\/li>\n  <li>become<\/li>\n  <li>bed<\/li>\n  <li>before<\/li>\n  <li>begin<\/li>\n  <li>behind<\/li>\n  <li>believe<\/li>\n  <li>benefit<\/li>\n  <li>best<\/li>\n  <li>bet<\/li>\n  <li>between<\/li>\n  <li>big<\/li>\n  <li>bill<\/li>\n  <li>birth<\/li>\n  <li>bit<\/li>\n  <li>black<\/li>\n  <li>bloke<\/li>\n  <li>blood<\/li>\n  <li>blow<\/li>\n  <li>blue<\/li>\n  <li>board<\/li>\n  <li>boat<\/li>\n  <li>body<\/li>\n  <li>book<\/li>\n  <li>both<\/li>\n  <li>bother<\/li>\n  <li>bottle<\/li>\n  <li>bottom<\/li>\n  <li>box<\/li>\n  <li>boy<\/li>\n  <li>break<\/li>\n  <li>brief<\/li>\n  <li>brilliant<\/li>\n  <li>bring<\/li>\n  <li>britain<\/li>\n  <li>brother<\/li>\n  <li>budget<\/li>\n  <li>build<\/li>\n  <li>bus<\/li>\n  <li>business<\/li>\n  <li>busy<\/li>\n  <li>but<\/li>\n  <li>buy<\/li>\n  <li>by<\/li>\n  <li>cake<\/li>\n  <li>call<\/li>\n  <li>can<\/li>\n  <li>car<\/li>\n  <li>card<\/li>\n  <li>care<\/li>\n  <li>carry<\/li>\n  <li>case<\/li>\n  <li>cat<\/li>\n  <li>catch<\/li>\n  <li>cause<\/li>\n  <li>cent<\/li>\n  <li>centre<\/li>\n  <li>certain<\/li>\n  <li>chair<\/li>\n  <li>chairman<\/li>\n  <li>chance<\/li>\n  <li>change<\/li>\n  <li>chap<\/li>\n  <li>character<\/li>\n  <li>charge<\/li>\n  <li>cheap<\/li>\n  <li>check<\/li>\n  <li>child<\/li>\n  <li>choice<\/li>\n  <li>choose<\/li>\n  <li>Christ<\/li>\n  <li>Christmas<\/li>\n  <li>church<\/li>\n  <li>city<\/li>\n  <li>claim<\/li>\n  <li>class<\/li>\n  <li>clean<\/li>\n  <li>clear<\/li>\n  <li>client<\/li>\n  <li>clock<\/li>\n  <li>close<\/li>\n  <li>closes<\/li>\n  <li>clothe<\/li>\n  <li>club<\/li>\n  <li>coffee<\/li>\n  <li>cold<\/li>\n  <li>colleague<\/li>\n  <li>collect<\/li>\n  <li>college<\/li>\n  <li>colour<\/li>\n  <li>come<\/li>\n  <li>comment<\/li>\n  <li>commit<\/li>\n  <li>committee<\/li>\n  <li>common<\/li>\n  <li>community<\/li>\n  <li>company<\/li>\n  <li>compare<\/li>\n  <li>complete<\/li>\n  <li>compute<\/li>\n  <li>concern<\/li>\n  <li>condition<\/li>\n  <li>confer<\/li>\n  <li>consider<\/li>\n  <li>consult<\/li>\n  <li>contact<\/li>\n  <li>continue<\/li>\n  <li>contract<\/li>\n  <li>control<\/li>\n  <li>converse<\/li>\n  <li>cook<\/li>\n  <li>copy<\/li>\n  <li>corner<\/li>\n  <li>correct<\/li>\n  <li>cost<\/li>\n  <li>could<\/li>\n  <li>council<\/li>\n  <li>count<\/li>\n  <li>country<\/li>\n  <li>county<\/li>\n  <li>couple<\/li>\n  <li>course<\/li>\n  <li>court<\/li>\n  <li>cover<\/li>\n  <li>create<\/li>\n  <li>cross<\/li>\n  <li>cup<\/li>\n  <li>current<\/li>\n  <li>cut<\/li>\n  <li>dad<\/li>\n  <li>danger<\/li>\n  <li>date<\/li>\n  <li>day<\/li>\n  <li>dead<\/li>\n  <li>deal<\/li>\n  <li>dear<\/li>\n  <li>debate<\/li>\n  <li>decide<\/li>\n  <li>decision<\/li>\n  <li>deep<\/li>\n  <li>definite<\/li>\n  <li>degree<\/li>\n  <li>department<\/li>\n  <li>depend<\/li>\n  <li>describe<\/li>\n  <li>design<\/li>\n  <li>detail<\/li>\n  <li>develop<\/li>\n  <li>die<\/li>\n  <li>difference<\/li>\n  <li>difficult<\/li>\n  <li>dinner<\/li>\n  <li>direct<\/li>\n  <li>discuss<\/li>\n  <li>district<\/li>\n  <li>divide<\/li>\n  <li>do<\/li>\n  <li>doctor<\/li>\n  <li>document<\/li>\n  <li>dog<\/li>\n  <li>door<\/li>\n  <li>double<\/li>\n  <li>doubt<\/li>\n  <li>down<\/li>\n  <li>draw<\/li>\n  <li>dress<\/li>\n  <li>drink<\/li>\n  <li>drive<\/li>\n  <li>drop<\/li>\n  <li>dry<\/li>\n  <li>due<\/li>\n  <li>during<\/li>\n  <li><span class='match'>e<\/span>ach<\/li>\n  <li><span class='match'>e<\/span>arly<\/li>\n  <li><span class='match'>e<\/span>ast<\/li>\n  <li><span class='match'>e<\/span>asy<\/li>\n  <li><span class='match'>e<\/span>at<\/li>\n  <li><span class='match'>e<\/span>conomy<\/li>\n  <li><span class='match'>e<\/span>ducate<\/li>\n  <li><span class='match'>e<\/span>ffect<\/li>\n  <li><span class='match'>e<\/span>gg<\/li>\n  <li><span class='match'>e<\/span>ight<\/li>\n  <li><span class='match'>e<\/span>ither<\/li>\n  <li><span class='match'>e<\/span>lect<\/li>\n  <li><span class='match'>e<\/span>lectric<\/li>\n  <li><span class='match'>e<\/span>leven<\/li>\n  <li><span class='match'>e<\/span>lse<\/li>\n  <li><span class='match'>e<\/span>mploy<\/li>\n  <li><span class='match'>e<\/span>ncourage<\/li>\n  <li><span class='match'>e<\/span>nd<\/li>\n  <li><span class='match'>e<\/span>ngine<\/li>\n  <li><span class='match'>e<\/span>nglish<\/li>\n  <li><span class='match'>e<\/span>njoy<\/li>\n  <li><span class='match'>e<\/span>nough<\/li>\n  <li><span class='match'>e<\/span>nter<\/li>\n  <li><span class='match'>e<\/span>nvironment<\/li>\n  <li><span class='match'>e<\/span>qual<\/li>\n  <li><span class='match'>e<\/span>special<\/li>\n  <li><span class='match'>e<\/span>urope<\/li>\n  <li><span class='match'>e<\/span>ven<\/li>\n  <li><span class='match'>e<\/span>vening<\/li>\n  <li><span class='match'>e<\/span>ver<\/li>\n  <li><span class='match'>e<\/span>very<\/li>\n  <li><span class='match'>e<\/span>vidence<\/li>\n  <li><span class='match'>e<\/span>xact<\/li>\n  <li><span class='match'>e<\/span>xample<\/li>\n  <li><span class='match'>e<\/span>xcept<\/li>\n  <li><span class='match'>e<\/span>xcuse<\/li>\n  <li><span class='match'>e<\/span>xercise<\/li>\n  <li><span class='match'>e<\/span>xist<\/li>\n  <li><span class='match'>e<\/span>xpect<\/li>\n  <li><span class='match'>e<\/span>xpense<\/li>\n  <li><span class='match'>e<\/span>xperience<\/li>\n  <li><span class='match'>e<\/span>xplain<\/li>\n  <li><span class='match'>e<\/span>xpress<\/li>\n  <li><span class='match'>e<\/span>xtra<\/li>\n  <li><span class='match'>e<\/span>ye<\/li>\n  <li>face<\/li>\n  <li>fact<\/li>\n  <li>fair<\/li>\n  <li>fall<\/li>\n  <li>family<\/li>\n  <li>far<\/li>\n  <li>farm<\/li>\n  <li>fast<\/li>\n  <li>father<\/li>\n  <li>favour<\/li>\n  <li>feed<\/li>\n  <li>feel<\/li>\n  <li>few<\/li>\n  <li>field<\/li>\n  <li>fight<\/li>\n  <li>figure<\/li>\n  <li>file<\/li>\n  <li>fill<\/li>\n  <li>film<\/li>\n  <li>final<\/li>\n  <li>finance<\/li>\n  <li>find<\/li>\n  <li>fine<\/li>\n  <li>finish<\/li>\n  <li>fire<\/li>\n  <li>first<\/li>\n  <li>fish<\/li>\n  <li>fit<\/li>\n  <li>five<\/li>\n  <li>flat<\/li>\n  <li>floor<\/li>\n  <li>fly<\/li>\n  <li>follow<\/li>\n  <li>food<\/li>\n  <li>foot<\/li>\n  <li>for<\/li>\n  <li>force<\/li>\n  <li>forget<\/li>\n  <li>form<\/li>\n  <li>fortune<\/li>\n  <li>forward<\/li>\n  <li>four<\/li>\n  <li>france<\/li>\n  <li>free<\/li>\n  <li>friday<\/li>\n  <li>friend<\/li>\n  <li>from<\/li>\n  <li>front<\/li>\n  <li>full<\/li>\n  <li>fun<\/li>\n  <li>function<\/li>\n  <li>fund<\/li>\n  <li>further<\/li>\n  <li>future<\/li>\n  <li>game<\/li>\n  <li>garden<\/li>\n  <li>gas<\/li>\n  <li>general<\/li>\n  <li>germany<\/li>\n  <li>get<\/li>\n  <li>girl<\/li>\n  <li>give<\/li>\n  <li>glass<\/li>\n  <li>go<\/li>\n  <li>god<\/li>\n  <li>good<\/li>\n  <li>goodbye<\/li>\n  <li>govern<\/li>\n  <li>grand<\/li>\n  <li>grant<\/li>\n  <li>great<\/li>\n  <li>green<\/li>\n  <li>ground<\/li>\n  <li>group<\/li>\n  <li>grow<\/li>\n  <li>guess<\/li>\n  <li>guy<\/li>\n  <li>hair<\/li>\n  <li>half<\/li>\n  <li>hall<\/li>\n  <li>hand<\/li>\n  <li>hang<\/li>\n  <li>happen<\/li>\n  <li>happy<\/li>\n  <li>hard<\/li>\n  <li>hate<\/li>\n  <li>have<\/li>\n  <li>he<\/li>\n  <li>head<\/li>\n  <li>health<\/li>\n  <li>hear<\/li>\n  <li>heart<\/li>\n  <li>heat<\/li>\n  <li>heavy<\/li>\n  <li>hell<\/li>\n  <li>help<\/li>\n  <li>here<\/li>\n  <li>high<\/li>\n  <li>history<\/li>\n  <li>hit<\/li>\n  <li>hold<\/li>\n  <li>holiday<\/li>\n  <li>home<\/li>\n  <li>honest<\/li>\n  <li>hope<\/li>\n  <li>horse<\/li>\n  <li>hospital<\/li>\n  <li>hot<\/li>\n  <li>hour<\/li>\n  <li>house<\/li>\n  <li>how<\/li>\n  <li>however<\/li>\n  <li>hullo<\/li>\n  <li>hundred<\/li>\n  <li>husband<\/li>\n  <li><span class='match'>i<\/span>dea<\/li>\n  <li><span class='match'>i<\/span>dentify<\/li>\n  <li><span class='match'>i<\/span>f<\/li>\n  <li><span class='match'>i<\/span>magine<\/li>\n  <li><span class='match'>i<\/span>mportant<\/li>\n  <li><span class='match'>i<\/span>mprove<\/li>\n  <li><span class='match'>i<\/span>n<\/li>\n  <li><span class='match'>i<\/span>nclude<\/li>\n  <li><span class='match'>i<\/span>ncome<\/li>\n  <li><span class='match'>i<\/span>ncrease<\/li>\n  <li><span class='match'>i<\/span>ndeed<\/li>\n  <li><span class='match'>i<\/span>ndividual<\/li>\n  <li><span class='match'>i<\/span>ndustry<\/li>\n  <li><span class='match'>i<\/span>nform<\/li>\n  <li><span class='match'>i<\/span>nside<\/li>\n  <li><span class='match'>i<\/span>nstead<\/li>\n  <li><span class='match'>i<\/span>nsure<\/li>\n  <li><span class='match'>i<\/span>nterest<\/li>\n  <li><span class='match'>i<\/span>nto<\/li>\n  <li><span class='match'>i<\/span>ntroduce<\/li>\n  <li><span class='match'>i<\/span>nvest<\/li>\n  <li><span class='match'>i<\/span>nvolve<\/li>\n  <li><span class='match'>i<\/span>ssue<\/li>\n  <li><span class='match'>i<\/span>t<\/li>\n  <li><span class='match'>i<\/span>tem<\/li>\n  <li>jesus<\/li>\n  <li>job<\/li>\n  <li>join<\/li>\n  <li>judge<\/li>\n  <li>jump<\/li>\n  <li>just<\/li>\n  <li>keep<\/li>\n  <li>key<\/li>\n  <li>kid<\/li>\n  <li>kill<\/li>\n  <li>kind<\/li>\n  <li>king<\/li>\n  <li>kitchen<\/li>\n  <li>knock<\/li>\n  <li>know<\/li>\n  <li>labour<\/li>\n  <li>lad<\/li>\n  <li>lady<\/li>\n  <li>land<\/li>\n  <li>language<\/li>\n  <li>large<\/li>\n  <li>last<\/li>\n  <li>late<\/li>\n  <li>laugh<\/li>\n  <li>law<\/li>\n  <li>lay<\/li>\n  <li>lead<\/li>\n  <li>learn<\/li>\n  <li>leave<\/li>\n  <li>left<\/li>\n  <li>leg<\/li>\n  <li>less<\/li>\n  <li>let<\/li>\n  <li>letter<\/li>\n  <li>level<\/li>\n  <li>lie<\/li>\n  <li>life<\/li>\n  <li>light<\/li>\n  <li>like<\/li>\n  <li>likely<\/li>\n  <li>limit<\/li>\n  <li>line<\/li>\n  <li>link<\/li>\n  <li>list<\/li>\n  <li>listen<\/li>\n  <li>little<\/li>\n  <li>live<\/li>\n  <li>load<\/li>\n  <li>local<\/li>\n  <li>lock<\/li>\n  <li>london<\/li>\n  <li>long<\/li>\n  <li>look<\/li>\n  <li>lord<\/li>\n  <li>lose<\/li>\n  <li>lot<\/li>\n  <li>love<\/li>\n  <li>low<\/li>\n  <li>luck<\/li>\n  <li>lunch<\/li>\n  <li>machine<\/li>\n  <li>main<\/li>\n  <li>major<\/li>\n  <li>make<\/li>\n  <li>man<\/li>\n  <li>manage<\/li>\n  <li>many<\/li>\n  <li>mark<\/li>\n  <li>market<\/li>\n  <li>marry<\/li>\n  <li>match<\/li>\n  <li>matter<\/li>\n  <li>may<\/li>\n  <li>maybe<\/li>\n  <li>mean<\/li>\n  <li>meaning<\/li>\n  <li>measure<\/li>\n  <li>meet<\/li>\n  <li>member<\/li>\n  <li>mention<\/li>\n  <li>middle<\/li>\n  <li>might<\/li>\n  <li>mile<\/li>\n  <li>milk<\/li>\n  <li>million<\/li>\n  <li>mind<\/li>\n  <li>minister<\/li>\n  <li>minus<\/li>\n  <li>minute<\/li>\n  <li>miss<\/li>\n  <li>mister<\/li>\n  <li>moment<\/li>\n  <li>monday<\/li>\n  <li>money<\/li>\n  <li>month<\/li>\n  <li>more<\/li>\n  <li>morning<\/li>\n  <li>most<\/li>\n  <li>mother<\/li>\n  <li>motion<\/li>\n  <li>move<\/li>\n  <li>mrs<\/li>\n  <li>much<\/li>\n  <li>music<\/li>\n  <li>must<\/li>\n  <li>name<\/li>\n  <li>nation<\/li>\n  <li>nature<\/li>\n  <li>near<\/li>\n  <li>necessary<\/li>\n  <li>need<\/li>\n  <li>never<\/li>\n  <li>new<\/li>\n  <li>news<\/li>\n  <li>next<\/li>\n  <li>nice<\/li>\n  <li>night<\/li>\n  <li>nine<\/li>\n  <li>no<\/li>\n  <li>non<\/li>\n  <li>none<\/li>\n  <li>normal<\/li>\n  <li>north<\/li>\n  <li>not<\/li>\n  <li>note<\/li>\n  <li>notice<\/li>\n  <li>now<\/li>\n  <li>number<\/li>\n  <li><span class='match'>o<\/span>bvious<\/li>\n  <li><span class='match'>o<\/span>ccasion<\/li>\n  <li><span class='match'>o<\/span>dd<\/li>\n  <li><span class='match'>o<\/span>f<\/li>\n  <li><span class='match'>o<\/span>ff<\/li>\n  <li><span class='match'>o<\/span>ffer<\/li>\n  <li><span class='match'>o<\/span>ffice<\/li>\n  <li><span class='match'>o<\/span>ften<\/li>\n  <li><span class='match'>o<\/span>kay<\/li>\n  <li><span class='match'>o<\/span>ld<\/li>\n  <li><span class='match'>o<\/span>n<\/li>\n  <li><span class='match'>o<\/span>nce<\/li>\n  <li><span class='match'>o<\/span>ne<\/li>\n  <li><span class='match'>o<\/span>nly<\/li>\n  <li><span class='match'>o<\/span>pen<\/li>\n  <li><span class='match'>o<\/span>perate<\/li>\n  <li><span class='match'>o<\/span>pportunity<\/li>\n  <li><span class='match'>o<\/span>ppose<\/li>\n  <li><span class='match'>o<\/span>r<\/li>\n  <li><span class='match'>o<\/span>rder<\/li>\n  <li><span class='match'>o<\/span>rganize<\/li>\n  <li><span class='match'>o<\/span>riginal<\/li>\n  <li><span class='match'>o<\/span>ther<\/li>\n  <li><span class='match'>o<\/span>therwise<\/li>\n  <li><span class='match'>o<\/span>ught<\/li>\n  <li><span class='match'>o<\/span>ut<\/li>\n  <li><span class='match'>o<\/span>ver<\/li>\n  <li><span class='match'>o<\/span>wn<\/li>\n  <li>pack<\/li>\n  <li>page<\/li>\n  <li>paint<\/li>\n  <li>pair<\/li>\n  <li>paper<\/li>\n  <li>paragraph<\/li>\n  <li>pardon<\/li>\n  <li>parent<\/li>\n  <li>park<\/li>\n  <li>part<\/li>\n  <li>particular<\/li>\n  <li>party<\/li>\n  <li>pass<\/li>\n  <li>past<\/li>\n  <li>pay<\/li>\n  <li>pence<\/li>\n  <li>pension<\/li>\n  <li>people<\/li>\n  <li>per<\/li>\n  <li>percent<\/li>\n  <li>perfect<\/li>\n  <li>perhaps<\/li>\n  <li>period<\/li>\n  <li>person<\/li>\n  <li>photograph<\/li>\n  <li>pick<\/li>\n  <li>picture<\/li>\n  <li>piece<\/li>\n  <li>place<\/li>\n  <li>plan<\/li>\n  <li>play<\/li>\n  <li>please<\/li>\n  <li>plus<\/li>\n  <li>point<\/li>\n  <li>police<\/li>\n  <li>policy<\/li>\n  <li>politic<\/li>\n  <li>poor<\/li>\n  <li>position<\/li>\n  <li>positive<\/li>\n  <li>possible<\/li>\n  <li>post<\/li>\n  <li>pound<\/li>\n  <li>power<\/li>\n  <li>practise<\/li>\n  <li>prepare<\/li>\n  <li>present<\/li>\n  <li>press<\/li>\n  <li>pressure<\/li>\n  <li>presume<\/li>\n  <li>pretty<\/li>\n  <li>previous<\/li>\n  <li>price<\/li>\n  <li>print<\/li>\n  <li>private<\/li>\n  <li>probable<\/li>\n  <li>problem<\/li>\n  <li>proceed<\/li>\n  <li>process<\/li>\n  <li>produce<\/li>\n  <li>product<\/li>\n  <li>programme<\/li>\n  <li>project<\/li>\n  <li>proper<\/li>\n  <li>propose<\/li>\n  <li>protect<\/li>\n  <li>provide<\/li>\n  <li>public<\/li>\n  <li>pull<\/li>\n  <li>purpose<\/li>\n  <li>push<\/li>\n  <li>put<\/li>\n  <li>quality<\/li>\n  <li>quarter<\/li>\n  <li>question<\/li>\n  <li>quick<\/li>\n  <li>quid<\/li>\n  <li>quiet<\/li>\n  <li>quite<\/li>\n  <li>radio<\/li>\n  <li>rail<\/li>\n  <li>raise<\/li>\n  <li>range<\/li>\n  <li>rate<\/li>\n  <li>rather<\/li>\n  <li>read<\/li>\n  <li>ready<\/li>\n  <li>real<\/li>\n  <li>realise<\/li>\n  <li>really<\/li>\n  <li>reason<\/li>\n  <li>receive<\/li>\n  <li>recent<\/li>\n  <li>reckon<\/li>\n  <li>recognize<\/li>\n  <li>recommend<\/li>\n  <li>record<\/li>\n  <li>red<\/li>\n  <li>reduce<\/li>\n  <li>refer<\/li>\n  <li>regard<\/li>\n  <li>region<\/li>\n  <li>relation<\/li>\n  <li>remember<\/li>\n  <li>report<\/li>\n  <li>represent<\/li>\n  <li>require<\/li>\n  <li>research<\/li>\n  <li>resource<\/li>\n  <li>respect<\/li>\n  <li>responsible<\/li>\n  <li>rest<\/li>\n  <li>result<\/li>\n  <li>return<\/li>\n  <li>rid<\/li>\n  <li>right<\/li>\n  <li>ring<\/li>\n  <li>rise<\/li>\n  <li>road<\/li>\n  <li>role<\/li>\n  <li>roll<\/li>\n  <li>room<\/li>\n  <li>round<\/li>\n  <li>rule<\/li>\n  <li>run<\/li>\n  <li>safe<\/li>\n  <li>sale<\/li>\n  <li>same<\/li>\n  <li>saturday<\/li>\n  <li>save<\/li>\n  <li>say<\/li>\n  <li>scheme<\/li>\n  <li>school<\/li>\n  <li>science<\/li>\n  <li>score<\/li>\n  <li>scotland<\/li>\n  <li>seat<\/li>\n  <li>second<\/li>\n  <li>secretary<\/li>\n  <li>section<\/li>\n  <li>secure<\/li>\n  <li>see<\/li>\n  <li>seem<\/li>\n  <li>self<\/li>\n  <li>sell<\/li>\n  <li>send<\/li>\n  <li>sense<\/li>\n  <li>separate<\/li>\n  <li>serious<\/li>\n  <li>serve<\/li>\n  <li>service<\/li>\n  <li>set<\/li>\n  <li>settle<\/li>\n  <li>seven<\/li>\n  <li>sex<\/li>\n  <li>shall<\/li>\n  <li>share<\/li>\n  <li>she<\/li>\n  <li>sheet<\/li>\n  <li>shoe<\/li>\n  <li>shoot<\/li>\n  <li>shop<\/li>\n  <li>short<\/li>\n  <li>should<\/li>\n  <li>show<\/li>\n  <li>shut<\/li>\n  <li>sick<\/li>\n  <li>side<\/li>\n  <li>sign<\/li>\n  <li>similar<\/li>\n  <li>simple<\/li>\n  <li>since<\/li>\n  <li>sing<\/li>\n  <li>single<\/li>\n  <li>sir<\/li>\n  <li>sister<\/li>\n  <li>sit<\/li>\n  <li>site<\/li>\n  <li>situate<\/li>\n  <li>six<\/li>\n  <li>size<\/li>\n  <li>sleep<\/li>\n  <li>slight<\/li>\n  <li>slow<\/li>\n  <li>small<\/li>\n  <li>smoke<\/li>\n  <li>so<\/li>\n  <li>social<\/li>\n  <li>society<\/li>\n  <li>some<\/li>\n  <li>son<\/li>\n  <li>soon<\/li>\n  <li>sorry<\/li>\n  <li>sort<\/li>\n  <li>sound<\/li>\n  <li>south<\/li>\n  <li>space<\/li>\n  <li>speak<\/li>\n  <li>special<\/li>\n  <li>specific<\/li>\n  <li>speed<\/li>\n  <li>spell<\/li>\n  <li>spend<\/li>\n  <li>square<\/li>\n  <li>staff<\/li>\n  <li>stage<\/li>\n  <li>stairs<\/li>\n  <li>stand<\/li>\n  <li>standard<\/li>\n  <li>start<\/li>\n  <li>state<\/li>\n  <li>station<\/li>\n  <li>stay<\/li>\n  <li>step<\/li>\n  <li>stick<\/li>\n  <li>still<\/li>\n  <li>stop<\/li>\n  <li>story<\/li>\n  <li>straight<\/li>\n  <li>strategy<\/li>\n  <li>street<\/li>\n  <li>strike<\/li>\n  <li>strong<\/li>\n  <li>structure<\/li>\n  <li>student<\/li>\n  <li>study<\/li>\n  <li>stuff<\/li>\n  <li>stupid<\/li>\n  <li>subject<\/li>\n  <li>succeed<\/li>\n  <li>such<\/li>\n  <li>sudden<\/li>\n  <li>suggest<\/li>\n  <li>suit<\/li>\n  <li>summer<\/li>\n  <li>sun<\/li>\n  <li>sunday<\/li>\n  <li>supply<\/li>\n  <li>support<\/li>\n  <li>suppose<\/li>\n  <li>sure<\/li>\n  <li>surprise<\/li>\n  <li>switch<\/li>\n  <li>system<\/li>\n  <li>table<\/li>\n  <li>take<\/li>\n  <li>talk<\/li>\n  <li>tape<\/li>\n  <li>tax<\/li>\n  <li>tea<\/li>\n  <li>teach<\/li>\n  <li>team<\/li>\n  <li>telephone<\/li>\n  <li>television<\/li>\n  <li>tell<\/li>\n  <li>ten<\/li>\n  <li>tend<\/li>\n  <li>term<\/li>\n  <li>terrible<\/li>\n  <li>test<\/li>\n  <li>than<\/li>\n  <li>thank<\/li>\n  <li>the<\/li>\n  <li>then<\/li>\n  <li>there<\/li>\n  <li>therefore<\/li>\n  <li>they<\/li>\n  <li>thing<\/li>\n  <li>think<\/li>\n  <li>thirteen<\/li>\n  <li>thirty<\/li>\n  <li>this<\/li>\n  <li>thou<\/li>\n  <li>though<\/li>\n  <li>thousand<\/li>\n  <li>three<\/li>\n  <li>through<\/li>\n  <li>throw<\/li>\n  <li>thursday<\/li>\n  <li>tie<\/li>\n  <li>time<\/li>\n  <li>to<\/li>\n  <li>today<\/li>\n  <li>together<\/li>\n  <li>tomorrow<\/li>\n  <li>tonight<\/li>\n  <li>too<\/li>\n  <li>top<\/li>\n  <li>total<\/li>\n  <li>touch<\/li>\n  <li>toward<\/li>\n  <li>town<\/li>\n  <li>trade<\/li>\n  <li>traffic<\/li>\n  <li>train<\/li>\n  <li>transport<\/li>\n  <li>travel<\/li>\n  <li>treat<\/li>\n  <li>tree<\/li>\n  <li>trouble<\/li>\n  <li>true<\/li>\n  <li>trust<\/li>\n  <li>try<\/li>\n  <li>tuesday<\/li>\n  <li>turn<\/li>\n  <li>twelve<\/li>\n  <li>twenty<\/li>\n  <li>two<\/li>\n  <li>type<\/li>\n  <li><span class='match'>u<\/span>nder<\/li>\n  <li><span class='match'>u<\/span>nderstand<\/li>\n  <li><span class='match'>u<\/span>nion<\/li>\n  <li><span class='match'>u<\/span>nit<\/li>\n  <li><span class='match'>u<\/span>nite<\/li>\n  <li><span class='match'>u<\/span>niversity<\/li>\n  <li><span class='match'>u<\/span>nless<\/li>\n  <li><span class='match'>u<\/span>ntil<\/li>\n  <li><span class='match'>u<\/span>p<\/li>\n  <li><span class='match'>u<\/span>pon<\/li>\n  <li><span class='match'>u<\/span>se<\/li>\n  <li><span class='match'>u<\/span>sual<\/li>\n  <li>value<\/li>\n  <li>various<\/li>\n  <li>very<\/li>\n  <li>video<\/li>\n  <li>view<\/li>\n  <li>village<\/li>\n  <li>visit<\/li>\n  <li>vote<\/li>\n  <li>wage<\/li>\n  <li>wait<\/li>\n  <li>walk<\/li>\n  <li>wall<\/li>\n  <li>want<\/li>\n  <li>war<\/li>\n  <li>warm<\/li>\n  <li>wash<\/li>\n  <li>waste<\/li>\n  <li>watch<\/li>\n  <li>water<\/li>\n  <li>way<\/li>\n  <li>we<\/li>\n  <li>wear<\/li>\n  <li>wednesday<\/li>\n  <li>wee<\/li>\n  <li>week<\/li>\n  <li>weigh<\/li>\n  <li>welcome<\/li>\n  <li>well<\/li>\n  <li>west<\/li>\n  <li>what<\/li>\n  <li>when<\/li>\n  <li>where<\/li>\n  <li>whether<\/li>\n  <li>which<\/li>\n  <li>while<\/li>\n  <li>white<\/li>\n  <li>who<\/li>\n  <li>whole<\/li>\n  <li>why<\/li>\n  <li>wide<\/li>\n  <li>wife<\/li>\n  <li>will<\/li>\n  <li>win<\/li>\n  <li>wind<\/li>\n  <li>window<\/li>\n  <li>wish<\/li>\n  <li>with<\/li>\n  <li>within<\/li>\n  <li>without<\/li>\n  <li>woman<\/li>\n  <li>wonder<\/li>\n  <li>wood<\/li>\n  <li>word<\/li>\n  <li>work<\/li>\n  <li>world<\/li>\n  <li>worry<\/li>\n  <li>worse<\/li>\n  <li>worth<\/li>\n  <li>would<\/li>\n  <li>write<\/li>\n  <li>wrong<\/li>\n  <li>year<\/li>\n  <li>yes<\/li>\n  <li>yesterday<\/li>\n  <li>yet<\/li>\n  <li>you<\/li>\n  <li>young<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_subset(stringr::words, &quot;[aeiou]&quot;, negate=TRUE)</code></pre>
-<pre><code>## [1] &quot;by&quot;  &quot;dry&quot; &quot;fly&quot; &quot;mrs&quot; &quot;try&quot; &quot;why&quot;</code></pre>
-<pre class="r"><code>str_view(stringr::words, &quot;[aeiou]&quot;, match=FALSE)</code></pre>
-<div id="htmlwidget-c647f103e61d482b9ac7" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c647f103e61d482b9ac7">{"x":{"html":"<ul>\n  <li>by<\/li>\n  <li>dry<\/li>\n  <li>fly<\/li>\n  <li>mrs<\/li>\n  <li>try<\/li>\n  <li>why<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_subset(c(&quot;ed&quot;, stringr::words), &quot;(^|[^e])ed$&quot;)</code></pre>
-<pre><code>## [1] &quot;ed&quot;      &quot;bed&quot;     &quot;hundred&quot; &quot;red&quot;</code></pre>
-<pre class="r"><code># ending in ing or ise
-str_view(stringr::words, &quot;i(ng|se)$&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-1b3a4856cb5283fa25b9" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1b3a4856cb5283fa25b9">{"x":{"html":"<ul>\n  <li>advert<span class='match'>ise<\/span><\/li>\n  <li>br<span class='match'>ing<\/span><\/li>\n  <li>dur<span class='match'>ing<\/span><\/li>\n  <li>even<span class='match'>ing<\/span><\/li>\n  <li>exerc<span class='match'>ise<\/span><\/li>\n  <li>k<span class='match'>ing<\/span><\/li>\n  <li>mean<span class='match'>ing<\/span><\/li>\n  <li>morn<span class='match'>ing<\/span><\/li>\n  <li>otherw<span class='match'>ise<\/span><\/li>\n  <li>pract<span class='match'>ise<\/span><\/li>\n  <li>ra<span class='match'>ise<\/span><\/li>\n  <li>real<span class='match'>ise<\/span><\/li>\n  <li>r<span class='match'>ing<\/span><\/li>\n  <li>r<span class='match'>ise<\/span><\/li>\n  <li>s<span class='match'>ing<\/span><\/li>\n  <li>surpr<span class='match'>ise<\/span><\/li>\n  <li>th<span class='match'>ing<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<ol start="2" style="list-style-type: decimal">
-<li>cie</li>
-</ol>
-<pre class="r"><code>str_subset(stringr::words, &quot;(cie|[^c])ie&quot;)</code></pre>
-<pre><code>##  [1] &quot;achieve&quot;    &quot;believe&quot;    &quot;brief&quot;      &quot;client&quot;     &quot;die&quot;       
-##  [6] &quot;experience&quot; &quot;field&quot;      &quot;friend&quot;     &quot;lie&quot;        &quot;piece&quot;     
-## [11] &quot;quiet&quot;      &quot;tie&quot;        &quot;view&quot;</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li></li>
-</ol>
-<pre class="r"><code># is &quot;q&quot; always followed by &quot;u&quot;
-str_subset(stringr::words, &quot;q[^u]&quot; )</code></pre>
-<pre><code>## character(0)</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li>Write a regular expression that matches a word if it’s probably written in British English, not American English. o &lt;- ou ise &lt;- ize a &lt;- ae o &lt;- oe</li>
-</ol>
-<pre class="r"><code>str_subset(stringr::words, &quot;ou|ise$|ae|oe&quot; )</code></pre>
-<pre><code>##  [1] &quot;about&quot;     &quot;account&quot;   &quot;advertise&quot; &quot;although&quot;  &quot;amount&quot;    &quot;around&quot;   
-##  [7] &quot;colour&quot;    &quot;could&quot;     &quot;council&quot;   &quot;count&quot;     &quot;country&quot;   &quot;county&quot;   
-## [13] &quot;couple&quot;    &quot;course&quot;    &quot;court&quot;     &quot;double&quot;    &quot;doubt&quot;     &quot;encourage&quot;
-## [19] &quot;enough&quot;    &quot;exercise&quot;  &quot;favour&quot;    &quot;four&quot;      &quot;ground&quot;    &quot;group&quot;    
-## [25] &quot;hour&quot;      &quot;house&quot;     &quot;labour&quot;    &quot;obvious&quot;   &quot;otherwise&quot; &quot;ought&quot;    
-## [31] &quot;out&quot;       &quot;pound&quot;     &quot;practise&quot;  &quot;previous&quot;  &quot;raise&quot;     &quot;realise&quot;  
-## [37] &quot;resource&quot;  &quot;rise&quot;      &quot;round&quot;     &quot;serious&quot;   &quot;shoe&quot;      &quot;should&quot;   
-## [43] &quot;sound&quot;     &quot;south&quot;     &quot;surprise&quot;  &quot;thou&quot;      &quot;though&quot;    &quot;thousand&quot; 
-## [49] &quot;through&quot;   &quot;touch&quot;     &quot;trouble&quot;   &quot;various&quot;   &quot;without&quot;   &quot;would&quot;    
-## [55] &quot;you&quot;       &quot;young&quot;</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li></li>
-</ol>
-</div>
-</div>
-<div id="repetition" class="section level1">
-<h1>14.3.4 Repetition</h1>
-<pre class="r"><code>x &lt;- c(&quot;123-456-7890&quot;, &quot;(123)456-7890&quot;, &quot;(123) 456-7890&quot;, &quot;1235-2351&quot;)
-str_view(x, &quot;\\d\\d\\d-\\d\\d\\d-\\d\\d\\d\\d&quot;)</code></pre>
-<div id="htmlwidget-3efa32f7095603077c34" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3efa32f7095603077c34">{"x":{"html":"<ul>\n  <li><span class='match'>123-456-7890<\/span><\/li>\n  <li>(123)456-7890<\/li>\n  <li>(123) 456-7890<\/li>\n  <li>1235-2351<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>x &lt;- &quot;1888 is the longest year in Roman numerals: MDCCCLXXXVIII&quot;
-str_view(x, &quot;CC?&quot;)</code></pre>
-<div id="htmlwidget-28b05fc782cc1df1ba2b" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-28b05fc782cc1df1ba2b">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MD<span class='match'>CC<\/span>CLXXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;CC+&quot;)</code></pre>
-<div id="htmlwidget-174c7b9d1a5c3a77e427" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-174c7b9d1a5c3a77e427">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MD<span class='match'>CCC<\/span>LXXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &#39;C[LX]+&#39;)</code></pre>
-<div id="htmlwidget-f8159baece464c6e0f2f" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f8159baece464c6e0f2f">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MDCC<span class='match'>CLXXX<\/span>VIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;C{2}&quot;)</code></pre>
-<div id="htmlwidget-7f126c1103f2390610c9" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7f126c1103f2390610c9">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MD<span class='match'>CC<\/span>CLXXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &quot;C{2,}&quot;)</code></pre>
-<div id="htmlwidget-3c77d3c0b2935d530225" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3c77d3c0b2935d530225">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MD<span class='match'>CCC<\/span>LXXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &#39;C{2,3}?&#39;)</code></pre>
-<div id="htmlwidget-11d66f91e74113477970" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-11d66f91e74113477970">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MD<span class='match'>CC<\/span>CLXXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(x, &#39;C[LX]+?&#39;)</code></pre>
-<div id="htmlwidget-4a677c01dacbbc5346fc" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4a677c01dacbbc5346fc">{"x":{"html":"<ul>\n  <li>1888 is the longest year in Roman numerals: MDCC<span class='match'>CL<\/span>XXXVIII<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="exercise" class="section level1">
-<h1>14.3.4 Exercise</h1>
-<ol style="list-style-type: decimal">
-<li>? &lt;- (0,1)</li>
-</ol>
 <ul>
-<li>&lt;- (1,)</li>
-<li>&lt;- (0,)</li>
+<li>vcf meta - describing the body of the file</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li></li>
-</ol>
-<ol style="list-style-type: decimal">
-<li>^.*$ - match any string</li>
-<li>“\\{.+\\}” - match any string with curly braces surrounding at least one character.</li>
-<li>\d{4}-\d{2}-\d{2} - will match four digits followed by a hyphen, followed by two digits followed by a hyphen, followed by another two digits “\\\\{4}” - is \\{4}, which will match four backslashes.</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li></li>
-</ol>
+<pre class="r"><code>library(vcfR)</code></pre>
+<pre><code>## 
+##    *****       ***   vcfR   ***       *****
+##    This is vcfR 1.12.0 
+##      browseVignettes(&#39;vcfR&#39;) # Documentation
+##      citation(&#39;vcfR&#39;) # Citation
+##    *****       *****      *****       *****</code></pre>
+<pre class="r"><code># function data loads datasets in vcfR
+data(vcfR_example)
+vcf</code></pre>
+<pre><code>## ***** Object of Class vcfR *****
+## 18 samples
+## 1 CHROMs
+## 2,533 variants
+## Object size: 3.2 Mb
+## 8.497 percent missing data
+## *****        *****         *****</code></pre>
+<div id="meta-region" class="section level2">
+<h2>Meta Region</h2>
 <ul>
-<li></li>
+<li>meta region contains information about the file, its creation, as well as information to interpret abbreviations used elsewhere in the file.</li>
 </ul>
-<pre class="r"><code>str_view(words, &quot;^[^aeiou]{3}&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-6dc04f8a369669f20c07" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6dc04f8a369669f20c07">{"x":{"html":"<ul>\n  <li><span class='match'>Chr<\/span>ist<\/li>\n  <li><span class='match'>Chr<\/span>istmas<\/li>\n  <li><span class='match'>dry<\/span><\/li>\n  <li><span class='match'>fly<\/span><\/li>\n  <li><span class='match'>mrs<\/span><\/li>\n  <li><span class='match'>sch<\/span>eme<\/li>\n  <li><span class='match'>sch<\/span>ool<\/li>\n  <li><span class='match'>str<\/span>aight<\/li>\n  <li><span class='match'>str<\/span>ategy<\/li>\n  <li><span class='match'>str<\/span>eet<\/li>\n  <li><span class='match'>str<\/span>ike<\/li>\n  <li><span class='match'>str<\/span>ong<\/li>\n  <li><span class='match'>str<\/span>ucture<\/li>\n  <li><span class='match'>sys<\/span>tem<\/li>\n  <li><span class='match'>thr<\/span>ee<\/li>\n  <li><span class='match'>thr<\/span>ough<\/li>\n  <li><span class='match'>thr<\/span>ow<\/li>\n  <li><span class='match'>try<\/span><\/li>\n  <li><span class='match'>typ<\/span>e<\/li>\n  <li><span class='match'>why<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(words, &quot;[aeiou]{3,}&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-4937c6c81b079449c106" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4937c6c81b079449c106">{"x":{"html":"<ul>\n  <li>b<span class='match'>eau<\/span>ty<\/li>\n  <li>obv<span class='match'>iou<\/span>s<\/li>\n  <li>prev<span class='match'>iou<\/span>s<\/li>\n  <li>q<span class='match'>uie<\/span>t<\/li>\n  <li>ser<span class='match'>iou<\/span>s<\/li>\n  <li>var<span class='match'>iou<\/span>s<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_view(words, &quot;([aeiou][^aeiou]){2,}&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-b0f08f8bfca6bb6b12e1" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b0f08f8bfca6bb6b12e1">{"x":{"html":"<ul>\n  <li>abs<span class='match'>olut<\/span>e<\/li>\n  <li><span class='match'>agen<\/span>t<\/li>\n  <li><span class='match'>alon<\/span>g<\/li>\n  <li><span class='match'>americ<\/span>a<\/li>\n  <li><span class='match'>anot<\/span>her<\/li>\n  <li><span class='match'>apar<\/span>t<\/li>\n  <li>app<span class='match'>aren<\/span>t<\/li>\n  <li>auth<span class='match'>orit<\/span>y<\/li>\n  <li>ava<span class='match'>ilab<\/span>le<\/li>\n  <li><span class='match'>awar<\/span>e<\/li>\n  <li><span class='match'>away<\/span><\/li>\n  <li>b<span class='match'>alan<\/span>ce<\/li>\n  <li>b<span class='match'>asis<\/span><\/li>\n  <li>b<span class='match'>ecom<\/span>e<\/li>\n  <li>b<span class='match'>efor<\/span>e<\/li>\n  <li>b<span class='match'>egin<\/span><\/li>\n  <li>b<span class='match'>ehin<\/span>d<\/li>\n  <li>b<span class='match'>enefit<\/span><\/li>\n  <li>b<span class='match'>usines<\/span>s<\/li>\n  <li>ch<span class='match'>arac<\/span>ter<\/li>\n  <li>cl<span class='match'>oses<\/span><\/li>\n  <li>comm<span class='match'>unit<\/span>y<\/li>\n  <li>cons<span class='match'>ider<\/span><\/li>\n  <li>c<span class='match'>over<\/span><\/li>\n  <li>d<span class='match'>ebat<\/span>e<\/li>\n  <li>d<span class='match'>ecid<\/span>e<\/li>\n  <li>d<span class='match'>ecis<\/span>ion<\/li>\n  <li>d<span class='match'>efinit<\/span>e<\/li>\n  <li>d<span class='match'>epar<\/span>tment<\/li>\n  <li>d<span class='match'>epen<\/span>d<\/li>\n  <li>d<span class='match'>esig<\/span>n<\/li>\n  <li>d<span class='match'>evelop<\/span><\/li>\n  <li>diff<span class='match'>eren<\/span>ce<\/li>\n  <li>diff<span class='match'>icul<\/span>t<\/li>\n  <li>d<span class='match'>irec<\/span>t<\/li>\n  <li>d<span class='match'>ivid<\/span>e<\/li>\n  <li>d<span class='match'>ocumen<\/span>t<\/li>\n  <li>d<span class='match'>urin<\/span>g<\/li>\n  <li><span class='match'>econom<\/span>y<\/li>\n  <li><span class='match'>educat<\/span>e<\/li>\n  <li><span class='match'>elec<\/span>t<\/li>\n  <li><span class='match'>elec<\/span>tric<\/li>\n  <li><span class='match'>eleven<\/span><\/li>\n  <li>enco<span class='match'>urag<\/span>e<\/li>\n  <li>env<span class='match'>iron<\/span>ment<\/li>\n  <li>e<span class='match'>urop<\/span>e<\/li>\n  <li><span class='match'>even<\/span><\/li>\n  <li><span class='match'>evenin<\/span>g<\/li>\n  <li><span class='match'>ever<\/span><\/li>\n  <li><span class='match'>ever<\/span>y<\/li>\n  <li><span class='match'>eviden<\/span>ce<\/li>\n  <li><span class='match'>exac<\/span>t<\/li>\n  <li><span class='match'>exam<\/span>ple<\/li>\n  <li><span class='match'>exer<\/span>cise<\/li>\n  <li><span class='match'>exis<\/span>t<\/li>\n  <li>f<span class='match'>amil<\/span>y<\/li>\n  <li>f<span class='match'>igur<\/span>e<\/li>\n  <li>f<span class='match'>inal<\/span><\/li>\n  <li>f<span class='match'>inan<\/span>ce<\/li>\n  <li>f<span class='match'>inis<\/span>h<\/li>\n  <li>fr<span class='match'>iday<\/span><\/li>\n  <li>f<span class='match'>utur<\/span>e<\/li>\n  <li>g<span class='match'>eneral<\/span><\/li>\n  <li>g<span class='match'>over<\/span>n<\/li>\n  <li>h<span class='match'>oliday<\/span><\/li>\n  <li>h<span class='match'>ones<\/span>t<\/li>\n  <li>hosp<span class='match'>ital<\/span><\/li>\n  <li>h<span class='match'>owever<\/span><\/li>\n  <li><span class='match'>iden<\/span>tify<\/li>\n  <li><span class='match'>imagin<\/span>e<\/li>\n  <li>ind<span class='match'>ivid<\/span>ual<\/li>\n  <li>int<span class='match'>eres<\/span>t<\/li>\n  <li>intr<span class='match'>oduc<\/span>e<\/li>\n  <li><span class='match'>item<\/span><\/li>\n  <li>j<span class='match'>esus<\/span><\/li>\n  <li>l<span class='match'>evel<\/span><\/li>\n  <li>l<span class='match'>ikel<\/span>y<\/li>\n  <li>l<span class='match'>imit<\/span><\/li>\n  <li>l<span class='match'>ocal<\/span><\/li>\n  <li>m<span class='match'>ajor<\/span><\/li>\n  <li>m<span class='match'>anag<\/span>e<\/li>\n  <li>me<span class='match'>anin<\/span>g<\/li>\n  <li>me<span class='match'>asur<\/span>e<\/li>\n  <li>m<span class='match'>inis<\/span>ter<\/li>\n  <li>m<span class='match'>inus<\/span><\/li>\n  <li>m<span class='match'>inut<\/span>e<\/li>\n  <li>m<span class='match'>omen<\/span>t<\/li>\n  <li>m<span class='match'>oney<\/span><\/li>\n  <li>m<span class='match'>usic<\/span><\/li>\n  <li>n<span class='match'>atur<\/span>e<\/li>\n  <li>n<span class='match'>eces<\/span>sary<\/li>\n  <li>n<span class='match'>ever<\/span><\/li>\n  <li>n<span class='match'>otic<\/span>e<\/li>\n  <li><span class='match'>okay<\/span><\/li>\n  <li><span class='match'>open<\/span><\/li>\n  <li><span class='match'>operat<\/span>e<\/li>\n  <li>opport<span class='match'>unit<\/span>y<\/li>\n  <li>org<span class='match'>aniz<\/span>e<\/li>\n  <li><span class='match'>original<\/span><\/li>\n  <li><span class='match'>over<\/span><\/li>\n  <li>p<span class='match'>aper<\/span><\/li>\n  <li>p<span class='match'>arag<\/span>raph<\/li>\n  <li>p<span class='match'>aren<\/span>t<\/li>\n  <li>part<span class='match'>icular<\/span><\/li>\n  <li>ph<span class='match'>otog<\/span>raph<\/li>\n  <li>p<span class='match'>olic<\/span>e<\/li>\n  <li>p<span class='match'>olic<\/span>y<\/li>\n  <li>p<span class='match'>olitic<\/span><\/li>\n  <li>p<span class='match'>osit<\/span>ion<\/li>\n  <li>p<span class='match'>ositiv<\/span>e<\/li>\n  <li>p<span class='match'>ower<\/span><\/li>\n  <li>pr<span class='match'>epar<\/span>e<\/li>\n  <li>pr<span class='match'>esen<\/span>t<\/li>\n  <li>pr<span class='match'>esum<\/span>e<\/li>\n  <li>pr<span class='match'>ivat<\/span>e<\/li>\n  <li>pr<span class='match'>obab<\/span>le<\/li>\n  <li>pr<span class='match'>oces<\/span>s<\/li>\n  <li>pr<span class='match'>oduc<\/span>e<\/li>\n  <li>pr<span class='match'>oduc<\/span>t<\/li>\n  <li>pr<span class='match'>ojec<\/span>t<\/li>\n  <li>pr<span class='match'>oper<\/span><\/li>\n  <li>pr<span class='match'>opos<\/span>e<\/li>\n  <li>pr<span class='match'>otec<\/span>t<\/li>\n  <li>pr<span class='match'>ovid<\/span>e<\/li>\n  <li>qu<span class='match'>alit<\/span>y<\/li>\n  <li>re<span class='match'>alis<\/span>e<\/li>\n  <li>re<span class='match'>ason<\/span><\/li>\n  <li>r<span class='match'>ecen<\/span>t<\/li>\n  <li>r<span class='match'>ecog<\/span>nize<\/li>\n  <li>r<span class='match'>ecom<\/span>mend<\/li>\n  <li>r<span class='match'>ecor<\/span>d<\/li>\n  <li>r<span class='match'>educ<\/span>e<\/li>\n  <li>r<span class='match'>efer<\/span><\/li>\n  <li>r<span class='match'>egar<\/span>d<\/li>\n  <li>r<span class='match'>elat<\/span>ion<\/li>\n  <li>r<span class='match'>emem<\/span>ber<\/li>\n  <li>r<span class='match'>epor<\/span>t<\/li>\n  <li>repr<span class='match'>esen<\/span>t<\/li>\n  <li>r<span class='match'>esul<\/span>t<\/li>\n  <li>r<span class='match'>etur<\/span>n<\/li>\n  <li>s<span class='match'>atur<\/span>day<\/li>\n  <li>s<span class='match'>econ<\/span>d<\/li>\n  <li>secr<span class='match'>etar<\/span>y<\/li>\n  <li>s<span class='match'>ecur<\/span>e<\/li>\n  <li>s<span class='match'>eparat<\/span>e<\/li>\n  <li>s<span class='match'>even<\/span><\/li>\n  <li>s<span class='match'>imilar<\/span><\/li>\n  <li>sp<span class='match'>ecific<\/span><\/li>\n  <li>str<span class='match'>ateg<\/span>y<\/li>\n  <li>st<span class='match'>uden<\/span>t<\/li>\n  <li>st<span class='match'>upid<\/span><\/li>\n  <li>t<span class='match'>elep<\/span>hone<\/li>\n  <li>t<span class='match'>elevis<\/span>ion<\/li>\n  <li>th<span class='match'>erefor<\/span>e<\/li>\n  <li>tho<span class='match'>usan<\/span>d<\/li>\n  <li>t<span class='match'>oday<\/span><\/li>\n  <li>t<span class='match'>oget<\/span>her<\/li>\n  <li>t<span class='match'>omor<\/span>row<\/li>\n  <li>t<span class='match'>onig<\/span>ht<\/li>\n  <li>t<span class='match'>otal<\/span><\/li>\n  <li>t<span class='match'>owar<\/span>d<\/li>\n  <li>tr<span class='match'>avel<\/span><\/li>\n  <li><span class='match'>unit<\/span><\/li>\n  <li><span class='match'>unit<\/span>e<\/li>\n  <li><span class='match'>univer<\/span>sity<\/li>\n  <li><span class='match'>upon<\/span><\/li>\n  <li>v<span class='match'>isit<\/span><\/li>\n  <li>w<span class='match'>ater<\/span><\/li>\n  <li>w<span class='match'>oman<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="grouping-and-backreferences" class="section level1">
-<h1>14.3.5 Grouping and backreferences</h1>
-<pre class="r"><code>str_view(fruit, &quot;(..)\\1&quot;, match = TRUE)</code></pre>
-<div id="htmlwidget-2d8e2bbdca947accad57" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2d8e2bbdca947accad57">{"x":{"html":"<ul>\n  <li>b<span class='match'>anan<\/span>a<\/li>\n  <li><span class='match'>coco<\/span>nut<\/li>\n  <li><span class='match'>cucu<\/span>mber<\/li>\n  <li><span class='match'>juju<\/span>be<\/li>\n  <li><span class='match'>papa<\/span>ya<\/li>\n  <li>s<span class='match'>alal<\/span> berry<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<p>(.)\1\ &lt;- 1same letter appearing three times consequtively (.)(.)\\2\\1 &lt;- it is read the same foward and in reverse ex: eppe in pepper (..)\1 &lt;- any two letters repeated (.).\\1.\\1 &lt;- A letter followed by any letter, the original letter, any other letter, the original letter again &quot;(.)(.)(.).*\\3\\2\\1&quot;&lt;- three characters followed by zero or more characters of any kind followed by the same three characters but in reverse order.</p>
-<pre class="r"><code>str_subset(words, &quot;^(.)((.*\\1$)|\\1?$)&quot;)</code></pre>
-<pre><code>##  [1] &quot;a&quot;          &quot;america&quot;    &quot;area&quot;       &quot;dad&quot;        &quot;dead&quot;      
-##  [6] &quot;depend&quot;     &quot;educate&quot;    &quot;else&quot;       &quot;encourage&quot;  &quot;engine&quot;    
-## [11] &quot;europe&quot;     &quot;evidence&quot;   &quot;example&quot;    &quot;excuse&quot;     &quot;exercise&quot;  
-## [16] &quot;expense&quot;    &quot;experience&quot; &quot;eye&quot;        &quot;health&quot;     &quot;high&quot;      
-## [21] &quot;knock&quot;      &quot;level&quot;      &quot;local&quot;      &quot;nation&quot;     &quot;non&quot;       
-## [26] &quot;rather&quot;     &quot;refer&quot;      &quot;remember&quot;   &quot;serious&quot;    &quot;stairs&quot;    
-## [31] &quot;test&quot;       &quot;tonight&quot;    &quot;transport&quot;  &quot;treat&quot;      &quot;trust&quot;     
-## [36] &quot;window&quot;     &quot;yesterday&quot;</code></pre>
-<pre class="r"><code>str_subset(&quot;remember&quot;, &quot;([A-Za-z][A-Za-z]).*\\1&quot;)</code></pre>
-<pre><code>## [1] &quot;remember&quot;</code></pre>
-<pre class="r"><code>str_subset(words, &quot;([A-Za-z][A-Za-z]).*\\1&quot;)</code></pre>
-<pre><code>##  [1] &quot;appropriate&quot; &quot;church&quot;      &quot;condition&quot;   &quot;decide&quot;      &quot;environment&quot;
-##  [6] &quot;london&quot;      &quot;paragraph&quot;   &quot;particular&quot;  &quot;photograph&quot;  &quot;prepare&quot;    
-## [11] &quot;pressure&quot;    &quot;remember&quot;    &quot;represent&quot;   &quot;require&quot;     &quot;sense&quot;      
-## [16] &quot;therefore&quot;   &quot;understand&quot;  &quot;whether&quot;</code></pre>
-<pre class="r"><code>str_subset(&quot;eleven&quot;, &quot;([a-z]).*\\1.*\\1&quot;)</code></pre>
-<pre><code>## [1] &quot;eleven&quot;</code></pre>
-<pre class="r"><code>str_subset(words, &quot;([a-z]).*\\1.*\\1&quot;)</code></pre>
-<pre><code>##  [1] &quot;appropriate&quot; &quot;available&quot;   &quot;believe&quot;     &quot;between&quot;     &quot;business&quot;   
-##  [6] &quot;degree&quot;      &quot;difference&quot;  &quot;discuss&quot;     &quot;eleven&quot;      &quot;environment&quot;
-## [11] &quot;evidence&quot;    &quot;exercise&quot;    &quot;expense&quot;     &quot;experience&quot;  &quot;individual&quot; 
-## [16] &quot;paragraph&quot;   &quot;receive&quot;     &quot;remember&quot;    &quot;represent&quot;   &quot;telephone&quot;  
-## [21] &quot;therefore&quot;   &quot;tomorrow&quot;</code></pre>
-</div>
-<div id="tools" class="section level1">
-<h1>14.4 Tools</h1>
-<pre class="r"><code>x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
-str_detect(x, &quot;e&quot;)</code></pre>
-<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
-<pre class="r"><code># How many common words start with t?
-sum(str_detect(words, &quot;^t&quot;))</code></pre>
-<pre><code>## [1] 65</code></pre>
-<pre class="r"><code># What proportion of common words end with a vowel?
-mean(str_detect(words, &quot;[aeiou]$&quot;))</code></pre>
-<pre><code>## [1] 0.2765306</code></pre>
-<pre class="r"><code># Find all words containing at least one vowel, and negate
-no_vowels_1 &lt;- !str_detect(words, &quot;[aeiou]&quot;)</code></pre>
-<pre class="r"><code># Find all words consisting only of consonants (non-vowels)
-no_vowels_2 &lt;- str_detect(words, &quot;^[^aeiou]+$&quot;)
-identical(no_vowels_1, no_vowels_2)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>words[str_detect(words, &quot;x$&quot;)]</code></pre>
-<pre><code>## [1] &quot;box&quot; &quot;sex&quot; &quot;six&quot; &quot;tax&quot;</code></pre>
-<pre class="r"><code>str_subset(words, &quot;x$&quot;)</code></pre>
-<pre><code>## [1] &quot;box&quot; &quot;sex&quot; &quot;six&quot; &quot;tax&quot;</code></pre>
-<pre class="r"><code>df &lt;- tibble(
-  word = words, 
-  i = seq_along(word)
-)
-df %&gt;% 
-  filter(str_detect(word, &quot;x$&quot;))</code></pre>
-<pre><code>## # A tibble: 4 x 2
-##   word      i
-##   &lt;chr&gt; &lt;int&gt;
-## 1 box     108
-## 2 sex     747
-## 3 six     772
-## 4 tax     841</code></pre>
-<pre class="r"><code>x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
-str_count(x, &quot;a&quot;)</code></pre>
-<pre><code>## [1] 1 3 1</code></pre>
-<pre class="r"><code>mean(str_count(words, &quot;[aeiou]&quot;))</code></pre>
-<pre><code>## [1] 1.991837</code></pre>
-<pre class="r"><code>df %&gt;% 
-  mutate(
-    vowels = str_count(word, &quot;[aeiou]&quot;),
-    consonants = str_count(word, &quot;[^aeiou]&quot;)
-  )</code></pre>
-<pre><code>## # A tibble: 980 x 4
-##    word         i vowels consonants
-##    &lt;chr&gt;    &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
-##  1 a            1      1          0
-##  2 able         2      2          2
-##  3 about        3      3          2
-##  4 absolute     4      4          4
-##  5 accept       5      2          4
-##  6 account      6      3          4
-##  7 achieve      7      4          3
-##  8 across       8      2          4
-##  9 act          9      1          2
-## 10 active      10      3          3
-## # … with 970 more rows</code></pre>
-<pre class="r"><code>str_count(&quot;abababa&quot;, &quot;aba&quot;)</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>str_view_all(&quot;abababa&quot;, &quot;aba&quot;)</code></pre>
-<div id="htmlwidget-c1ae4fed56cc24e788ad" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c1ae4fed56cc24e788ad">{"x":{"html":"<ul>\n  <li><span class='match'>aba<\/span>b<span class='match'>aba<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<div id="exercises-2" class="section level3">
-<h3>14.4.1.1 Exercises</h3>
-<p>For each of the following challenges, try solving it by using both a single regular expression, and a combination of multiple str_detect() calls. Find all words that start or end with x. Find all words that start with a vowel and end with a consonant. Are there any words that contain at least one of each different vowel? What word has the highest number of vowels? What word has the highest proportion of vowels? (Hint: what is the denominator?)</p>
-</div>
-</div>
-<div id="extract-matches" class="section level1">
-<h1>14.4.2 Extract matches</h1>
-<pre class="r"><code>length(sentences)</code></pre>
-<pre><code>## [1] 720</code></pre>
-<pre class="r"><code>head(sentences)</code></pre>
-<pre><code>## [1] &quot;The birch canoe slid on the smooth planks.&quot; 
-## [2] &quot;Glue the sheet to the dark blue background.&quot;
-## [3] &quot;It&#39;s easy to tell the depth of a well.&quot;     
-## [4] &quot;These days a chicken leg is a rare dish.&quot;   
-## [5] &quot;Rice is often served in round bowls.&quot;       
-## [6] &quot;The juice of lemons makes fine punch.&quot;</code></pre>
-<pre class="r"><code>colours &lt;- c(&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;purple&quot;)
-colour_match &lt;- str_c(colours, collapse = &quot;|&quot;)
-colour_match</code></pre>
-<pre><code>## [1] &quot;red|orange|yellow|green|blue|purple&quot;</code></pre>
-<pre class="r"><code>has_colour &lt;- str_subset(sentences, colour_match)
-matches &lt;- str_extract(has_colour, colour_match)
-head(matches)</code></pre>
-<pre><code>## [1] &quot;blue&quot; &quot;blue&quot; &quot;red&quot;  &quot;red&quot;  &quot;red&quot;  &quot;blue&quot;</code></pre>
-<pre class="r"><code>has_colour</code></pre>
-<pre><code>##  [1] &quot;Glue the sheet to the dark blue background.&quot;       
-##  [2] &quot;Two blue fish swam in the tank.&quot;                   
-##  [3] &quot;The colt reared and threw the tall rider.&quot;         
-##  [4] &quot;The wide road shimmered in the hot sun.&quot;           
-##  [5] &quot;See the cat glaring at the scared mouse.&quot;          
-##  [6] &quot;A wisp of cloud hung in the blue air.&quot;             
-##  [7] &quot;Leaves turn brown and yellow in the fall.&quot;         
-##  [8] &quot;He ordered peach pie with ice cream.&quot;              
-##  [9] &quot;Pure bred poodles have curls.&quot;                     
-## [10] &quot;The spot on the blotter was made by green ink.&quot;    
-## [11] &quot;Mud was spattered on the front of his white shirt.&quot;
-## [12] &quot;The sofa cushion is red and of light weight.&quot;      
-## [13] &quot;The sky that morning was clear and bright blue.&quot;   
-## [14] &quot;Torn scraps littered the stone floor.&quot;             
-## [15] &quot;The doctor cured him with these pills.&quot;            
-## [16] &quot;The new girl was fired today at noon.&quot;             
-## [17] &quot;The third act was dull and tired the players.&quot;     
-## [18] &quot;A blue crane is a tall wading bird.&quot;               
-## [19] &quot;Lire wires should be kept covered.&quot;                
-## [20] &quot;It is hard to erase blue or red ink.&quot;              
-## [21] &quot;The wreck occurred by the bank on Main Street.&quot;    
-## [22] &quot;The lamp shone with a steady green flame.&quot;         
-## [23] &quot;The box is held by a bright red snapper.&quot;          
-## [24] &quot;The prince ordered his head chopped off.&quot;          
-## [25] &quot;The houses are built of red clay bricks.&quot;          
-## [26] &quot;The red tape bound the smuggled food.&quot;             
-## [27] &quot;Nine men were hired to dig the ruins.&quot;             
-## [28] &quot;The flint sputtered and lit a pine torch.&quot;         
-## [29] &quot;Hedge apples may stain your hands green.&quot;          
-## [30] &quot;The old pan was covered with hard fudge.&quot;          
-## [31] &quot;The plant grew large and green in the window.&quot;     
-## [32] &quot;The store walls were lined with colored frocks.&quot;   
-## [33] &quot;The purple tie was ten years old.&quot;                 
-## [34] &quot;Bathe and relax in the cool green grass.&quot;          
-## [35] &quot;The clan gathered on each dull night.&quot;             
-## [36] &quot;The lake sparkled in the red hot sun.&quot;             
-## [37] &quot;Mark the spot with a sign painted red.&quot;            
-## [38] &quot;Smoke poured out of every crack.&quot;                  
-## [39] &quot;Serve the hot rum to the tired heroes.&quot;            
-## [40] &quot;The couch cover and hall drapes were blue.&quot;        
-## [41] &quot;He offered proof in the form of a lsrge chart.&quot;    
-## [42] &quot;A man in a blue sweater sat at the desk.&quot;          
-## [43] &quot;The sip of tea revives his tired friend.&quot;          
-## [44] &quot;The door was barred, locked, and bolted as well.&quot;  
-## [45] &quot;A thick coat of black paint covered all.&quot;          
-## [46] &quot;The small red neon lamp went out.&quot;                 
-## [47] &quot;Paint the sockets in the wall dull green.&quot;         
-## [48] &quot;Wake and rise, and step into the green outdoors.&quot;  
-## [49] &quot;The green light in the brown box flickered.&quot;       
-## [50] &quot;He put his last cartridge into the gun and fired.&quot; 
-## [51] &quot;The ram scared the school children off.&quot;           
-## [52] &quot;Tear a thin sheet from the yellow pad.&quot;            
-## [53] &quot;Dimes showered down from all sides.&quot;               
-## [54] &quot;The sky in the west is tinged with orange red.&quot;    
-## [55] &quot;The red paper brightened the dim stage.&quot;           
-## [56] &quot;The hail pattered on the burnt brown grass.&quot;       
-## [57] &quot;The big red apple fell to the ground.&quot;</code></pre>
-<pre class="r"><code>more &lt;- sentences[str_count(sentences, colour_match) &gt; 1]
-str_view_all(more, colour_match)</code></pre>
-<div id="htmlwidget-2c42f94a96f08a41e441" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2c42f94a96f08a41e441">{"x":{"html":"<ul>\n  <li>It is hard to erase <span class='match'>blue<\/span> or <span class='match'>red<\/span> ink.<\/li>\n  <li>The <span class='match'>green<\/span> light in the brown box flicke<span class='match'>red<\/span>.<\/li>\n  <li>The sky in the west is tinged with <span class='match'>orange<\/span> <span class='match'>red<\/span>.<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_extract(more, colour_match)</code></pre>
-<pre><code>## [1] &quot;blue&quot;   &quot;green&quot;  &quot;orange&quot;</code></pre>
-<pre class="r"><code>str_extract_all(more, colour_match)</code></pre>
+<pre class="r"><code>strwrap(vcf@meta[1:7])</code></pre>
+<pre><code>## [1] &quot;##fileformat=VCFv4.1&quot;                                                   
+## [2] &quot;##source=\&quot;GATK haplotype Caller, phased with beagle4\&quot;&quot;                
+## [3] &quot;##FILTER=&lt;ID=LowQual,Description=\&quot;Low quality\&quot;&gt;&quot;                      
+## [4] &quot;##FORMAT=&lt;ID=AD,Number=.,Type=Integer,Description=\&quot;Allelic depths for&quot; 
+## [5] &quot;the ref and alt alleles in the order listed\&quot;&gt;&quot;                         
+## [6] &quot;##FORMAT=&lt;ID=DP,Number=1,Type=Integer,Description=\&quot;Approximate read&quot;   
+## [7] &quot;depth (reads with MQ=255 or with bad mates are filtered)\&quot;&gt;&quot;            
+## [8] &quot;##FORMAT=&lt;ID=GQ,Number=1,Type=Integer,Description=\&quot;Genotype Quality\&quot;&gt;&quot;
+## [9] &quot;##FORMAT=&lt;ID=GT,Number=1,Type=String,Description=\&quot;Genotype\&quot;&gt;&quot;</code></pre>
+<pre class="r"><code># help press the data making it convinient to view. 
+queryMETA(vcf)</code></pre>
+<pre><code>##  [1] &quot;FILTER=ID=LowQual&quot;                   
+##  [2] &quot;FORMAT=ID=AD&quot;                        
+##  [3] &quot;FORMAT=ID=DP&quot;                        
+##  [4] &quot;FORMAT=ID=GQ&quot;                        
+##  [5] &quot;FORMAT=ID=GT&quot;                        
+##  [6] &quot;FORMAT=ID=PL&quot;                        
+##  [7] &quot;GATKCommandLine=ID=HaplotypeCaller&quot;  
+##  [8] &quot;INFO=ID=AC&quot;                          
+##  [9] &quot;INFO=ID=AF&quot;                          
+## [10] &quot;INFO=ID=AN&quot;                          
+## [11] &quot;INFO=ID=BaseQRankSum&quot;                
+## [12] &quot;INFO=ID=ClippingRankSum&quot;             
+## [13] &quot;INFO=ID=DP&quot;                          
+## [14] &quot;INFO=ID=DS&quot;                          
+## [15] &quot;INFO=ID=FS&quot;                          
+## [16] &quot;INFO=ID=HaplotypeScore&quot;              
+## [17] &quot;INFO=ID=InbreedingCoeff&quot;             
+## [18] &quot;INFO=ID=MLEAC&quot;                       
+## [19] &quot;INFO=ID=MLEAF&quot;                       
+## [20] &quot;INFO=ID=MQ&quot;                          
+## [21] &quot;INFO=ID=MQ0&quot;                         
+## [22] &quot;INFO=ID=MQRankSum&quot;                   
+## [23] &quot;INFO=ID=QD&quot;                          
+## [24] &quot;INFO=ID=ReadPosRankSum&quot;              
+## [25] &quot;INFO=ID=SOR&quot;                         
+## [26] &quot;1 contig=&lt;IDs omitted from queryMETA&quot;</code></pre>
+<ul>
+<li>When the function queryMETA() is called with only a vcfR object as a parameter, it attempts to summarize the meta information. Not all of the information is returned. For example, ‘contig’ elements are not returned</li>
+</ul>
+<pre class="r"><code>queryMETA(vcf, element = &#39;DP&#39;)</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;blue&quot; &quot;red&quot; 
+## [1] &quot;FORMAT=ID=DP&quot;                                                                         
+## [2] &quot;Number=1&quot;                                                                             
+## [3] &quot;Type=Integer&quot;                                                                         
+## [4] &quot;Description=Approximate read depth (reads with MQ=255 or with bad mates are filtered)&quot;
 ## 
 ## [[2]]
-## [1] &quot;green&quot; &quot;red&quot;  
-## 
-## [[3]]
-## [1] &quot;orange&quot; &quot;red&quot;</code></pre>
-<pre class="r"><code>str_extract_all(more, colour_match, simplify = TRUE)</code></pre>
-<pre><code>##      [,1]     [,2] 
-## [1,] &quot;blue&quot;   &quot;red&quot;
-## [2,] &quot;green&quot;  &quot;red&quot;
-## [3,] &quot;orange&quot; &quot;red&quot;</code></pre>
-<pre class="r"><code>x &lt;- c(&quot;a&quot;, &quot;a b&quot;, &quot;a b c&quot;)
-str_extract_all(x, &quot;[a-z]&quot;, simplify = TRUE)</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,] &quot;a&quot;  &quot;&quot;   &quot;&quot;  
-## [2,] &quot;a&quot;  &quot;b&quot;  &quot;&quot;  
-## [3,] &quot;a&quot;  &quot;b&quot;  &quot;c&quot;</code></pre>
-<pre class="r"><code>noun &lt;- &quot;(a|the) ([^ ]+)&quot;
-
-has_noun &lt;- sentences %&gt;%
-  str_subset(noun) %&gt;%
-  head(10)
-has_noun %&gt;% 
-  str_extract(noun)</code></pre>
-<pre><code>##  [1] &quot;the smooth&quot; &quot;the sheet&quot;  &quot;the depth&quot;  &quot;a chicken&quot;  &quot;the parked&quot;
-##  [6] &quot;the sun&quot;    &quot;the huge&quot;   &quot;the ball&quot;   &quot;the woman&quot;  &quot;a helps&quot;</code></pre>
-<pre class="r"><code>has_noun %&gt;% 
-  str_match(noun)</code></pre>
-<pre><code>##       [,1]         [,2]  [,3]     
-##  [1,] &quot;the smooth&quot; &quot;the&quot; &quot;smooth&quot; 
-##  [2,] &quot;the sheet&quot;  &quot;the&quot; &quot;sheet&quot;  
-##  [3,] &quot;the depth&quot;  &quot;the&quot; &quot;depth&quot;  
-##  [4,] &quot;a chicken&quot;  &quot;a&quot;   &quot;chicken&quot;
-##  [5,] &quot;the parked&quot; &quot;the&quot; &quot;parked&quot; 
-##  [6,] &quot;the sun&quot;    &quot;the&quot; &quot;sun&quot;    
-##  [7,] &quot;the huge&quot;   &quot;the&quot; &quot;huge&quot;   
-##  [8,] &quot;the ball&quot;   &quot;the&quot; &quot;ball&quot;   
-##  [9,] &quot;the woman&quot;  &quot;the&quot; &quot;woman&quot;  
-## [10,] &quot;a helps&quot;    &quot;a&quot;   &quot;helps&quot;</code></pre>
-<pre class="r"><code>tibble(sentence = sentences) %&gt;% 
-  tidyr::extract(
-    sentence, c(&quot;article&quot;, &quot;noun&quot;), &quot;(a|the) ([^ ]+)&quot;, 
-    remove = FALSE
-  )</code></pre>
-<pre><code>## # A tibble: 720 x 3
-##    sentence                                    article noun   
-##    &lt;chr&gt;                                       &lt;chr&gt;   &lt;chr&gt;  
-##  1 The birch canoe slid on the smooth planks.  the     smooth 
-##  2 Glue the sheet to the dark blue background. the     sheet  
-##  3 It&#39;s easy to tell the depth of a well.      the     depth  
-##  4 These days a chicken leg is a rare dish.    a       chicken
-##  5 Rice is often served in round bowls.        &lt;NA&gt;    &lt;NA&gt;   
-##  6 The juice of lemons makes fine punch.       &lt;NA&gt;    &lt;NA&gt;   
-##  7 The box was thrown beside the parked truck. the     parked 
-##  8 The hogs were fed chopped corn and garbage. &lt;NA&gt;    &lt;NA&gt;   
-##  9 Four hours of steady work faced us.         &lt;NA&gt;    &lt;NA&gt;   
-## 10 Large size in stockings is hard to sell.    &lt;NA&gt;    &lt;NA&gt;   
-## # … with 710 more rows</code></pre>
-<div id="exercises-3" class="section level3">
-<h3>14.4.3.1 Exercises</h3>
-<p>Find all words that come after a “number” like “one”, “two”, “three” etc. Pull out both the number and the word. Find all contractions. Separate out the pieces before and after the apostrophe.</p>
-</div>
-</div>
-<div id="replacing-matches" class="section level1">
-<h1>14.4.4 Replacing matches</h1>
-<pre class="r"><code>x &lt;- c(&quot;apple&quot;, &quot;pear&quot;, &quot;banana&quot;)
-str_replace(x, &quot;[aeiou]&quot;, &quot;-&quot;)</code></pre>
-<pre><code>## [1] &quot;-pple&quot;  &quot;p-ar&quot;   &quot;b-nana&quot;</code></pre>
-<pre class="r"><code>str_replace_all(x, &quot;[aeiou]&quot;, &quot;-&quot;)</code></pre>
-<pre><code>## [1] &quot;-ppl-&quot;  &quot;p--r&quot;   &quot;b-n-n-&quot;</code></pre>
-<pre class="r"><code>x &lt;- c(&quot;1 house&quot;, &quot;2 cars&quot;, &quot;3 people&quot;)
-str_replace_all(x, c(&quot;1&quot; = &quot;one&quot;, &quot;2&quot; = &quot;two&quot;, &quot;3&quot; = &quot;three&quot;))</code></pre>
-<pre><code>## [1] &quot;one house&quot;    &quot;two cars&quot;     &quot;three people&quot;</code></pre>
-<pre class="r"><code>sentences %&gt;% 
-  str_replace(&quot;([^ ]+) ([^ ]+) ([^ ]+)&quot;, &quot;\\1 \\3 \\2&quot;) %&gt;% 
-  head(5)</code></pre>
-<pre><code>## [1] &quot;The canoe birch slid on the smooth planks.&quot; 
-## [2] &quot;Glue sheet the to the dark blue background.&quot;
-## [3] &quot;It&#39;s to easy tell the depth of a well.&quot;     
-## [4] &quot;These a days chicken leg is a rare dish.&quot;   
-## [5] &quot;Rice often is served in round bowls.&quot;</code></pre>
-</div>
-<div id="splitting" class="section level1">
-<h1>14.4.5 Splitting</h1>
-<pre class="r"><code>sentences %&gt;%
-  head(5) %&gt;% 
-  str_split(&quot; &quot;)</code></pre>
+## [1] &quot;INFO=ID=DP&quot;                                                           
+## [2] &quot;Number=1&quot;                                                             
+## [3] &quot;Type=Integer&quot;                                                         
+## [4] &quot;Description=Approximate read depth; some reads may have been filtered&quot;</code></pre>
+<pre class="r"><code>queryMETA(vcf, element = &#39;FORMAT=&lt;ID=DP&#39;)</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;The&quot;     &quot;birch&quot;   &quot;canoe&quot;   &quot;slid&quot;    &quot;on&quot;      &quot;the&quot;     &quot;smooth&quot; 
-## [8] &quot;planks.&quot;
+## [1] &quot;FORMAT=ID=DP&quot;                                                                         
+## [2] &quot;Number=1&quot;                                                                             
+## [3] &quot;Type=Integer&quot;                                                                         
+## [4] &quot;Description=Approximate read depth (reads with MQ=255 or with bad mates are filtered)&quot;</code></pre>
+</div>
+<div id="fix-region" class="section level2">
+<h2>Fix Region</h2>
+<ul>
+<li>The fix region contains information for each variant which is sometimes summarized over all samples.</li>
+<li>CHROM and POS - indicate the location of the variant.</li>
+<li>REF and ALT - reference and alternate allelic states for a diploid sample.</li>
+<li>QUAL - quality of each variant.</li>
+<li>FILTER - whether a variant has passed some form of quality assessment.</li>
+</ul>
+<pre class="r"><code># CHROM, POS, ID, RED, ALT, QUAL, FILTER are variants that are similar over all samples. 
+head(getFIX(vcf))</code></pre>
+<pre><code>##      CHROM              POS   ID REF ALT QUAL     FILTER
+## [1,] &quot;Supercontig_1.50&quot; &quot;2&quot;   NA &quot;T&quot; &quot;A&quot; &quot;44.44&quot;  NA    
+## [2,] &quot;Supercontig_1.50&quot; &quot;246&quot; NA &quot;C&quot; &quot;G&quot; &quot;144.21&quot; NA    
+## [3,] &quot;Supercontig_1.50&quot; &quot;549&quot; NA &quot;A&quot; &quot;C&quot; &quot;68.49&quot;  NA    
+## [4,] &quot;Supercontig_1.50&quot; &quot;668&quot; NA &quot;G&quot; &quot;C&quot; &quot;108.07&quot; NA    
+## [5,] &quot;Supercontig_1.50&quot; &quot;765&quot; NA &quot;A&quot; &quot;C&quot; &quot;92.78&quot;  NA    
+## [6,] &quot;Supercontig_1.50&quot; &quot;780&quot; NA &quot;G&quot; &quot;T&quot; &quot;58.38&quot;  NA</code></pre>
+</div>
+<div id="the-gt-region" class="section level2">
+<h2>The gt region</h2>
+<ul>
+<li>The gt (genotype) region contains information about each variant for each sample.</li>
+</ul>
+<pre class="r"><code>vcf@gt[1:6, 1:4]</code></pre>
+<pre><code>##      FORMAT           BL2009P4_us23               DDR7602                  
+## [1,] &quot;GT:AD:DP:GQ:PL&quot; &quot;0|0:62,0:62:99:0,190,2835&quot; &quot;0|0:12,0:12:39:0,39,585&quot;
+## [2,] &quot;GT:AD:DP:GQ:PL&quot; &quot;1|0:5,5:10:99:111,0,114&quot;   NA                       
+## [3,] &quot;GT:AD:DP:GQ:PL&quot; NA                          NA                       
+## [4,] &quot;GT:AD:DP:GQ:PL&quot; &quot;0|0:1,0:1:3:0,3,44&quot;        NA                       
+## [5,] &quot;GT:AD:DP:GQ:PL&quot; &quot;0|0:2,0:2:6:0,6,49&quot;        &quot;0|0:1,0:1:3:0,3,34&quot;     
+## [6,] &quot;GT:AD:DP:GQ:PL&quot; &quot;0|0:2,0:2:6:0,6,49&quot;        &quot;0|0:1,0:1:3:0,3,34&quot;     
+##      IN2009T1_us22              
+## [1,] &quot;0|0:37,0:37:99:0,114,1709&quot;
+## [2,] &quot;0|1:2,1:3:16:16,0,48&quot;     
+## [3,] &quot;0|0:2,0:2:6:0,6,51&quot;       
+## [4,] &quot;1|1:0,1:1:3:25,3,0&quot;       
+## [5,] &quot;0|0:1,0:1:3:0,3,31&quot;       
+## [6,] &quot;0|0:3,0:3:9:0,9,85&quot;</code></pre>
+</div>
+<div id="vcfr" class="section level1">
+<h1>vcfR</h1>
+<pre class="r"><code>library(&#39;vcfR&#39;)
+vcf &lt;- read.vcfR(&quot;data/pinf_sc50.vcf.gz&quot;)</code></pre>
+<pre><code>## Scanning file to determine attributes.
+## File attributes:
+##   meta lines: 29
+##   header_line: 30
+##   variant count: 22031
+##   column count: 27
 ## 
-## [[2]]
-## [1] &quot;Glue&quot;        &quot;the&quot;         &quot;sheet&quot;       &quot;to&quot;          &quot;the&quot;        
-## [6] &quot;dark&quot;        &quot;blue&quot;        &quot;background.&quot;
+Meta line 29 read in.
+## All meta lines processed.
+## gt matrix initialized.
+## Character matrix gt created.
+##   Character matrix gt rows: 22031
+##   Character matrix gt cols: 27
+##   skip: 0
+##   nrows: 22031
+##   row_num: 0
 ## 
-## [[3]]
-## [1] &quot;It&#39;s&quot;  &quot;easy&quot;  &quot;to&quot;    &quot;tell&quot;  &quot;the&quot;   &quot;depth&quot; &quot;of&quot;    &quot;a&quot;     &quot;well.&quot;
+Processed variant 1000
+Processed variant 2000
+Processed variant 3000
+Processed variant 4000
+Processed variant 5000
+Processed variant 6000
+Processed variant 7000
+Processed variant 8000
+Processed variant 9000
+Processed variant 10000
+Processed variant 11000
+Processed variant 12000
+Processed variant 13000
+Processed variant 14000
+Processed variant 15000
+Processed variant 16000
+Processed variant 17000
+Processed variant 18000
+Processed variant 19000
+Processed variant 20000
+Processed variant 21000
+Processed variant 22000
+Processed variant: 22031
+## All variants processed</code></pre>
+<pre class="r"><code>vcf</code></pre>
+<pre><code>## ***** Object of Class vcfR *****
+## 18 samples
+## 1 CHROMs
+## 22,031 variants
+## Object size: 22.4 Mb
+## 7.929 percent missing data
+## *****        *****         *****</code></pre>
+<pre class="r"><code>library(adegenet)</code></pre>
+<pre><code>## Loading required package: ade4</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;spdep&#39;:
+##   method   from
+##   plot.mst ape</code></pre>
+<pre><code>## 
+##    /// adegenet 2.1.3 is loaded ////////////
 ## 
-## [[4]]
-## [1] &quot;These&quot;   &quot;days&quot;    &quot;a&quot;       &quot;chicken&quot; &quot;leg&quot;     &quot;is&quot;      &quot;a&quot;      
-## [8] &quot;rare&quot;    &quot;dish.&quot;  
+##    &gt; overview: &#39;?adegenet&#39;
+##    &gt; tutorials/doc/questions: &#39;adegenetWeb()&#39; 
+##    &gt; bug reports/feature requests: adegenetIssues()</code></pre>
+<pre class="r"><code>vcfR2genlight(vcf)</code></pre>
+<pre><code>## Warning in vcfR2genlight(vcf): Found 312 loci with more than two alleles.
+## Objects of class genlight only support loci with two alleles.
+## 312 loci will be omitted from the genlight object.</code></pre>
+<pre><code>##  /// GENLIGHT OBJECT /////////
 ## 
-## [[5]]
-## [1] &quot;Rice&quot;   &quot;is&quot;     &quot;often&quot;  &quot;served&quot; &quot;in&quot;     &quot;round&quot;  &quot;bowls.&quot;</code></pre>
-<pre class="r"><code>&quot;a|b|c|d&quot; %&gt;% 
-  str_split(&quot;\\|&quot;) %&gt;% 
-  .[[1]]</code></pre>
-<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</code></pre>
-<pre class="r"><code>sentences %&gt;%
-  head(5) %&gt;% 
-  str_split(&quot; &quot;, simplify = TRUE)</code></pre>
-<pre><code>##      [,1]    [,2]    [,3]    [,4]      [,5]  [,6]    [,7]     [,8]         
-## [1,] &quot;The&quot;   &quot;birch&quot; &quot;canoe&quot; &quot;slid&quot;    &quot;on&quot;  &quot;the&quot;   &quot;smooth&quot; &quot;planks.&quot;    
-## [2,] &quot;Glue&quot;  &quot;the&quot;   &quot;sheet&quot; &quot;to&quot;      &quot;the&quot; &quot;dark&quot;  &quot;blue&quot;   &quot;background.&quot;
-## [3,] &quot;It&#39;s&quot;  &quot;easy&quot;  &quot;to&quot;    &quot;tell&quot;    &quot;the&quot; &quot;depth&quot; &quot;of&quot;     &quot;a&quot;          
-## [4,] &quot;These&quot; &quot;days&quot;  &quot;a&quot;     &quot;chicken&quot; &quot;leg&quot; &quot;is&quot;    &quot;a&quot;      &quot;rare&quot;       
-## [5,] &quot;Rice&quot;  &quot;is&quot;    &quot;often&quot; &quot;served&quot;  &quot;in&quot;  &quot;round&quot; &quot;bowls.&quot; &quot;&quot;           
-##      [,9]   
-## [1,] &quot;&quot;     
-## [2,] &quot;&quot;     
-## [3,] &quot;well.&quot;
-## [4,] &quot;dish.&quot;
-## [5,] &quot;&quot;</code></pre>
-<pre class="r"><code>fields &lt;- c(&quot;Name: Hadley&quot;, &quot;Country: NZ&quot;, &quot;Age: 35&quot;)
-fields %&gt;% str_split(&quot;: &quot;, n = 2, simplify = TRUE)</code></pre>
-<pre><code>##      [,1]      [,2]    
-## [1,] &quot;Name&quot;    &quot;Hadley&quot;
-## [2,] &quot;Country&quot; &quot;NZ&quot;    
-## [3,] &quot;Age&quot;     &quot;35&quot;</code></pre>
-<pre class="r"><code>x &lt;- &quot;This is a sentence.  This is another sentence.&quot;
-str_view_all(x, boundary(&quot;word&quot;))</code></pre>
-<div id="htmlwidget-52e7092f7939c32fc4fb" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-52e7092f7939c32fc4fb">{"x":{"html":"<ul>\n  <li><span class='match'>This<\/span> <span class='match'>is<\/span> <span class='match'>a<\/span> <span class='match'>sentence<\/span>.  <span class='match'>This<\/span> <span class='match'>is<\/span> <span class='match'>another<\/span> <span class='match'>sentence<\/span>.<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>str_split(x, &quot; &quot;)[[1]]</code></pre>
-<pre><code>## [1] &quot;This&quot;      &quot;is&quot;        &quot;a&quot;         &quot;sentence.&quot; &quot;&quot;          &quot;This&quot;     
-## [7] &quot;is&quot;        &quot;another&quot;   &quot;sentence.&quot;</code></pre>
-<pre class="r"><code>str_split(x, boundary(&quot;word&quot;))[[1]]</code></pre>
-<pre><code>## [1] &quot;This&quot;     &quot;is&quot;       &quot;a&quot;        &quot;sentence&quot; &quot;This&quot;     &quot;is&quot;       &quot;another&quot; 
-## [8] &quot;sentence&quot;</code></pre>
+##  // 18 genotypes,  21,719 binary SNPs, size: 2.2 Mb
+##  31239 (7.99 %) missing data
+## 
+##  // Basic content
+##    @gen: list of 18 SNPbin
+## 
+##  // Optional content
+##    @ind.names:  18 individual labels
+##    @loc.names:  21719 locus labels
+##    @chromosome: factor storing chromosomes of the SNPs
+##    @position: integer storing positions of the SNPs
+##    @other: a list containing: elements without names</code></pre>
 </div>
 
 
