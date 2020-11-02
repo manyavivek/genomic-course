@@ -74,4 +74,10 @@ library(adegenet)
 ```{r}
 vcfR2genlight(vcf)
 ```
+```{r}
+# vcfR
+gt <- extract.gt(vcf, element = "GT")
+gt[c(2,6,18), 1:3]
+```
+
 
