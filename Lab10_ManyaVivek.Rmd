@@ -57,27 +57,210 @@ vcf@gt[1:6, 1:4]
 ```
 
 # vcfR
+```{r}
+library('vcfR')
+vcf1 <- read.vcfR("data/pinfsc50_filtered.vcf.gz")
+```
+
+```{r}
+vcf1 <- read.vcfR("data/pinfsc50_filtered.vcf.gz")
+```
+
+```{r}
+head(vcf1)
+```
+
+```{r}
+vcf <- read.vcfR("data/pinf_sc50.vcf.gz")
+```
+
+```{r}
+head(vcf)
+```
+
+```{r}
+# write.vcf() will write a file to your active directory.
+write.vcf(vcf, "myVCFdata_filtered.vcf.gz")
+```
+
+```{r}
+# write.vcf() will write a file to your active directory.
+write.vcf(vcf1, "myVCF1data_filtered.vcf.gz")
+```
+## Exercise 1 
+
+1) How would we find more information about read.vcfR()?
+
+```{r}
+?read.vcfR(vcf)
+```
+
+```{r}
+?read.vcfR(vcf1)
+```
+2) How would we learn what the acronym “AD” stands for?
+
+```{r}
+queryMETA(vcf, element = "AD")
+```
+
+
+3. 
+```{r}
+tail(vcf@fix)
+```
+
+```{r}
+tail(vcf1@fix)
+```
+```{r}
+plot(vcf)
+```
+
+```{r}
+library(ggplot2)
+qplot(getQUAL(vcf), geom = "histogram")
+```
+
+5. How would we query the sample names?
+```{r}
+colnames(vcf@gt)
+```
+
+# Part II - Analysis of Genome Data
+
+```{r}
+library(adegenet)
+```
 
 ```{r}
 library('vcfR')
 vcf <- read.vcfR("data/pinf_sc50.vcf.gz")
 ```
+```{r}
+# genlight only supports binary variants. 
+x <- vcfR2genlight(vcf)
+```
+```{r}
+head(vcf)
+```
+
+#### Because genlight objects only use biallelic loci the genotypes can be recoded as 0, 1 and 2.
+
+* These correspond to homozygous for the reference or zero allele, heterozygote or homozygous for the first alternate allele. We can validate this by checking a few select genotypes from both the vcfR object and the genlight object.
+* Maybe: homozygotes is 1 and heterozygotes is 2 
 
 ```{r}
-vcf
+# vcfR
+gt <- extract.gt(vcf, element = "GT")
+gt[c(1,11,36), 1:5]
 ```
+```{r}
+# vcfR
+gt <- extract.gt(vcf, element = "GT")
+gt[c(1,5,17), 1:3]
+```
+
+```{r}
+# genlight
+t(as.matrix(x))[c(1,5,17), 1:3]
+```
+
+## Adegenet 
+
+* VCF data there is no concept of ‘population.’ The package adegenet was designed specifically for the analysis of population data. 
+
 ```{r}
 library(adegenet)
 ```
 
 
 ```{r}
-vcfR2genlight(vcf)
+pop(x) <- as.factor(c("us", "eu", "us", "af", "eu", "us", "mx", "eu", "eu", "sa", "mx", "sa", "us", "sa", "Pmir", "us", "eu", "eu"))
+popNames(x)
 ```
+* In a genlight object different samples may be of different ploidy levels, but within each sample all of its loci must be of the same ploidy level. Here we’ll set the ploidy of all the samples in the genlight object to the same ploidy.
 ```{r}
-# vcfR
-gt <- extract.gt(vcf, element = "GT")
-gt[c(2,6,18), 1:3]
+ploidy(x) <- 2
 ```
 
+```{r}
+x.dist <- dist(x)
+```
+
+# chromR objects
+
+* Using chromR to locate unusual features in a genome
+
+```{r}
+library(vcfR)
+
+# Find the files.
+vcf_file <- system.file("extdata", "pinf_sc50.vcf.gz", package = "pinfsc50")
+dna_file <- system.file("extdata", "pinf_sc50.fasta", package = "pinfsc50")
+gff_file <- system.file("extdata", "pinf_sc50.gff", package = "pinfsc50")
+
+# Input the files.
+vcf <- read.vcfR(vcf_file, verbose = FALSE)
+dna <- ape::read.dna(dna_file, format = "fasta")
+gff <- read.table(gff_file, sep="\t", quote="")
+
+# Create a chromR object.
+chrom <- create.chromR(name="Supercontig", vcf=vcf, seq=dna, ann=gff, verbose=TRUE)
+```
+
+```{r}
+chrom
+```
+
+* The read depth here is a sum over all samples. We see a peak that represents the depth where most of our genomes were sequenced at.
+
+* Low regions of sequence depth may indicate variants where we may be concerned that there may not be enough information to call a genotype. 
+
+* Variants of high coverage may represent repetetive regions of genomes where the reference may not contain all the copies so the reads pile up on the fraction of repeats that were successfully assembled. 
+
+*  It appears that most of the variants are of a low quality with very few of them being of high quality. QUAL may not be a good parameter to use to judge your variants. 
+
+* The graph for SNP density is empty - 
+```{r}
+plot(chrom)
+```
+```{r}
+chromoqc(chrom, dp.alpha = 66)
+```
+
+## Processing chromR objects
+
+*  Processing the chromR object generates summaries of the data. Some of these summaries will need to be updated as the chromR object is updated. 
+```{r}
+chrom <- proc.chromR(chrom, verbose = TRUE)
+```
+
+```{r}
+plot(chrom)
+```
+
+
+
+#### When we observe the chromoqc plot we see that we now have variant densities, nucleotide content as well as a representation of where in our reference we have nucleotides (A, C, G or T) or where we have ambiguous nucleotides.
+
+```{r}
+# visualization of raw data 
+chromoqc(chrom, dp.alpha = 66)
+```
+
+```{r}
+vcf <- read.vcfR("data/pinf_sc50.vcf.gz")
+chrom <- create.chromR(name="Supercontig", vcf=vcf, seq=dna, ann=gff, verbose=FALSE)
+chrom <- proc.chromR(chrom, verbose = FALSE)
+chromoqc(chrom, dp.alpha = 66)
+```
+# Tabular summary 
+
+```{r}
+head(chrom@var.info)
+```
+```{r}
+head(chrom@win.info)
+```
 
