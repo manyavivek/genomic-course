@@ -115,7 +115,7 @@ f <- function(num = 1) {
 
 ```{r}
 f <- function(num = 1) {
-  hello <- "Hello Underworld!!"
+  hello <- "Hello world!!"
   for(i in seq_len(num)) {
     cat(hello)
   }
