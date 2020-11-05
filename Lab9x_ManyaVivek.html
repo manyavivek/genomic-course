@@ -529,6 +529,36 @@ while(z &gt;= 3 &amp;&amp; z &lt;= 10) {
 print(z)</code></pre>
 <pre><code>## [1] 2</code></pre>
 </div>
+<div id="functions" class="section level1">
+<h1>FUNCTIONS</h1>
+<pre class="r"><code>f &lt;- function(num = 1) {
+        hello &lt;- &quot;Hello, world!\n&quot;
+        for(i in seq_len(num)) {
+               cat(hello)
+        }
+        chars &lt;- nchar(hello) * num
+         chars
+ }
+ f(3)   </code></pre>
+<pre><code>## Hello, world!
+## Hello, world!
+## Hello, world!</code></pre>
+<pre><code>## [1] 42</code></pre>
+<pre class="r"><code>f &lt;- function(num = 1) {
+  hello &lt;- &quot;Hello Underworld!!&quot;
+  for(i in seq_len(num)) {
+    cat(hello)
+  }
+  chars &lt;- nchar(hello) * num
+         chars
+}
+f()</code></pre>
+<pre><code>## Hello Underworld!!</code></pre>
+<pre><code>## [1] 18</code></pre>
+<pre class="r"><code>f(5)</code></pre>
+<pre><code>## Hello Underworld!!Hello Underworld!!Hello Underworld!!Hello Underworld!!Hello Underworld!!</code></pre>
+<pre><code>## [1] 90</code></pre>
+</div>
 
 
 
