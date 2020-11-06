@@ -4,15 +4,22 @@ author: "Manya Vivek"
 date: "10/19/2020"
 output: html_document
 ---
+
 # Exercise 1 
+
 * Open NGPhylogeny.fr. 
+
 * Click on "Let's go! with One Click Workflow" 
+
 * Choose FASTME/OneClick in Select your workflow 
+
 * Either input the "tree phylogenetic tree" or copy and paste the amino acid sequence from the file downloaded. 
+
 * Hit submit 
+
 * Download output tree file 
 
-[Output Tree](data/Output_Tree.nhx)
+![TreeImage](Tree_image.png) 
 
 ```{r}
 library(tidyverse)
@@ -71,7 +78,7 @@ ggtree(tree, branch.length="none", color="blue", size=2, linetype=3)
 ```
 
 
-## Exercise 1 
+##### Exercise 1 
 ```{r}
 ggtree(tree, layout = "slanted")
 ```
@@ -98,7 +105,7 @@ p <- ggtree(tree)
 p + geom_nodepoint() + geom_tippoint() + geom_tiplab()
 ```
 
-## Exercise 2 
+##### Exercise 2 
 
 ```{r}
 p + geom_tippoint(shape = "diamond", color = "purple") + geom_tiplab(color = "purple") + geom_nodepoint(color = "yellow", alpha = 0.5, size = 3)
@@ -159,7 +166,7 @@ ggtree(tree) +
   geom_taxalink("C", "G", color="orange2", curvature=-.9)
 ```
 
-## Exercise 3
+##### Exercise 3
 
 ```{r}
 ggtree(tree) + geom_text(aes(label=node), hjust=-.3)
@@ -222,6 +229,7 @@ trees <- lapply(rep(c(10, 25, 50, 100), 3), rtree)
 class(trees) <- "multiPhylo"
 ggtree(trees) + facet_wrap(~.id, scale="free", ncol=4) + ggtitle("Phylogenetic trees")
 ```
+
 ```{r}
 tree <- rtree(30)
 p <- ggtree(tree)
@@ -233,24 +241,8 @@ p3 <- facet_plot(p2, panel='bar', data=d2, geom=geom_segment,
 p3 + theme_tree2()
 ```
 
-```{r}
 
-newick <- "((Pongo_abelii,(Gorilla_gorilla_gorilla,(Pan_paniscus,Pan_troglodytes)Pan,Homo_sapiens)Homininae)Hominidae,Nomascus_leucogenys)Hominoidea;"
-
-tree <- read.tree(text=newick)
-
-d <- ggimage::phylopic_uid(tree$tip.label)
-d$body_mass = c(52, 114, 47, 45, 58, 6)
-
-p <- ggtree(tree) %<+% d + 
-  geom_tiplab(aes(image=uid, colour=body_mass), geom="phylopic", offset=2.5) +
-  geom_tiplab(aes(label=label), offset = .2) + xlim(NA, 7) +
-  scale_color_viridis_c()
-p  
-
-```
-
-# Exercise 3
+----------------------------------------------------------------------------------------------------------------------------
 
 [Tree File](data/fastree_result.tre)
 
@@ -273,6 +265,43 @@ ggtree(tree, layout = "circular") +
     geom_tiplab() + 
   geom_nodelab() + 
   xlim(0,36)
+```
+
+# Exercise 4 
+
+```{r}
+library(ggtree)
+```
+[Output_tree.nhx](data/Output_Tree.nhx)
+
+
+```{r}
+nhxfile <- read.tree("data/Output_Tree.nhx")
+nhxfile
+```
+
+```{r}
+ggtree(nhxfile) + geom_text(aes(label=node), hjust=-.3)
+```
+
+```{r}
+ggtree(nhxfile) +
+    geom_nodelab()+
+  geom_tiplab(hjust=-.1, size = 3) +
+    geom_hilight(node=23, fill="gold", extend = 0.5) + 
+    geom_hilight(node=37, fill="purple", extend = 0.8) + 
+    geom_hilight(node=27, fill="blue", extend = 0.5) 
+xlim(0,36)
+```
+
+```{r}
+ggtree(nhxfile, layout = "circular") +
+    geom_nodelab()+
+  geom_tiplab(hjust=-.1, size = 3) +
+    geom_hilight(node=23, fill="gold", extend = 0.5) + 
+    geom_hilight(node=37, fill="purple", extend = 0.5) + 
+    geom_hilight(node=27, fill="blue", extend = 0.5) 
+xlim(0,36)
 ```
 
 
