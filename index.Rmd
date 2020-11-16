@@ -49,5 +49,4 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 * [Lab 9x: Programming in R - Control Structures and Functions](Lab9x_ManyaVivek.html)
 
 10. 
-
-
+* [Lab 10: Population genomics based on high throughput sequencing (HTS)](Lab10_ManyaVivek.html)
