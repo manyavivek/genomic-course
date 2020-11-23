@@ -2,8 +2,10 @@
 title: "Lab 9"
 author: "Manya Vivek"
 date: "10/26/2020"
-output: html_document
-urlcolor : lavender
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 # 14.3.1 BASIC MATCHES
