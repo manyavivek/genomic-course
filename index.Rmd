@@ -56,4 +56,7 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 
 11. 
 * [Lab 11: Microbiome Analysis using dada2 and phyloseq](Lab11_ManyaVivek.html)
+* [Lab11x: Microbiome Analysis using phyloseq Introduction to Microbiome Analysis](Lab11x_ManyaVivek.html)
 
+12. 
+* [Lab12: Network Analysis using Cytoscape and RCy3](Lab12_ManyaVivek.html)
