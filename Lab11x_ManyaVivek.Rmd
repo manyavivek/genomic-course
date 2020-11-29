@@ -1,0 +1,43 @@
+---
+title: "Lab11x: Microbiome Analysis using phyloseq Introduction to Microbiome Analysis"
+author: "Manya Vivek"
+date: "11/22/2020"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+
+# Ordination 
+
+```{r}
+library("phyloseq"); packageVersion("phyloseq")
+```
+
+```{r}
+data(GlobalPatterns)
+library("ggplot2"); packageVersion("ggplot2")
+```
+
+```{r}
+library("plyr"); packageVersion("plyr")
+```
+
+* OTUs - An operational taxonomic unit (OTU) is an operational definition used to classify groups of closely related individuals
+
+1. Filter low-occurance and poorly represented OTUs. 
+
+Remove OTUs that do not appear more than five times in more than half the samples. 
+```{r}
+GP = GlobalPatterns
+wh0 = genefilter_sample(GP, filterfun_sample(function(x) x > 5), A=0.5*nsamples(GP))
+GP1 = prune_taxa(wh0, GP)
+```
+
+Transform to even sampling depth
+```{r}
+GP1 = transform_sample_counts(GP1, function(x) 1E6 * x/sum(x))
+```
+
+

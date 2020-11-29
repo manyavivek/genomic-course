@@ -1,0 +1,22 @@
+---
+title: 'Lab12: Network Analysis using Cytoscape and RCy3'
+author: "Manya Vivek"
+date: "11/23/2020"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r}
+library(RCy3)
+cytoscapePing()
+```
+
+### Figure 1: Image from Basic Data Visualization
+
+![](galFiltered network with data(2).png)
+
+
+
+
