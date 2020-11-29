@@ -1,8 +1,11 @@
 ---
-title: "Lab7"
+title: "Lab7: RNA-Seq workflow: gene-level exploratory analysis and differential expression"
 author: "Manya Vivek"
 date: "10/12/2020"
-output: html_document
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 ```{r}
@@ -392,13 +395,13 @@ head(resSig[ order(resSig$log2FoldChange, decreasing = TRUE), ])
 ```
 
 
-## plotcounts
+# plotcounts
 ```{r}
 topGene <- rownames(res)[which.min(res$padj)]
 plotCounts(dds, gene = topGene, intgroup=c("dex"))
 ```
 
-## ggplotcountsjitter
+# ggplotcountsjitter
 ```{r, fig.width = 4, fig.height = 3}
 library("ggbeeswarm")
 geneCounts <- plotCounts(dds, gene = topGene, intgroup = c("dex","cell"),
@@ -407,13 +410,13 @@ ggplot(geneCounts, aes(x = dex, y = count, color = cell)) +
   scale_y_log10() +  geom_beeswarm(cex = 3)
 ```
 
-## ggplotcountsgroup
+# ggplotcountsgroup
 ```{r, fig.width = 4, fig.height = 3}
 ggplot(geneCounts, aes(x = dex, y = count, color = cell, group = cell)) +
   scale_y_log10() + geom_point(size = 3) + geom_line()
 ```
 
-## ----plotma-------------------------------------------------------------------
+# plotma
 ```{r}
 library("apeglm")
 resultsNames(dds)
@@ -421,12 +424,12 @@ res <- lfcShrink(dds, coef="dex_trt_vs_untrt", type="apeglm")
 plotMA(res, ylim = c(-5, 5))
 ```
 
-## ----plotmaNoShr--------------------------------------------------------------
+# plotmaNoShr
 ```{r}
 res.noshr <- results(dds, name="dex_trt_vs_untrt")
 plotMA(res.noshr, ylim = c(-5, 5))
 ```
-## ----plotmalabel--------------------------------------------------------------
+# plotmalabel
 ```{r}
 plotMA(res, ylim = c(-5,5))
 topGene <- rownames(res)[which.min(res$padj)]
@@ -436,7 +439,7 @@ with(res[topGene, ], {
 })
 ```
 
-## ----histpvalue2--------------------------------------------------------------
+# histpvalue2
 ```{r}
 hist(res$pvalue[res$baseMean > 1], breaks = 0:20/20,
      col = "grey50", border = "white")
@@ -447,7 +450,7 @@ library("genefilter")
 topVarGenes <- head(order(rowVars(assay(vsd)), decreasing = TRUE), 20)
 ```
 
-## ----genescluster-------------------------------------------------------------
+# genescluster
 ```{r}
 mat  <- assay(vsd)[ topVarGenes, ]
 mat  <- mat - rowMeans(mat)
@@ -465,7 +468,7 @@ barplot(fractionSig, xlab = "mean normalized count",
                      ylab = "fraction of small p values")
 ```
 
-## ---- eval=FALSE--------------------------------------------------------------
+
 
 ## -----------------------------------------------------------------------------
 ```{r}
@@ -541,7 +544,7 @@ resGRsub$group <- ifelse(naOrDup, names(resGRsub), resGRsub$symbol)
 status <- factor(ifelse(resGRsub$padj < 0.05 & !is.na(resGRsub$padj),
                         "sig", "notsig"))
 ```
-## ----gvizplot-----------------------------------------------------------------
+# gvizplot
 ```{r}
 options(ucscChromosomeNames = FALSE)
 g <- GenomeAxisTrack()
@@ -568,7 +571,7 @@ svseq <- svaseq(dat, mod, mod0, n.sv = 2)
 svseq$sv
 ```
 
-## ----svaplot------------------------------------------------------------------
+# svaplot
 ```{r}
 par(mfrow = c(2, 1), mar = c(3,5,3,1))
 for (i in 1:2) {
@@ -600,7 +603,7 @@ set <- RUVg(set, empirical, k=2)
 pData(set)
 ```
 
-## ----ruvplot------------------------------------------------------------------
+# ruvplot
 ```{r}
 par(mfrow = c(2, 1), mar = c(3,5,3,1))
 for (i in 1:2) {
@@ -624,7 +627,7 @@ data("fission")
 ddsTC <- DESeqDataSet(fission, ~ strain + minute + strain:minute)
 ```
 
-## ----fissionDE----------------------------------------------------------------
+# fissionDE
 ```{r}
 ddsTC <- DESeq(ddsTC, test="LRT", reduced = ~ strain + minute)
 resTC <- results(ddsTC)
@@ -632,7 +635,7 @@ resTC$symbol <- mcols(ddsTC)$symbol
 head(resTC[order(resTC$padj),], 4)
 ```
 
-## ----fissioncounts, 
+#fissioncounts
 ```{r, fig.width=6, fig.height=4.5}
 fiss <- plotCounts(ddsTC, which.min(resTC$padj), 
                    intgroup = c("minute","strain"), returnData = TRUE)
@@ -655,7 +658,8 @@ betas <- coef(ddsTC)
 colnames(betas)
 ```
 
-## ----fissionheatmap-----------------------------------------------------------
+## ---------------------------------------------------------------
+# fissionheatmap
 ```{r}
 topGenes <- head(order(resTC$padj),20)
 mat <- betas[topGenes, -c(1,2)]
