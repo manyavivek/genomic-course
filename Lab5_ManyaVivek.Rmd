@@ -1,6 +1,11 @@
 ---
-title: "Lab5"
-output: html_document
+title: "Lab 5: Data wrangling and graphing COVID-19 reporting data (Part 2)"
+author: "Manya Vivek"
+date: "09/28/2020"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
