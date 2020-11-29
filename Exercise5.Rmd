@@ -1,8 +1,11 @@
 ---
-title: "Exercise5"
+title: "COVID-19 CONFIRMED CASES AND DEATHS"
 author: "Manya Vivek"
 date: "10/3/2020"
-output: html_document
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 bibliography: reference.bib
 ---
 ```{r echo= FALSE, results= FALSE, warning=FALSE, message=FALSE}
