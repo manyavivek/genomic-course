@@ -13,9 +13,17 @@ library(RCy3)
 cytoscapePing()
 ```
 
-### Figure 1: Image from Basic Data Visualization
+### Figure 1: Basic Data Visualization
 
 ![](galFiltered network with data(2).png)
+
+### Figure 2: Differentially Expressed Genes Network Analysis
+
+#### Example 1
+
+![](Example1(1).png)
+
+![](String Network(1).png)
 
 
 
