@@ -2,6 +2,7 @@
 title: "Lab11x: Microbiome Analysis using phyloseq Introduction to Microbiome Analysis"
 author: "Manya Vivek"
 date: "11/22/2020"
+output: html_document
 ---
 
 
@@ -220,3 +221,45 @@ p + geom_point(size=5, alpha=0.7)
 ```
 
 # Heat Maps 
+
+### Plot a 300-taxa dataset
+```{r}
+data("GlobalPatterns")
+gpt <- subset_taxa(GlobalPatterns, Kingdom=="Bacteria")
+gpt <- prune_taxa(names(sort(taxa_sums(gpt),TRUE)[1:300]), gpt)
+plot_heatmap(gpt, sample.label="SampleType")
+```
+## Subset a smaller dataset based on an Archaeal phylum
+```{r}
+gpac <- subset_taxa(GlobalPatterns, Phylum=="Crenarchaeota")
+```
+
+```{r}
+plot_heatmap(gpac)
+```
+### Re-label by a sample variable and taxonomic family
+```{r}
+(p <- plot_heatmap(gpac, "NMDS", "bray", "SampleType", "Family"))
+```
+
+### Re-label axis titles
+```{r}
+p$scales$scales[[1]]$name <- "My X-Axis"
+p$scales$scales[[2]]$name <- "My Y-Axis"
+print(p)
+```
+
+### Changing the color scheme 
+```{r}
+plot_heatmap(gpac, "NMDS", "bray", "SampleType", "Family", low="#000033", high="#CCFF66")
+```
+
+```{r}
+plot_heatmap(gpac, "NMDS", "bray", "SampleType", "Family", low="#FFFFCC", high="#000033", na.value="white")
+```
+
+### Different ecological distances/ordinations
+```{r}
+plot_heatmap(gpac, "MDS", "unifrac", "SampleType", "Family", weighted=TRUE)
+```
+
