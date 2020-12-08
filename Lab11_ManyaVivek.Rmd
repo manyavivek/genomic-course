@@ -2,10 +2,7 @@
 title: "Lab 11: Microbiome Analysis using dada2 and phyloseq"
 author: "Manya Vivek"
 date: "11/9/2020"
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+output: html_document
 ---
 
 
