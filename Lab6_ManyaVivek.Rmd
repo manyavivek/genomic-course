@@ -2,6 +2,7 @@
 title: "Lab6: Data Maps and Interactive Graphs from the COVID-19 reporting data"
 author: "Manya Vivek"
 date: "9/28/2020"
+output: html_document
 ---
 
 ```{r}
