@@ -2,6 +2,7 @@
 title: "Lab8: Sequence Alignment, Phylogenetic Analysis and Tree Visualization"
 author: "Manya Vivek"
 date: "10/19/2020"
+output: html_document
 ---
 
 # Exercise 1 
