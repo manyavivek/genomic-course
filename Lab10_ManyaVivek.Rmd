@@ -2,10 +2,7 @@
 title: "Lab10"
 author: "Manya Vivek"
 date: "11/2/2020"
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+output: html_document
 ---
 
 * vcf meta - describing the body of the file 
