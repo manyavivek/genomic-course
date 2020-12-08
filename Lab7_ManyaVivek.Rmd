@@ -2,17 +2,7 @@
 title: "Lab7: RNA-Seq workflow: gene-level exploratory analysis and differential expression"
 author: "Manya Vivek"
 date: "10/12/2020"
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
 ---
-
-```{r}
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install(version = "3.11")
-```
 
 ```{r  echo=FALSE, message=FALSE, warning=FALSE, results="asis"}
 library("BiocStyle")
