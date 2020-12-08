@@ -61,5 +61,4 @@ Welcome to my page! My name is Manya Vivek. I'm a Biology undergrad at UMass Amh
 12. 
 * [Lab12: Network Analysis using Cytoscape and RCy3](Lab12_ManyaVivek.html)
 
-13. 
-* Lab Website: file:///Users/manya/Desktop/genomic-course/https:/manyavivek.github.io/GenomicsCourseWebsite/_site/index.html
+
