@@ -166,3 +166,17 @@ p + ggtitle("MDS/PCoA on weighted-UniFrac distance, GlobalPatterns")
 
 # ---------------------------------------------------------------------------------------------
 
+```{r}
+data("GlobalPatterns")
+```
+```{r}
+theme_set(theme_bw())
+pal = "Set1"
+scale_colour_discrete <-  function(palname=pal, ...){
+  scale_colour_brewer(palette=palname, ...)
+}
+scale_fill_discrete <-  function(palname=pal, ...){
+  scale_fill_brewer(palette=palname, ...)
+}
+```
+
