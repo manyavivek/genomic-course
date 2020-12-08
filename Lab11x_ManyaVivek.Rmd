@@ -2,10 +2,6 @@
 title: "Lab11x: Microbiome Analysis using phyloseq Introduction to Microbiome Analysis"
 author: "Manya Vivek"
 date: "11/22/2020"
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
 ---
 
 
@@ -52,9 +48,9 @@ human = get_variable(GP1, "SampleType") %in% c("Feces", "Mock", "Skin", "Tongue"
 sample_data(GP1)$human <- factor(human)
 ```
 
-# Four main ordination plots
+## Four main ordination plots
 
-## (1) Just OTUs
+### (1) Just OTUs
 
 ```{r}
 GP.ord <- ordinate(GP1, "NMDS", "bray")
@@ -65,7 +61,7 @@ print(p1)
 p1 + facet_wrap(~Phylum, 3)
 ```
 
-## (2) Just Samples
+### (2) Just Samples
 
 * Shade the points by “SampleType” while also modifying the shape according to whether they are human-associated.
 
@@ -74,7 +70,7 @@ p2 = plot_ordination(GP1, GP.ord, type="samples", color="SampleType", shape="hum
 p2 + geom_polygon(aes(fill=SampleType)) + geom_point(size=5) + ggtitle("samples")
 ```
 
-## (3) Biplot graphic
+### (3) Biplot graphic
 
 * plot ordination - create two different graphic layouts in which both the samples and OTUs are plotted together in one “biplot”.
 
@@ -88,7 +84,7 @@ GP1.shape["samples"] <- 16
 p3 + scale_shape_manual(values=GP1.shape)
 ```
 
-## (4) Split graphic
+### (4) Split graphic
 
 ```{r}
 p4 = plot_ordination(GP1, GP.ord, type="split", color="Phylum", shape="human", label="SampleType", title="split") 
@@ -107,7 +103,7 @@ p4cols["samples"] <- "black"
 p4 + scale_color_manual(values=p4cols)
 ```
 
-# Supported Ordination Methods
+## Supported Ordination Methods
 
 ```{r}
 dist = "bray"
@@ -150,7 +146,7 @@ p = p + geom_point(size=5) + geom_polygon(aes(fill=SampleType))
 p
 ```
 
-# MDS (“PCoA”) on Unifrac Distances
+## MDS (“PCoA”) on Unifrac Distances
 
 ```{r}
 ordu = ordinate(GP1, "PCoA", "unifrac", weighted=TRUE)
@@ -166,9 +162,19 @@ p + ggtitle("MDS/PCoA on weighted-UniFrac distance, GlobalPatterns")
 
 # ---------------------------------------------------------------------------------------------
 
+# Global Patterns
+
+```{r}
+library("phyloseq"); packageVersion("phyloseq")
+```
+
 ```{r}
 data("GlobalPatterns")
 ```
+```{r}
+library("ggplot2"); packageVersion("ggplot2")
+```
+
 ```{r}
 theme_set(theme_bw())
 pal = "Set1"
@@ -180,3 +186,37 @@ scale_fill_discrete <-  function(palname=pal, ...){
 }
 ```
 
+```{r}
+GP <- prune_species(speciesSums(GlobalPatterns) > 0, GlobalPatterns)
+```
+
+### Plot Examples
+
+```{r}
+plot_richness(GP)
+```
+```{r}
+plot_richness(GP, measures=c("Chao1", "Shannon"))
+```
+```{r}
+plot_richness(GP, x="SampleType", measures=c("Chao1", "Shannon"))
+```
+```{r}
+sampleData(GP)$human <- getVariable(GP, "SampleType") %in% c("Feces", "Mock", "Skin", "Tongue")
+```
+```{r}
+plot_richness(GP, x="human", color="SampleType", measures=c("Chao1", "Shannon"))
+```
+```{r}
+GPst = merge_samples(GP, "SampleType")
+# repair variables that were damaged during merge (coerced to numeric)
+sample_data(GPst)$SampleType <- factor(sample_names(GPst))
+sample_data(GPst)$human <- as.logical(sample_data(GPst)$human)
+```
+
+```{r}
+p = plot_richness(GPst, x="human", color="SampleType", measures=c("Chao1", "Shannon"))
+p + geom_point(size=5, alpha=0.7)
+```
+
+# Heat Maps 
